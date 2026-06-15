@@ -8,7 +8,8 @@
     "build": "npm run build:wasm && vite build",
     "preview": "vite preview",
     "build:wasm": "cd ET-COSMIC/void_core && wasm-pack build --target web --out-dir pkg",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy": "npm run build && npx -y gh-pages -d dist"
   },
   "dependencies": {
     "@noble/curves": "^2.2.0",
