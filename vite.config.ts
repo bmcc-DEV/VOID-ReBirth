@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      'void_core': resolve(__dirname, 'ET-COSMIC/void_core/pkg'),
     },
   },
   build: {
