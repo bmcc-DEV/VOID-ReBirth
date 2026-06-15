@@ -1,0 +1,15 @@
+{
+  "name": "void_core",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "void_core_bg.wasm",
+    "void_core.js",
+    "void_core.d.ts"
+  ],
+  "main": "void_core.js",
+  "types": "void_core.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
