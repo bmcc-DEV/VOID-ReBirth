@@ -1,0 +1,6545 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "id": "vite.config.ts"
+    },
+    {
+      "id": "src/parity.integration.test.ts"
+    },
+    {
+      "id": "src/main.tsx"
+    },
+    {
+      "id": "src/shared/lib/webgpu.ts"
+    },
+    {
+      "id": "src/shared/lib/wasm.ts"
+    },
+    {
+      "id": "src/shared/lib/wasm.test.ts"
+    },
+    {
+      "id": "src/db/index.ts"
+    },
+    {
+      "id": "src/pages/GhostIDPage/index.tsx"
+    },
+    {
+      "id": "src/pages/GitPayPage/index.tsx"
+    },
+    {
+      "id": "src/pages/PqcAuditPage/index.tsx"
+    },
+    {
+      "id": "src/pages/HomePage/index.tsx"
+    },
+    {
+      "id": "src/services/bitcoin.ts"
+    },
+    {
+      "id": "src/services/bitcoin.test.ts"
+    },
+    {
+      "id": "src/services/nostr.ts"
+    },
+    {
+      "id": "src/app/App.tsx"
+    },
+    {
+      "id": "src/entities/domain.test.ts"
+    },
+    {
+      "id": "src/entities/ghostid/model.ts"
+    },
+    {
+      "id": "src/entities/invoice/model.ts"
+    },
+    {
+      "id": "src/entities/mesh/model.ts"
+    },
+    {
+      "id": "src/features/gitpay-merchant/Checkout.tsx"
+    },
+    {
+      "id": "src/features/pqc-audit/PqcAudit.tsx"
+    },
+    {
+      "id": "src/features/ghostid-deploy/identityMigration.ts"
+    },
+    {
+      "id": "src/features/ghostid-deploy/GhostIdGenerator.tsx"
+    },
+    {
+      "id": "src/features/ghostid-deploy/identityMigration.test.ts"
+    },
+    {
+      "id": "src/features/ghostid-deploy/SettingsImport.tsx"
+    },
+    {
+      "id": "ET-COSMIC/vitest.config.ts"
+    },
+    {
+      "id": "ET-COSMIC/paleo-cli.js"
+    },
+    {
+      "id": "ET-COSMIC/stress_test.js"
+    },
+    {
+      "id": "ET-COSMIC/vite.config.ts"
+    },
+    {
+      "id": "ET-COSMIC/capacitor.config.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/routes.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/router.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/panelTiers.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/App.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/vite-env.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/AppLanding.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/main.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/economy/sovEconomy.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/economy/sovEconomyClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/collapse/collapseAlgebra.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/collapse/collapseAlgebra.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/plugins/voidAnimus.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/plugins/voidAnimusWeb.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/ghostDockerBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/higgsGit.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/phantomPipeline.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/ecoNet.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/voidRunnerBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/vps/voidRunnerClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/acousticRoom.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/sensorEntropy.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/nostrMesh.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/imcClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/thomasFermiWebgl.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/imc/imcEntropy.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/omega/wasmDeepResearch.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/omega/steganography.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/omega/AnimusBootstrap.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/omega/animusSubstrates.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/sovereignty/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/slaContract.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/datEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/reputationPricing.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/datTypes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/pools.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/liquidity/liquidityMining.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/ldkWasmBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/ampPipeline.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/knownLimitations.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/consentLattice.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/eil.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/amp.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/slcc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/recursiveStark.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/test/setup.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/server/finance.payment.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/server/ecosystem.stress.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/VoidProtocol.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/VoidProtocol.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/useVoid.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/PowerGovernor.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/ghostDock.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/cosmicVoidOrchestrator.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/useVhgpuFarm.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/useLua.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/ghostDock.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/VoidOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/core/VoidOrchestrator.c3.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/void/voidStackClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/void/sovereignStack.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/void/etCore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/void/sovereignStack.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/void/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/lscMcmCoupled.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/geomWebgpuPass.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/pmuDomains.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/pmuVhgpuScheduler.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/compute/lscMcmCoupled.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrDEX.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/collapseFinance.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrDEX.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/qel.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/quantumDAO.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/topologyTracker.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/gpuMiner.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/supplyChain.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/powFaucet.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/qel.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostid.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostvpn.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/sovTokenomics.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/doubleRatchet.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/utxo.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/paymentPanel.flow.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/homotopyMining.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/chimeraExchange.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/sphinx.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/antiHiggs.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostid.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/cryptoTestament.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nwcInteropHarness.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrTransaction.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nwcProtocol.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ldkBridge.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nwcProtocol.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/temporalOracle.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/octreeSdf.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/cqrPqc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/hgpuCompute.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/differentialCore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/sovereignPools.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/utuTokens.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/zkCompressor.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostIdEntropyAudit.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/acousticHandshake.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/mirageCompute.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/antiHiggs.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/homotopyMining.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/entropyOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/paleoYield.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/stablecoin.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrSync.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/cryptoMiner.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/pqc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostIdEntropyAudit.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/utuTokens.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostLocker.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/aegisVault.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nwcInteropHarness.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nwcInterop.live.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/rwaTokenization.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrTransaction.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/gf256.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/collapseFinance.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/fuzzyExtractor.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ldkBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/chimeraExchange.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/doubleRatchet.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/singularityHarvester.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/matchmaker.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/singularityHarvester.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/socialRecovery.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/heptaryQuantum.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/qrng.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/doubleSpendDefense.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/voidLicense.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/paymentGateway.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/econet.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/communityTreasury.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/entropyOrchestrator.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/sovereignPools.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/watchtower.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/utxo.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/zkp.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ghostMailbox.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/zkCompressor.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/signingKeys.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/antiSybil.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/retf.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/janusFinance.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/karmaSystem.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/qrStocks.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/paymentGateway.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/quantumBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/c3Engine.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/qrStocks.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/c3Engine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/swiftChain.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/watchtower.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/phantomShopper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/nostrOracle.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/merkleTree.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/fuzzyExtractor.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/ldkChannelFacade.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/cqrPqc.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/rcp.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/furc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/pdc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/brunoTheoryTypes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/dtu.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/brunoTheory.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/hmcoAmua.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/brunoTheoryFrame.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/brunoTheoryEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/theory/collapseEngineering.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/mobileWebViewGuard.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/httpJson.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/cosmicSovereignMode.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/lususClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/aqreClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/remoteCqrConfig.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/moduleRealityBackend.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/localCqrEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lib/anacrocasticLimits.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/GovernanceSovereigntyPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/MeshLiquidityPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/ProductsPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/ProductionApp.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/Void308Checkout.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/PageShell.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/PairedDepositPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/BuilderSubscribeCheckout.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/BusinessModelPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/HomePage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/main.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/layouts/AppLayout.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuAuditClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuAuditTypes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/etrnetAnchorAbi.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuMeshSubscriber.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuRoadmap.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuMeshIdentity.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuAnchorClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuTruthLevels.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/secureRandom.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/secureRandom.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/devLog.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/qr.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/omitUndefined.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/utils/cn.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/relayProbe.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/bleChatTransport.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/etrnetKinds.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/loraDriver.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/nostrMesh.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/distanceBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/relayProbe.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/acousticDriver.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/lightningNostrTransport.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/distanceBridge.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/localDrivers.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/nostrMesh.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/network/NativeBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/ethics/consentContract.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/ethics/consentContract.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/hooks/useOmegaMaterial.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/hooks/useAmpConsent.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/hooks/useCoreConsent.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PaleoPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Omega.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/QuantumDaoPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/IsossupraCorePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/EcoNetPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SovereigntyPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/DistanceBridge.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CategoryHubPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PaleoYieldPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AnacroclastiaPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SovereignPoolsPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/StablecoinPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/KarmaWallet.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SilentMeshHostingPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Overview.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Nav.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CQRPqcPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Marquee.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/MirageComputePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ConsentContractPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/GPUMiningPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AcousticHandshakePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/HomotopyMiningPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/HGPUVisualizer.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AntiSybilLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Manifesto.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ContactList.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ActiveTerminal.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PhantomShopperPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ZKPLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/NostrSyncPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SocialFabricPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/VhgpuFarmPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/MiningPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CollapseFinancePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/GhostMailboxPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/DifferentialCorePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SkuEcosystemPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Sidebar.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AppErrorBoundary.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Onboarding.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CollapseAlgebraPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SymbiontInoculator.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PoWFaucetPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/TemporalOracleLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/LuaPluginPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PmuTruthOmegaPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/LSCPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/DevSetupBanner.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/VoidSovereignStackPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Glossary.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ParasiticArchitecture.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PanelTierBadge.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/DEXPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Hero.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/QRStocksPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/JanusFinancePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/LiquidityMeshPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CoreInnovations.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/WatchtowerPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/HeptaryQuantumPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ChatBubble.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/MeshCdnPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Messenger.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/GhostIDSetup.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/LUSUSTerminalPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Footer.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CryptoTestamentLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AQREPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PhantomHarvesterPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/OmegaResearchLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/CosmicHarmonyPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/EternetDashboard.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/GhostVPNPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ChimeraExchangePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/ConsentBanner.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/OctreeSDFPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SphinxMixnetPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/QRCTopologyPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/DoubleSpendDefenseLab.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SovereignEconomyPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/NostrDEXPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/NostrOraclePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/NetworkSimCore.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/GhostLockerPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/NotFoundPage.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PanelWrapper.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Hydra.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Roadmap.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AnimusSubstratesPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/BottomBar.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/PqcDeveloperDashboard.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/IMCCorePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SectionHeader.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/HGPUComputePanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/AegisVaultPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/QRNGPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SupplyChainSecurity.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/SocialRecoveryPanel.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/components/Guarantees.tsx"
+    },
+    {
+      "id": "ET-COSMIC/src/crdt/gCounterCrdt.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/eternet/entropy.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/eternet/eternet.entropy.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/eternet/config.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/eternet/types.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/eternet/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/social/SocialFabric.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/qrcMotor.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/tensorNetwork.stress.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/tensorNetwork.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/qrcMotor.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/trajectoryLut.generated.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/qrcRoutePqc.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/quantumSwitch.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/qrcRoutePqc.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/webgpuTensorEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/staGeodesic.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/quantumSwitch.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/tensorNetwork.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/silentMesh/voidMeshClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lsc/lscEngine.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/lsc/lscEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/routes/finance.payment.route.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuTypes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcSkuLineage.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcInfrastructure.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcSkuAdaptation.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcAdaptedComponentMap.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/routeCatalog.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/productDefinitions.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuCatalog.generated.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/componentMap.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuManifest.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuArtifacts.generated.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcAdaptedRouteCatalog.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/buildRoutes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/buildFlags.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/filterRoutes.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuManifest.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/imcRouteCatalog.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/commercialPricing.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/injectors/et-tampermonkey-injector.user.js"
+    },
+    {
+      "id": "ET-COSMIC/src/storage/contactDirectory.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/storage/chatStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/storage/hcnStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/storage/utxoStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/storage/channelStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/research/researchModules.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/research/quantumResearch.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/research/zkStarkResearch.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/research/hgpuResearch.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/buildContact.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchangeScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/scrapScanner.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/phantomHarvester.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/scrapScannerCli.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/identityMapper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/scrapScanner.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/socialScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchanges/krakenScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchanges/bybitScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchanges/mercadoBitcoinScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchanges/coinbaseScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/exchanges/binanceScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/twitterScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/tumblrScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/whatsappScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/facebookScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/instagramScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/harvesters/social/telegramScraper.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/mesh/liquidityMeshClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/paleo/anacroclastia.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/paleo/PaleoEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/paleo/anacroclastia.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/isossupra/isossupraClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/src/config/sovereign.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/vitest.config.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/index.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/voidAnimusWorker.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/higgsGit.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/phantomPipeline.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/ecoNet.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/voidRunnerExec.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/powerGovernor.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/voidOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/VoidVPS.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/vps/voidRunnerBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/useVoid.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/PowerGovernor.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/ghostDock.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/useVhgpuFarm.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/useLua.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/ghostDock.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/collapseFinance.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nostrDEX.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/qel.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/quantumDAO.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/topologyTracker.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/gpuMiner.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/supplyChain.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/powFaucet.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/qel.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ghostid.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/sovTokenomics.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/utxo.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/homotopyMining.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/chimeraExchange.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/sphinx.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/cryptoTestament.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.void-vps.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/temporalOracle.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/octreeSdf.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/hgpuCompute.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/differentialCore.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/sovereignPools.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/utuTokens.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/acousticHandshake.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/homotopyMining.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/paleoYield.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nostrSync.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/pqc.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/utuTokens.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ghostLocker.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/aegisVault.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/collapseFinance.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/fuzzyExtractor.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/matchmaker.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/socialRecovery.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/qrng.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/doubleSpendDefense.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/econet.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/communityTreasury.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/watchtower.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/zkp.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/ghostMailbox.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/signingKeys.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/antiSybil.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/retf.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/qrStocks.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/quantumBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/qrStocks.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/watchtower.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/nostrOracle.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/merkleTree.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/fuzzyExtractor.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/pmu/pmuAuditClient.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/utils/cn.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/loraDriver.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/nostrMesh.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/acousticDriver.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/lightningNostrTransport.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/distanceBridge.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/localDrivers.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/network/NativeBridge.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/transport/nostrBus.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/transport/voidRelays.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/transport/distanceBridge.void-vps.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/trajectoryLut.generated.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/qrcRoutePqc.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/webgpuTensorEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/staGeodesic.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/lsc/lscEngine.test.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/lsc/lscEngine.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/storage/hcnStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/storage/utxoStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/storage/channelStore.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/loadEnv.js"
+    },
+    {
+      "id": "ET-COSMIC/server/server.js"
+    },
+    {
+      "id": "ET-COSMIC/server/pqcService.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/proofOfData.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/dmcToken.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/hostingRevenue.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/binaryMarket.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/proofOfConnectivity.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/pairedDeposit.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/clienteLane.test.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/ethicalMining.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/hostingRevenue.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/sovLedger.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/binaryMarket.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/sovLedger.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/economyPersistence.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/ethicalMining.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/swiftChain.js"
+    },
+    {
+      "id": "ET-COSMIC/server/economy/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/core.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/sensor_entropy_mesh.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/chaos_mesh.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/zk_aggregate.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/marketplace.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/ising_mesh.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/entropy_service.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/thomas_distributed.js"
+    },
+    {
+      "id": "ET-COSMIC/server/imc/acoustic_room.js"
+    },
+    {
+      "id": "ET-COSMIC/server/pqcService/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/spin_network.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/memory_collapse.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/chi_field.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/sta_geodesic.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/orchestrator.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/lscCore.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/lieb_robinson.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/causal_tracker.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/lsc_monitor.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/aqre/sdf_engine.js"
+    },
+    {
+      "id": "ET-COSMIC/server/void/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/void/mesh.js"
+    },
+    {
+      "id": "ET-COSMIC/server/void/bridge.js"
+    },
+    {
+      "id": "ET-COSMIC/server/void/pci.js"
+    },
+    {
+      "id": "ET-COSMIC/server/void/compute.js"
+    },
+    {
+      "id": "ET-COSMIC/server/pmu/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/eternet/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/vortex_memory.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/grav_mimetic_cooler.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/cavity_planck.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/adiabatic_shifter.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/ising_machine.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/chaos_bell.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/thomas_fermi_solver.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/tensor_contract.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lusus/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/silentMesh/symbioticHost.js"
+    },
+    {
+      "id": "ET-COSMIC/server/silentMesh/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/silentMesh/cdnStore.js"
+    },
+    {
+      "id": "ET-COSMIC/server/silentMesh/void700.js"
+    },
+    {
+      "id": "ET-COSMIC/server/lightning/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/slaContract.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/datRegistry.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/liquidityMining.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/vasCheckout.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/datSettlement.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/liquidity.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/datRegistry.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/slaContract.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/tierSubscriptions.js"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/datSettlement.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/liquidityMining.d.ts"
+    },
+    {
+      "id": "ET-COSMIC/server/mesh/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/core.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/ising_solver.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/acoustic_handshake.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/qrng_thermal.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/index.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/thomas_fermi_sdf.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/vortex_store.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/homotopy_compiler.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/standalone.js"
+    },
+    {
+      "id": "ET-COSMIC/server/isossupra/chaos_bell_auth.js"
+    },
+    {
+      "id": "ET-COSMIC/core/__init__.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tensor_networks/mera_compiler.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tensor_networks/__init__.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tensor_networks/spin_networks.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tensor_networks/hermiticity.py"
+    },
+    {
+      "id": "ET-COSMIC/core/motor_qrc/sta_geodesic.py"
+    },
+    {
+      "id": "ET-COSMIC/core/motor_qrc/__init__.py"
+    },
+    {
+      "id": "ET-COSMIC/core/motor_qrc/trajectory_compiler.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tests/test_sta_geodesic.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tests/test_anderson.py"
+    },
+    {
+      "id": "ET-COSMIC/core/tests/test_hermiticity.py"
+    },
+    {
+      "id": "ET-COSMIC/core/hamiltonians/anderson.py"
+    },
+    {
+      "id": "ET-COSMIC/core/hamiltonians/__init__.py"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/python/_paths.py"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/python/entropy_audit.py"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/python/sts_light.py"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/python/void_pool.py"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/ts/pmuAuditTypes.ts"
+    },
+    {
+      "id": "ET-COSMIC/pmu-base/ts/pmuTruthLevels.ts"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/mapreduce.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/wasm_worker.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/ghost_docker.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/void_vps.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/main.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/eco_net.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/lusus_tensor.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/poh.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_runner/src/lib.rs"
+    },
+    {
+      "id": "ET-COSMIC/public/void-mesh.js"
+    },
+    {
+      "id": "ET-COSMIC/public/sw.js"
+    },
+    {
+      "id": "ET-COSMIC/public/ghostid-quantum-injector.user.js"
+    },
+    {
+      "id": "ET-COSMIC/workers/pi_worker/src/lib.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/license.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/pqc.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/antisybil.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/ldk.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/qel.rs"
+    },
+    {
+      "id": "ET-COSMIC/void_core/src/lib.rs"
+    },
+    {
+      "id": "ET-COSMIC/scripts/revenue-calculator.ts"
+    },
+    {
+      "id": "ET-COSMIC/scripts/vite-b2b-loaders.ts"
+    },
+    {
+      "id": "ET-COSMIC/scripts/lnd-create-wallet.py"
+    },
+    {
+      "id": "GitPay/sw.js"
+    },
+    {
+      "id": "GitPay/app.js"
+    },
+    {
+      "id": "GitPay/lib-entry.js"
+    },
+    {
+      "id": "GitPay/js/bitcoin.min.js"
+    },
+    {
+      "id": "GitPay/js/nostr.js"
+    }
+  ],
+  "links": [
+    {
+      "source": "src/shared/lib/wasm.test.ts",
+      "target": "src/shared/lib/webgpu.ts",
+      "value": 1
+    },
+    {
+      "source": "src/services/bitcoin.test.ts",
+      "target": "src/services/bitcoin.ts",
+      "value": 1
+    },
+    {
+      "source": "src/entities/domain.test.ts",
+      "target": "src/entities/invoice/model.ts",
+      "value": 1
+    },
+    {
+      "source": "src/entities/domain.test.ts",
+      "target": "src/entities/ghostid/model.ts",
+      "value": 1
+    },
+    {
+      "source": "src/entities/domain.test.ts",
+      "target": "src/entities/mesh/model.ts",
+      "value": 1
+    },
+    {
+      "source": "src/features/ghostid-deploy/identityMigration.test.ts",
+      "target": "src/features/ghostid-deploy/identityMigration.ts",
+      "value": 1
+    },
+    {
+      "source": "src/features/ghostid-deploy/SettingsImport.tsx",
+      "target": "src/features/ghostid-deploy/identityMigration.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/vitest.config.ts",
+      "target": "ET-COSMIC/scripts/vite-b2b-loaders.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/stress_test.js",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/stress_test.js",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/vite.config.ts",
+      "target": "ET-COSMIC/scripts/vite-b2b-loaders.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/vite.config.ts",
+      "target": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/vite.config.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/routes.test.ts",
+      "target": "ET-COSMIC/src/panelTiers.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/router.tsx",
+      "target": "ET-COSMIC/src/b2b/buildRoutes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/router.tsx",
+      "target": "ET-COSMIC/src/b2b/routeCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/router.tsx",
+      "target": "ET-COSMIC/src/b2b/filterRoutes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/router.tsx",
+      "target": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/network/NativeBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/b2b/buildFlags.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/components/NotFoundPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/b2b/componentMap.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/AppLanding.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/App.tsx",
+      "target": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/AppLanding.tsx",
+      "target": "ET-COSMIC/src/b2b/imcSkuLineage.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/AppLanding.tsx",
+      "target": "ET-COSMIC/src/components/PanelTierBadge.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/AppLanding.tsx",
+      "target": "ET-COSMIC/src/panelTiers.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/main.tsx",
+      "target": "ET-COSMIC/src/App.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/main.tsx",
+      "target": "ET-COSMIC/src/lib/mobileWebViewGuard.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/main.tsx",
+      "target": "ET-COSMIC/src/components/AppErrorBoundary.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/collapse/collapseAlgebra.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/collapse/collapseAlgebra.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/plugins/voidAnimus.ts",
+      "target": "ET-COSMIC/src/plugins/voidAnimusWeb.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/plugins/voidAnimusWeb.ts",
+      "target": "ET-COSMIC/src/plugins/voidAnimus.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/ghostDockerBridge.ts",
+      "target": "ET-COSMIC/src/core/ghostDock.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/ghostDockerBridge.ts",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/phantomPipeline.ts",
+      "target": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/phantomPipeline.ts",
+      "target": "ET-COSMIC/src/vps/ecoNet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/phantomPipeline.ts",
+      "target": "ET-COSMIC/src/vps/ghostDockerBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+      "target": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+      "target": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+      "target": "ET-COSMIC/src/vps/higgsGit.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+      "target": "ET-COSMIC/src/vps/phantomPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+      "target": "ET-COSMIC/src/vps/ecoNet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerClient.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/vps/voidRunnerClient.ts",
+      "target": "ET-COSMIC/src/lib/remoteCqrConfig.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcClient.ts",
+      "target": "ET-COSMIC/src/imc/sensorEntropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcClient.ts",
+      "target": "ET-COSMIC/src/lib/httpJson.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "target": "ET-COSMIC/src/eternet/entropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "target": "ET-COSMIC/src/imc/sensorEntropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/omega/AnimusBootstrap.ts",
+      "target": "ET-COSMIC/src/omega/steganography.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/omega/AnimusBootstrap.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/slaContract.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/reputationPricing.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/reputationPricing.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/liquidityMining.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/liquidityMining.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/slaContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/liquidity/liquidityMining.ts",
+      "target": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/ldkWasmBridge.ts",
+      "target": "ET-COSMIC/src/crypto/ldkChannelFacade.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/ldkWasmBridge.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "target": "ET-COSMIC/src/compute/pmuDomains.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "target": "ET-COSMIC/src/research/hgpuResearch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "target": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "target": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/eil.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/eil.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/knownLimitations.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/ldkWasmBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/recursiveStark.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/crypto/cqrPqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "target": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "target": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "target": "ET-COSMIC/src/research/hgpuResearch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/slcc.ts",
+      "target": "ET-COSMIC/src/protocol/amp/recursiveStark.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts",
+      "target": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts",
+      "target": "ET-COSMIC/src/compute/pmuDomains.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/src/crypto/zkCompressor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/src/lsc/lscEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/src/core/VoidProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/useVoid.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/useVoid.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/PowerGovernor.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/core/ghostDock.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/vps/phantomPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/gpuMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/vps/ecoNet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/vps/higgsGit.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostDock.test.ts",
+      "target": "ET-COSMIC/src/core/ghostDock.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/cosmicVoidOrchestrator.test.ts",
+      "target": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/useVhgpuFarm.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/useVhgpuFarm.ts",
+      "target": "ET-COSMIC/src/core/useLua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/ghostDock.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/network/loraDriver.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/network/acousticDriver.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/network/nostrMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/network/localDrivers.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.c3.test.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/core/VoidOrchestrator.c3.test.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/void/voidStackClient.ts",
+      "target": "ET-COSMIC/src/lib/httpJson.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/void/etCore.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/void/etCore.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "target": "ET-COSMIC/src/lsc/lscEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "target": "ET-COSMIC/src/compute/pmuDomains.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "target": "ET-COSMIC/src/collapse/collapseAlgebra.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+      "target": "ET-COSMIC/src/crypto/gpuMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+      "target": "ET-COSMIC/src/crypto/hgpuCompute.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/collapse/collapseAlgebra.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "target": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.test.ts",
+      "target": "ET-COSMIC/src/compute/pmuDomains.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/pmuVhgpuScheduler.test.ts",
+      "target": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/compute/lscMcmCoupled.test.ts",
+      "target": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrDEX.test.ts",
+      "target": "ET-COSMIC/src/crypto/nostrDEX.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrDEX.test.ts",
+      "target": "ET-COSMIC/src/network/etrnetKinds.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrDEX.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrDEX.ts",
+      "target": "ET-COSMIC/src/network/etrnetKinds.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/qel.test.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumDAO.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/powFaucet.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/qel.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.test.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paymentPanel.flow.test.ts",
+      "target": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/src/crypto/matchmaker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/antiHiggs.test.ts",
+      "target": "ET-COSMIC/src/crypto/antiHiggs.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/utils/devLog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/crypto/fuzzyExtractor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/crypto/ghostIdEntropyAudit.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostid.ts",
+      "target": "ET-COSMIC/src/crypto/voidLicense.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/cryptoTestament.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/cryptoTestament.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nwcInteropHarness.ts",
+      "target": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrTransaction.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrTransaction.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrTransaction.ts",
+      "target": "ET-COSMIC/src/network/etrnetKinds.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ldkBridge.test.ts",
+      "target": "ET-COSMIC/src/crypto/ldkBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nwcProtocol.test.ts",
+      "target": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/temporalOracle.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/cqrPqc.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/cqrPqc.ts",
+      "target": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovereignPools.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovereignPools.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/zkCompressor.test.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/acousticHandshake.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/antiHiggs.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/antiHiggs.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "target": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "target": "ET-COSMIC/src/eternet/entropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "target": "ET-COSMIC/src/eternet/config.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paleoYield.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrSync.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/aegisVault.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/aegisVault.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nwcInteropHarness.test.ts",
+      "target": "ET-COSMIC/src/crypto/nwcInteropHarness.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nwcInterop.live.test.ts",
+      "target": "ET-COSMIC/src/crypto/nwcInteropHarness.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/collapseFinance.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ldkBridge.ts",
+      "target": "ET-COSMIC/src/storage/channelStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/chimeraExchange.test.ts",
+      "target": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/chimeraExchange.test.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.ts",
+      "target": "ET-COSMIC/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/matchmaker.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/socialRecovery.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/socialRecovery.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/heptaryQuantum.test.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/doubleSpendDefense.ts",
+      "target": "ET-COSMIC/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/voidLicense.ts",
+      "target": "ET-COSMIC/src/utils/devLog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/voidLicense.ts",
+      "target": "ET-COSMIC/src/plugins/voidAnimus.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "target": "ET-COSMIC/src/crypto/nostrOracle.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "target": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/communityTreasury.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/entropyOrchestrator.test.ts",
+      "target": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovereignPools.test.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/sovereignPools.test.ts",
+      "target": "ET-COSMIC/src/crypto/sovereignPools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/watchtower.test.ts",
+      "target": "ET-COSMIC/src/crypto/watchtower.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ghostMailbox.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/zkCompressor.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/antiSybil.ts",
+      "target": "ET-COSMIC/src/crypto/gpuMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/antiSybil.ts",
+      "target": "ET-COSMIC/src/crypto/hgpuCompute.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/retf.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/retf.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/src/crypto/zkp.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/paymentGateway.test.ts",
+      "target": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/imc/imcEntropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/lib/anacrocasticLimits.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/lib/remoteCqrConfig.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/utils/devLog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/eternet/index.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/src/crypto/zkCompressor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/qrStocks.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/qrStocks.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "target": "ET-COSMIC/src/crypto/cqrPqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "target": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "target": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/crypto/ghostvpn.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/crypto/ghostLocker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/crypto/janusFinance.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/nostrOracle.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ldkChannelFacade.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/crypto/ldkChannelFacade.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/rcp.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/rcp.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/pdc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/rcp.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/hmcoAmua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "target": "ET-COSMIC/src/theory/dtu.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/dtu.ts",
+      "target": "ET-COSMIC/src/lsc/lscEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/dtu.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/dtu.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/rcp.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/hmcoAmua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+      "target": "ET-COSMIC/src/theory/dtu.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/hmcoAmua.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/pdc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/rcp.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/hmcoAmua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "target": "ET-COSMIC/src/theory/dtu.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "target": "ET-COSMIC/src/theory/furc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/mobileWebViewGuard.ts",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "target": "ET-COSMIC/src/lib/remoteCqrConfig.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/lususClient.ts",
+      "target": "ET-COSMIC/src/lib/httpJson.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/aqreClient.ts",
+      "target": "ET-COSMIC/src/lib/httpJson.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/lsc/lscEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/paleo/anacroclastia.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/crypto/supplyChain.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/crypto/collapseFinance.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "target": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/localCqrEngine.ts",
+      "target": "ET-COSMIC/src/vps/ghostDockerBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/localCqrEngine.ts",
+      "target": "ET-COSMIC/src/vps/voidRunnerClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/lib/localCqrEngine.ts",
+      "target": "ET-COSMIC/src/plugins/voidAnimus.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/GovernanceSovereigntyPage.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/MeshLiquidityPage.tsx",
+      "target": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/MeshLiquidityPage.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductsPage.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/components/Onboarding.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/GovernanceSovereigntyPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/BusinessModelPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/MeshLiquidityPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/ProductsPage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "target": "ET-COSMIC/src/pages/HomePage.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/Void308Checkout.tsx",
+      "target": "ET-COSMIC/src/economy/sovEconomyClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/BuilderSubscribeCheckout.tsx",
+      "target": "ET-COSMIC/src/economy/sovEconomyClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/BusinessModelPage.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/HomePage.tsx",
+      "target": "ET-COSMIC/src/pages/PageShell.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/main.tsx",
+      "target": "ET-COSMIC/src/pages/ProductionApp.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "target": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "target": "ET-COSMIC/src/pages/BuilderSubscribeCheckout.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "target": "ET-COSMIC/src/pages/Void308Checkout.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "target": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+      "target": "ET-COSMIC/src/pages/PairedDepositPanel.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/PanelWrapper.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/b2b/buildFlags.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/BottomBar.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/AppErrorBoundary.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/DevSetupBanner.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/ConsentBanner.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/Sidebar.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/router.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/layouts/AppLayout.tsx",
+      "target": "ET-COSMIC/src/components/CategoryHubPanel.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "target": "ET-COSMIC/src/lib/localCqrEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "target": "ET-COSMIC/src/pmu/pmuAuditTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAuditTypes.ts",
+      "target": "ET-COSMIC/src/pmu/pmuTruthLevels.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuMeshSubscriber.ts",
+      "target": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuMeshSubscriber.ts",
+      "target": "ET-COSMIC/src/network/etrnetKinds.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuMeshSubscriber.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAnchorClient.ts",
+      "target": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuAnchorClient.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "target": "ET-COSMIC/src/network/etrnetKinds.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "target": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/utils/secureRandom.test.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/relayProbe.test.ts",
+      "target": "ET-COSMIC/src/network/relayProbe.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/nostrMesh.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/nostrMesh.ts",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/distanceBridge.ts",
+      "target": "ET-COSMIC/src/protocol/amp/knownLimitations.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/distanceBridge.ts",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/distanceBridge.test.ts",
+      "target": "ET-COSMIC/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/distanceBridge.test.ts",
+      "target": "ET-COSMIC/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/nostrMesh.test.ts",
+      "target": "ET-COSMIC/src/network/nostrMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/src/plugins/voidAnimus.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/ethics/consentContract.test.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/hooks/useAmpConsent.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/hooks/useAmpConsent.ts",
+      "target": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/hooks/useCoreConsent.ts",
+      "target": "ET-COSMIC/src/hooks/useAmpConsent.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PaleoPanel.tsx",
+      "target": "ET-COSMIC/src/paleo/PaleoEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Omega.tsx",
+      "target": "ET-COSMIC/src/components/OmegaResearchLab.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Omega.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QuantumDaoPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QuantumDaoPanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/IsossupraCorePanel.tsx",
+      "target": "ET-COSMIC/src/isossupra/isossupraClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/IsossupraCorePanel.tsx",
+      "target": "ET-COSMIC/src/lib/anacrocasticLimits.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuMeshIdentity.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuRoadmap.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EcoNetPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EcoNetPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereigntyPanel.tsx",
+      "target": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereigntyPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DistanceBridge.tsx",
+      "target": "ET-COSMIC/src/components/NetworkSimCore.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DistanceBridge.tsx",
+      "target": "ET-COSMIC/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DistanceBridge.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DistanceBridge.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DistanceBridge.tsx",
+      "target": "ET-COSMIC/src/components/KarmaWallet.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CategoryHubPanel.tsx",
+      "target": "ET-COSMIC/src/components/PanelTierBadge.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AnacroclastiaPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereignPoolsPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereignPoolsPanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereignPoolsPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/sovereignPools.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/stablecoin.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/KarmaWallet.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/KarmaWallet.tsx",
+      "target": "ET-COSMIC/src/crypto/karmaSystem.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/KarmaWallet.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SilentMeshHostingPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SilentMeshHostingPanel.tsx",
+      "target": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Overview.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CQRPqcPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MirageComputePanel.tsx",
+      "target": "ET-COSMIC/src/crypto/mirageCompute.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MirageComputePanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MirageComputePanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GPUMiningPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/gpuMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AcousticHandshakePanel.tsx",
+      "target": "ET-COSMIC/src/crypto/acousticHandshake.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/HomotopyMiningPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/HomotopyMiningPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/HGPUVisualizer.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/HGPUVisualizer.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AntiSybilLab.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AntiSybilLab.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/utils/qr.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/storage/utxoStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/crypto/matchmaker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/core/PowerGovernor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomShopperPanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomShopperPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/phantomShopper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomShopperPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NostrSyncPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/nostrSync.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SocialFabricPanel.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SocialFabricPanel.tsx",
+      "target": "ET-COSMIC/src/social/SocialFabric.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/VhgpuFarmPanel.tsx",
+      "target": "ET-COSMIC/src/core/useVhgpuFarm.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MiningPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CollapseFinancePanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostMailboxPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/ghostMailbox.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SkuEcosystemPanel.tsx",
+      "target": "ET-COSMIC/src/b2b/skuCatalog.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SkuEcosystemPanel.tsx",
+      "target": "ET-COSMIC/src/b2b/imcSkuLineage.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CollapseAlgebraPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SymbiontInoculator.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SymbiontInoculator.tsx",
+      "target": "ET-COSMIC/src/crypto/sovTokenomics.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SymbiontInoculator.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SymbiontInoculator.tsx",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PoWFaucetPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/powFaucet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/TemporalOracleLab.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/TemporalOracleLab.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LuaPluginPanel.tsx",
+      "target": "ET-COSMIC/src/core/useLua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuTruthOmegaPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuTruthLevels.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LSCPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DevSetupBanner.tsx",
+      "target": "ET-COSMIC/src/router.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DevSetupBanner.tsx",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+      "target": "ET-COSMIC/src/omega/AnimusBootstrap.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+      "target": "ET-COSMIC/src/crypto/supplyChain.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/matchmaker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DEXPanel.tsx",
+      "target": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Hero.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QRStocksPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/qrStocks.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QRStocksPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/JanusFinancePanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/JanusFinancePanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/JanusFinancePanel.tsx",
+      "target": "ET-COSMIC/src/crypto/janusFinance.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LiquidityMeshPanel.tsx",
+      "target": "ET-COSMIC/src/economy/sovEconomyClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LiquidityMeshPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LiquidityMeshPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CoreInnovations.tsx",
+      "target": "ET-COSMIC/src/components/AntiSybilLab.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CoreInnovations.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/WatchtowerPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/WatchtowerPanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ChatBubble.tsx",
+      "target": "ET-COSMIC/src/social/SocialFabric.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MeshCdnPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/MeshCdnPanel.tsx",
+      "target": "ET-COSMIC/src/silentMesh/voidMeshClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/storage/chatStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/components/ContactList.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/components/ChatBubble.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Messenger.tsx",
+      "target": "ET-COSMIC/src/social/SocialFabric.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "target": "ET-COSMIC/src/hooks/useCoreConsent.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LUSUSTerminalPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/LUSUSTerminalPanel.tsx",
+      "target": "ET-COSMIC/src/lib/anacrocasticLimits.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Footer.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AQREPanel.tsx",
+      "target": "ET-COSMIC/src/lib/aqreClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomHarvesterPanel.tsx",
+      "target": "ET-COSMIC/src/harvesters/exchangeScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomHarvesterPanel.tsx",
+      "target": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PhantomHarvesterPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useAmpConsent.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/OmegaResearchLab.tsx",
+      "target": "ET-COSMIC/src/omega/steganography.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/OmegaResearchLab.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CosmicHarmonyPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CosmicHarmonyPanel.tsx",
+      "target": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/CosmicHarmonyPanel.tsx",
+      "target": "ET-COSMIC/src/pmu/pmuTruthLevels.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EternetDashboard.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EternetDashboard.tsx",
+      "target": "ET-COSMIC/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EternetDashboard.tsx",
+      "target": "ET-COSMIC/src/utils/devLog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EternetDashboard.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/EternetDashboard.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx",
+      "target": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx",
+      "target": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx",
+      "target": "ET-COSMIC/src/theory/collapseEngineering.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx",
+      "target": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostVPNPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostVPNPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/ghostvpn.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ChimeraExchangePanel.tsx",
+      "target": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ChimeraExchangePanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ChimeraExchangePanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/ConsentBanner.tsx",
+      "target": "ET-COSMIC/src/hooks/useCoreConsent.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/OctreeSDFPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/OctreeSDFPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/OctreeSDFPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/octreeSdf.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SphinxMixnetPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/sphinx.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QRCTopologyPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DoubleSpendDefenseLab.tsx",
+      "target": "ET-COSMIC/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/DoubleSpendDefenseLab.tsx",
+      "target": "ET-COSMIC/src/crypto/doubleSpendDefense.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereignEconomyPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SovereignEconomyPanel.tsx",
+      "target": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NostrDEXPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/nostrDEX.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NostrDEXPanel.tsx",
+      "target": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NostrOraclePanel.tsx",
+      "target": "ET-COSMIC/src/crypto/nostrOracle.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NostrOraclePanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/NetworkSimCore.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/GhostLockerPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/ghostLocker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+      "target": "ET-COSMIC/src/compute/pmuDomains.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+      "target": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+      "target": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PanelWrapper.tsx",
+      "target": "ET-COSMIC/src/panelTiers.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PanelWrapper.tsx",
+      "target": "ET-COSMIC/src/components/PanelTierBadge.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PanelWrapper.tsx",
+      "target": "ET-COSMIC/src/router.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PanelWrapper.tsx",
+      "target": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+      "target": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/nwcInteropHarness.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+      "target": "ET-COSMIC/src/config/sovereign.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Hydra.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Hydra.tsx",
+      "target": "ET-COSMIC/src/components/TemporalOracleLab.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Hydra.tsx",
+      "target": "ET-COSMIC/src/components/DoubleSpendDefenseLab.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Roadmap.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AnimusSubstratesPanel.tsx",
+      "target": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AnimusSubstratesPanel.tsx",
+      "target": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AegisVaultPanel.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AegisVaultPanel.tsx",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/AegisVaultPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/aegisVault.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/QRNGPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/qrng.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SupplyChainSecurity.tsx",
+      "target": "ET-COSMIC/src/crypto/supplyChain.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+      "target": "ET-COSMIC/src/core/useVoid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+      "target": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+      "target": "ET-COSMIC/src/storage/utxoStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/SocialRecoveryPanel.tsx",
+      "target": "ET-COSMIC/src/crypto/socialRecovery.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/components/Guarantees.tsx",
+      "target": "ET-COSMIC/src/components/SectionHeader.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/entropy.ts",
+      "target": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/entropy.ts",
+      "target": "ET-COSMIC/src/eternet/types.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/entropy.ts",
+      "target": "ET-COSMIC/src/lib/lususClient.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/entropy.ts",
+      "target": "ET-COSMIC/src/eternet/config.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/entropy.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/eternet.entropy.test.ts",
+      "target": "ET-COSMIC/src/eternet/entropy.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/eternet/config.ts",
+      "target": "ET-COSMIC/src/eternet/types.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/social/SocialFabric.ts",
+      "target": "ET-COSMIC/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/social/SocialFabric.ts",
+      "target": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/social/SocialFabric.ts",
+      "target": "ET-COSMIC/src/storage/chatStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/social/SocialFabric.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "target": "ET-COSMIC/src/qrc/trajectoryLut.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "target": "ET-COSMIC/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/tensorNetwork.stress.test.ts",
+      "target": "ET-COSMIC/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/tensorNetwork.test.ts",
+      "target": "ET-COSMIC/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcMotor.test.ts",
+      "target": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcMotor.test.ts",
+      "target": "ET-COSMIC/src/qrc/trajectoryLut.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcMotor.test.ts",
+      "target": "ET-COSMIC/src/qrc/staGeodesic.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/trajectoryLut.generated.ts",
+      "target": "ET-COSMIC/src/qrc/staGeodesic.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcRoutePqc.test.ts",
+      "target": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcRoutePqc.test.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcRoutePqc.test.ts",
+      "target": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/quantumSwitch.test.ts",
+      "target": "ET-COSMIC/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/quantumSwitch.test.ts",
+      "target": "ET-COSMIC/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+      "target": "ET-COSMIC/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+      "target": "ET-COSMIC/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/silentMesh/voidMeshClient.ts",
+      "target": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/routes/finance.payment.route.test.ts",
+      "target": "ET-COSMIC/src/b2b/imcAdaptedComponentMap.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/routes/finance.payment.route.test.ts",
+      "target": "ET-COSMIC/src/b2b/imcRouteCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "target": "ET-COSMIC/src/b2b/imcAdaptedRouteCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuCatalog.generated.ts",
+      "target": "ET-COSMIC/src/b2b/skuTypes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "target": "ET-COSMIC/src/b2b/skuCatalog.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/imcAdaptedRouteCatalog.ts",
+      "target": "ET-COSMIC/src/b2b/imcRouteCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/buildRoutes.ts",
+      "target": "ET-COSMIC/src/b2b/routeCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/filterRoutes.ts",
+      "target": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/filterRoutes.ts",
+      "target": "ET-COSMIC/src/router.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+      "target": "ET-COSMIC/src/b2b/skuCatalog.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+      "target": "ET-COSMIC/src/b2b/routeCatalog.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+      "target": "ET-COSMIC/src/b2b/buildRoutes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+      "target": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+      "target": "ET-COSMIC/src/b2b/filterRoutes.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/storage/utxoStore.ts",
+      "target": "ET-COSMIC/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/researchModules.test.ts",
+      "target": "ET-COSMIC/src/research/zkStarkResearch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/researchModules.test.ts",
+      "target": "ET-COSMIC/src/research/hgpuResearch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/researchModules.test.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/quantumResearch.ts",
+      "target": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/quantumResearch.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/zkStarkResearch.ts",
+      "target": "ET-COSMIC/src/crypto/zkCompressor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/zkStarkResearch.ts",
+      "target": "ET-COSMIC/src/protocol/amp/recursiveStark.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/zkStarkResearch.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/research/hgpuResearch.ts",
+      "target": "ET-COSMIC/src/ethics/consentContract.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "target": "ET-COSMIC/src/utils/omitUndefined.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "target": "ET-COSMIC/src/harvesters/socialScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchangeScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.test.ts",
+      "target": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchanges/mercadoBitcoinScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/utils/omitUndefined.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/twitterScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/whatsappScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/identityMapper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchanges/binanceScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/facebookScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/telegramScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchanges/krakenScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchangeScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchanges/coinbaseScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/exchanges/bybitScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/tumblrScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/socialScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "target": "ET-COSMIC/src/harvesters/social/instagramScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+      "target": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+      "target": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/identityMapper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/social/telegramScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/socialScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/exchangeScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+      "target": "ET-COSMIC/src/harvesters/social/twitterScraper.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/socialScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchanges/krakenScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchanges/bybitScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchanges/mercadoBitcoinScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchanges/coinbaseScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/exchanges/binanceScraper.ts",
+      "target": "ET-COSMIC/src/storage/contactDirectory.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/social/twitterScraper.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/social/whatsappScraper.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/social/facebookScraper.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/social/instagramScraper.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/harvesters/social/telegramScraper.ts",
+      "target": "ET-COSMIC/src/harvesters/buildContact.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/paleo/PaleoEngine.ts",
+      "target": "ET-COSMIC/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts",
+      "target": "ET-COSMIC/src/paleo/PaleoEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts",
+      "target": "ET-COSMIC/src/paleo/anacroclastia.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/src/isossupra/isossupraClient.ts",
+      "target": "ET-COSMIC/src/lib/httpJson.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/lsc/lscEngine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/useVoid.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/useVoid.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/PowerGovernor.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostDock.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/ghostDock.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/useVhgpuFarm.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/useLua.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/useVhgpuFarm.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/ghostDock.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/localDrivers.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/acousticDriver.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/loraDriver.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/qrcRoutePqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/nostrMesh.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nostrDEX.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/qel.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/quantumDAO.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/powFaucet.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ghostid.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/sovTokenomics.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/matchmaker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/chimeraExchange.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/cryptoTestament.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/cryptoTestament.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/temporalOracle.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/sovereignPools.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/sovereignPools.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/acousticHandshake.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/paleoYield.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/aegisVault.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/aegisVault.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/collapseFinance.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.ts",
+      "target": "ET-COSMIC/eternet_ts/src/storage/channelStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/matchmaker.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/socialRecovery.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/socialRecovery.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/doubleSpendDefense.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/communityTreasury.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/watchtower.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/watchtower.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/ghostMailbox.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/antiSybil.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/hgpuCompute.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/antiSybil.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/gpuMiner.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/retf.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/signingKeys.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/zkp.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/qrStocks.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostLocker.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/crypto/nostrOracle.ts",
+      "target": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/nostrMesh.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/distanceBridge.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/distanceBridge.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/network/NativeBridge.ts",
+      "target": "ET-COSMIC/eternet_ts/src/storage/hcnStore.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts",
+      "target": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/trajectoryLut.generated.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/trajectoryLut.generated.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/staGeodesic.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.test.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/qrcRoutePqc.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/pqc.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/qrc/qrcRoutePqc.ts",
+      "target": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/eternet_ts/src/storage/utxoStore.ts",
+      "target": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tensor_networks/__init__.py",
+      "target": "ET-COSMIC/core/tensor_networks/spin_networks.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tensor_networks/__init__.py",
+      "target": "ET-COSMIC/core/tensor_networks/mera_compiler.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tensor_networks/__init__.py",
+      "target": "ET-COSMIC/core/tensor_networks/hermiticity.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/motor_qrc/__init__.py",
+      "target": "ET-COSMIC/server/aqre/sta_geodesic.js",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/motor_qrc/trajectory_compiler.py",
+      "target": "ET-COSMIC/server/aqre/sta_geodesic.js",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_sta_geodesic.py",
+      "target": "ET-COSMIC/core/motor_qrc/sta_geodesic.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_anderson.py",
+      "target": "ET-COSMIC/core/hamiltonians/anderson.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_hermiticity.py",
+      "target": "ET-COSMIC/core/tensor_networks/spin_networks.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_hermiticity.py",
+      "target": "ET-COSMIC/core/tensor_networks/mera_compiler.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_hermiticity.py",
+      "target": "ET-COSMIC/core/tensor_networks/hermiticity.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/tests/test_hermiticity.py",
+      "target": "ET-COSMIC/core/hamiltonians/anderson.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/core/hamiltonians/__init__.py",
+      "target": "ET-COSMIC/core/hamiltonians/anderson.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/python/_paths.py",
+      "target": "src/pages/GhostIDPage/index.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/python/entropy_audit.py",
+      "target": "ET-COSMIC/pmu-base/python/sts_light.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/python/entropy_audit.py",
+      "target": "ET-COSMIC/pmu-base/python/void_pool.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/python/entropy_audit.py",
+      "target": "ET-COSMIC/pmu-base/python/_paths.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/python/void_pool.py",
+      "target": "ET-COSMIC/pmu-base/python/_paths.py",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/pmu-base/ts/pmuAuditTypes.ts",
+      "target": "ET-COSMIC/pmu-base/ts/pmuTruthLevels.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/scripts/vite-b2b-loaders.ts",
+      "target": "ET-COSMIC/src/b2b/componentMap.ts",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/scripts/lnd-create-wallet.py",
+      "target": "src/pages/GhostIDPage/index.tsx",
+      "value": 1
+    },
+    {
+      "source": "ET-COSMIC/scripts/lnd-create-wallet.py",
+      "target": "ET-COSMIC/src/server/ecosystem.stress.test.ts",
+      "value": 1
+    }
+  ],
+  "cycles": [
+    "ET-COSMIC/src/plugins/voidAnimusWeb.ts",
+    "ET-COSMIC/src/imc/imcEntropy.ts",
+    "ET-COSMIC/src/theory/collapseEngineering.ts",
+    "ET-COSMIC/eternet_ts/src/network/nostrMesh.ts",
+    "ET-COSMIC/src/plugins/voidAnimus.ts",
+    "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+    "ET-COSMIC/src/network/nostrMesh.ts",
+    "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+    "ET-COSMIC/src/eternet/entropy.ts",
+    "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+    "ET-COSMIC/src/core/VoidOrchestrator.ts",
+    "ET-COSMIC/src/router.tsx",
+    "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+    "ET-COSMIC/src/crypto/quantumBridge.ts",
+    "ET-COSMIC/src/b2b/filterRoutes.ts"
+  ]
+}

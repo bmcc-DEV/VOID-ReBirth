@@ -1,0 +1,1164 @@
+{
+  "generated_at": "2026-06-14T01:57:00Z",
+  "modules": [
+    {
+      "name": "GitPay",
+      "path": "GitPay",
+      "purpose": "Processador de pagamentos Bitcoin sem custódia client-side e descentralizado baseado em Nostr (NIP-23 / Long-form) e derivação de endereços BIP32",
+      "primary_files": [
+        "GitPay/app.js",
+        "GitPay/lib-entry.js",
+        "GitPay/sw.js",
+        "GitPay/index.html"
+      ],
+      "functions": [
+        {
+          "name": "deriveAddressFromExtendedKey",
+          "file": "GitPay/lib-entry.js",
+          "params": [
+            "extendedKey: string",
+            "index: number",
+            "type: string",
+            "networkType: string"
+          ],
+          "returns": "{ address: string, addressType: string, derivationPath: string, network: string, originalPrefix: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "deriveInvoiceKey",
+          "file": "GitPay/app.js",
+          "params": [
+            "masterKeyHex: string",
+            "index: number"
+          ],
+          "returns": "Promise<string>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "encryptAesGcm",
+          "file": "GitPay/app.js",
+          "params": [
+            "text: string",
+            "hexKey: string"
+          ],
+          "returns": "Promise<{ ciphertext: string, iv: string }>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "decryptAesGcm",
+          "file": "GitPay/app.js",
+          "params": [
+            "ciphertextBase64: string",
+            "ivBase64: string",
+            "hexKey: string"
+          ],
+          "returns": "Promise<string>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "signNostrEvent",
+          "file": "GitPay/lib-entry.js",
+          "params": [
+            "event: Object",
+            "privateKeyHex: string"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "pollBlockchainForAddress",
+          "file": "GitPay/app.js",
+          "params": [
+            "address: string",
+            "targetSats: number",
+            "isTestnet: boolean",
+            "invoice: Object",
+            "invoiceEventId: string"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "confirmPaymentOnNostr",
+          "file": "GitPay/app.js",
+          "params": [
+            "inv: Object",
+            "receivedSats: number"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "gitPaySettings",
+          "fields": [
+            { "name": "nostrNsec", "type": "string", "required": true },
+            { "name": "nostrNpub", "type": "string", "required": true },
+            { "name": "nostrRelays", "type": "string", "required": true },
+            { "name": "extendedKey", "type": "string", "required": true },
+            { "name": "network", "type": "string", "required": true },
+            { "name": "fiatCurrency", "type": "string", "required": true },
+            { "name": "masterKey", "type": "string", "required": true },
+            { "name": "tolerance", "type": "number", "required": true },
+            { "name": "localWebhook", "type": "string", "required": false },
+            { "name": "localDiscord", "type": "string", "required": false },
+            { "name": "localTgToken", "type": "string", "required": false },
+            { "name": "localTgChat", "type": "string", "required": false }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "invoice",
+          "fields": [
+            { "name": "index", "type": "number", "required": true },
+            { "name": "amount_sats", "type": "number", "required": true },
+            { "name": "address", "type": "string", "required": true },
+            { "name": "created_at", "type": "number", "required": true },
+            { "name": "network", "type": "string", "required": true },
+            { "name": "address_type", "type": "string", "required": true },
+            { "name": "description", "type": "string", "required": true },
+            { "name": "tolerance", "type": "number", "required": true },
+            { "name": "status", "type": "string", "required": true }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Faturamento probabilístico de 1%: há 1% de chance de rotear a fatura para o DEVELOPER_XPUB em vez da extendedKey do merchant.",
+          "location": "GitPay/app.js:1069-1075",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Tolerância de pagamento: a fatura é considerada paga se o valor total recebido na blockchain for superior à tolerância percentual configurada (default 99.5%).",
+          "location": "GitPay/app.js:758-761,860-863,1303-1308",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Expiração das faturas: faturas expiram após 15 minutos se não forem pagas a tempo.",
+          "location": "GitPay/app.js:867-878,1256-1276",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Ledger Nostr descentralizado: criação/atualização de faturas publicam eventos Kind 30023 criptografados com AES-GCM (usando chave derivada masterKey-index).",
+          "location": "GitPay/app.js:520-618,778-824,1108-1127",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "P2P Instant Sync via Nostr Kind 23001: o cliente publica um recibo Kind 23001 assinado por uma chave descartável ao detectar o pagamento localmente, permitindo sincronização instantânea do merchant via Nostr.",
+          "location": "GitPay/app.js:634-658,1312-1334",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [],
+      "algorithms": [
+        {
+          "name": "BIP32 Address Derivation",
+          "description": "Derivação determinística de endereços do tipo P2WPKH, P2SH-P2WPKH ou P2PKH no caminho m/0/index a partir de xpub/ypub/zpub/tpub/upub/vpub."
+        },
+        {
+          "name": "AES-GCM WebCrypto Encryption",
+          "description": "Cifragem simétrica com vetor de inicialização (IV) aleatório de 12 bytes e chave derivada de 256 bits, com fallback para cifragem XOR em contextos HTTP inseguros."
+        }
+      ],
+      "complexity": "medium"
+    },
+    {
+      "name": "ET-COSMIC-Core",
+      "path": "ET-COSMIC/void_core",
+      "purpose": "Biblioteca criptográfica core do ET-COSMIC escrita em Rust e compilada para WebAssembly, responsável por prover primitivas de Post-Quantum Cryptography (PQC), Zero-Knowledge Proofs (ZKP), Shamir Secret Sharing (QEL), Verifiable Delay Functions (VDF) e handshakes de licenciamento.",
+      "primary_files": [
+        "ET-COSMIC/void_core/src/lib.rs",
+        "ET-COSMIC/void_core/src/qel.rs",
+        "ET-COSMIC/void_core/src/pqc.rs",
+        "ET-COSMIC/void_core/src/antisybil.rs",
+        "ET-COSMIC/void_core/src/license.rs",
+        "ET-COSMIC/void_core/src/ldk.rs"
+      ],
+      "functions": [
+        {
+          "name": "derive_ghost_id",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["entropy: &[u8]"],
+          "returns": "GhostIdentityWasm",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "create_pedersen_commitment",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["value: u64"],
+          "returns": "PedersenCommitmentWasm",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "create_balance_proof",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["inputs_r: &[u8]", "outputs_r: &[u8]"],
+          "returns": "Uint8Array",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "create_range_proof",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["value: u64", "blinding_factor: &[u8]"],
+          "returns": "RangeProofResult",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "verify_range_proof",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["proof_bytes: &[u8]", "commitment_bytes: &[u8]"],
+          "returns": "bool",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "aggregate_zk_proofs",
+          "file": "ET-COSMIC/void_core/src/lib.rs",
+          "params": ["proofs_concat: &[u8]", "single_proof_size: usize"],
+          "returns": "StarkAggregateProofWasm",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "qel_split",
+          "file": "ET-COSMIC/void_core/src/qel.rs",
+          "params": ["secret: &[u8]", "k: u32", "n: u32", "aad_key: &[u8]"],
+          "returns": "Result<QelSplitResult, JsValue>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "qel_reconstruct",
+          "file": "ET-COSMIC/void_core/src/qel.rs",
+          "params": ["shards_concat: &[u8]", "shard_len: u32", "k: u32", "aad_key: &[u8]", "secret_len: u32"],
+          "returns": "Result<Uint8Array, JsValue>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mlkem_keygen",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": [],
+          "returns": "KemKeyPairWasm",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mlkem_encapsulate",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": ["public_key_bytes: &[u8]"],
+          "returns": "Result<KemEncapResult, JsValue>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mlkem_decapsulate",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": ["private_seed_bytes: &[u8]", "ciphertext_bytes: &[u8]"],
+          "returns": "Result<Uint8Array, JsValue>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mldsa_keygen",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": [],
+          "returns": "DsaKeyPairWasm",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mldsa_sign",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": ["signing_seed_bytes: &[u8]", "message: &[u8]"],
+          "returns": "Result<Uint8Array, JsValue>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "mldsa_verify",
+          "file": "ET-COSMIC/void_core/src/pqc.rs",
+          "params": ["public_key_bytes: &[u8]", "message: &[u8]", "signature_bytes: &[u8]"],
+          "returns": "bool",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "pow_solve",
+          "file": "ET-COSMIC/void_core/src/antisybil.rs",
+          "params": ["challenge: &[u8]", "difficulty: u32", "max_attempts: u32"],
+          "returns": "Option<PowSolution>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "vdf_evaluate",
+          "file": "ET-COSMIC/void_core/src/antisybil.rs",
+          "params": ["input: &[u8]", "steps: u32"],
+          "returns": "VdfResult",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "license_verify_handshake",
+          "file": "ET-COSMIC/void_core/src/license.rs",
+          "params": ["vendor_public_key: &[u8]", "device_entropy: &[u8]", "sku: &str", "license_payload: &[u8]", "signature: &[u8]", "unix_now_secs: u64"],
+          "returns": "LicenseHandshakeResult",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "parse_bolt11",
+          "file": "ET-COSMIC/void_core/src/ldk.rs",
+          "params": ["bolt11_str: &str"],
+          "returns": "Result<String, JsValue>",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        { "name": "GhostIdentityWasm", "fields": [], "confidence": "confirmed" },
+        { "name": "PedersenCommitmentWasm", "fields": [], "confidence": "confirmed" },
+        { "name": "RangeProofResult", "fields": [], "confidence": "confirmed" },
+        { "name": "QelSplitResult", "fields": [], "confidence": "confirmed" },
+        { "name": "KemKeyPairWasm", "fields": [], "confidence": "confirmed" },
+        { "name": "KemEncapResult", "fields": [], "confidence": "confirmed" },
+        { "name": "DsaKeyPairWasm", "fields": [], "confidence": "confirmed" },
+        { "name": "PowSolution", "fields": [], "confidence": "confirmed" },
+        { "name": "VdfResult", "fields": [], "confidence": "confirmed" },
+        { "name": "LicenseHandshakeResult", "fields": [], "confidence": "confirmed" }
+      ],
+      "business_rules": [
+        {
+          "description": "Handshake de licença comercial obrigatório: o WASM verifica a assinatura ML-DSA-87 de 4627 bytes e o device_id de hardware antes de liberar as derivações principais.",
+          "location": "ET-COSMIC/void_core/src/license.rs:141-190",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Segurança de informação em fragmentação (QEL): o Shamir Secret Sharing garante segurança teórica de informação perfeita para K-1 shards (revelam 0 informação sobre o segredo).",
+          "location": "ET-COSMIC/void_core/src/qel.rs:1-9",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Resistência anti-Sybil: o faucet exige PoW válido e delay sequencial VDF não-paralelizável para mitigar ataques Sybil e spam de rede.",
+          "location": "ET-COSMIC/void_core/src/antisybil.rs:1-9",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [],
+      "algorithms": [
+        {
+          "name": "Shamir Secret Sharing",
+          "description": "Fragmentação de segredos em corpo finito GF(2^8) usando polinômio irredutível do AES (0x11b) e interpolação de Lagrange."
+        },
+        {
+          "name": "Verifiable Delay Function (VDF)",
+          "description": "Wesolowski VDF simplificado implementando iterated squaring modular em aritmética u256 simulada via limbs u64."
+        },
+        {
+          "name": "Post-Quantum Cryptography (ML-KEM/ML-DSA)",
+          "description": "FIPS 203 ML-KEM-1024 para encapsulamento e FIPS 204 ML-DSA-87 para assinaturas digitais resistentes a computadores quânticos."
+        },
+        {
+          "name": "Pedersen Commitments & Bulletproofs",
+          "description": "Geração de compromissos homomórficos confidenciais e provas de intervalo de 32 bits usando ristretto255."
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "ET-COSMIC-Mesh",
+      "path": "ET-COSMIC/src/mesh",
+      "purpose": "Camada de rede e mesh (malha soberana) do ecossistema ET-COSMIC, responsável por prover transporte resiliente e descentralizado de shards e mensagens P2P usando canais híbridos (BLE, LoRa, WebRTC/Nostr e áudio ultrassônico).",
+      "primary_files": [
+        "ET-COSMIC/src/mesh/liquidityMeshClient.ts",
+        "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+        "ET-COSMIC/src/silentMesh/voidMeshClient.ts",
+        "ET-COSMIC/src/network/nostrMesh.ts",
+        "ET-COSMIC/src/network/bleChatTransport.ts",
+        "ET-COSMIC/src/network/loraDriver.ts",
+        "ET-COSMIC/src/network/acousticDriver.ts",
+        "ET-COSMIC/src/network/distanceBridge.ts",
+        "ET-COSMIC/src/network/lightningNostrTransport.ts",
+        "ET-COSMIC/src/network/localDrivers.ts",
+        "ET-COSMIC/src/network/relayProbe.ts",
+        "ET-COSMIC/src/network/etrnetKinds.ts"
+      ],
+      "functions": [
+        {
+          "name": "connectToPeer",
+          "file": "ET-COSMIC/src/network/nostrMesh.ts",
+          "params": [
+            "peerPk: string"
+          ],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "broadcastShard",
+          "file": "ET-COSMIC/src/network/nostrMesh.ts",
+          "params": [
+            "shardData: unknown"
+          ],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "sendEncryptedMessage",
+          "file": "ET-COSMIC/src/network/bleChatTransport.ts",
+          "params": [
+            "peerId: string",
+            "ciphertext: string",
+            "senderPk: string"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "handleIncomingShard",
+          "file": "ET-COSMIC/src/network/bleChatTransport.ts",
+          "params": [
+            "shard: Shard",
+            "sessionKeyHex: string"
+          ],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "connect",
+          "file": "ET-COSMIC/src/network/loraDriver.ts",
+          "params": [
+            "config: LoRaConfig"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "sendData",
+          "file": "ET-COSMIC/src/network/loraDriver.ts",
+          "params": [
+            "destAddress: number",
+            "payload: string"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "transmit",
+          "file": "ET-COSMIC/src/network/acousticDriver.ts",
+          "params": [
+            "data: string"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "listen",
+          "file": "ET-COSMIC/src/network/acousticDriver.ts",
+          "params": [
+            "callback: AcousticMessageCallback"
+          ],
+          "returns": "Promise<void>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "routeShard",
+          "file": "ET-COSMIC/src/network/distanceBridge.ts",
+          "params": [
+            "shard: Shard",
+            "shardIndex: number",
+            "preferredOverride?: DistanceBridgeChannel"
+          ],
+          "returns": "Promise<DistanceBridgeRouteResult>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "send",
+          "file": "ET-COSMIC/src/network/lightningNostrTransport.ts",
+          "params": [
+            "peerPubkey: string",
+            "kind: LNNostrKind",
+            "payload: Uint8Array",
+            "channelId?: string"
+          ],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "lscAllowsWork",
+          "file": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+          "params": [
+            "limits: LscGuardLimits",
+            "hostCpuPct?: number"
+          ],
+          "returns": "Promise<{ ok: boolean; reason?: string }>",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "RelayHealth",
+          "fields": [
+            { "name": "url", "type": "string", "required": true },
+            { "name": "healthy", "type": "boolean", "required": true },
+            { "name": "consecutiveFailures", "type": "number", "required": true },
+            { "name": "lastPing", "type": "number", "required": true },
+            { "name": "lastSuccess", "type": "number", "required": true },
+            { "name": "latencyMs", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "BLEChatMessage",
+          "fields": [
+            { "name": "id", "type": "string", "required": true },
+            { "name": "senderPk", "type": "string", "required": true },
+            { "name": "ciphertext", "type": "string", "required": true },
+            { "name": "timestamp", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "LoRaConfig",
+          "fields": [
+            { "name": "baudRate", "type": "number", "required": true },
+            { "name": "address", "type": "number", "required": true },
+            { "name": "networkId", "type": "number", "required": true },
+            { "name": "frequency", "type": "number", "required": true },
+            { "name": "spreadingFactor", "type": "number", "required": true },
+            { "name": "bandwidth", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "LscGuardLimits",
+          "fields": [
+            { "name": "cpuPctMax", "type": "number", "required": true },
+            { "name": "ramMbMax", "type": "number", "required": true },
+            { "name": "minBatteryPct", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "DistanceBridgeRouteResult",
+          "fields": [
+            { "name": "preferred", "type": "string", "required": true },
+            { "name": "channel", "type": "string", "required": true },
+            { "name": "attempted", "type": "string[]", "required": true },
+            { "name": "fallbackUsed", "type": "boolean", "required": true }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Roteamento de Shards determinístico com cascata de fallback: se o canal preferido falhar, o sistema executa a escada de fallbacks (BLE, LoRa, HCN_MESH, WEBRTC) até o HCN_MESH que atua como barreira final.",
+          "location": "ET-COSMIC/src/network/distanceBridge.ts:70-126",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Garantia de não-drenagem de bateria e CPU no cliente (LSC): as tarefas de rede em background respeitam limites operacionais de 5% de uso máximo de CPU, 50MB de RAM e 20% de nível mínimo de bateria.",
+          "location": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts:11-15, 52-69",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "FSK Acústico P2P como alternativa de canal bloqueado: usa áudio ultrassônico em 18.5kHz-19.5kHz para contornar restrições de Bluetooth em navegadores móveis.",
+          "location": "ET-COSMIC/src/network/acousticDriver.ts:4-10",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Cifragem de Mensagens Lightning usando Nostr Kinds customizados (VØID-LN): transmite payloads LDK sobre relays de Nostr em kinds 31340-31349 protegidos por segredos compartilhados NIP-44.",
+          "location": "ET-COSMIC/src/network/lightningNostrTransport.ts:4-19",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Sinalização WebRTC via Nostr NIP-04 e comunicação posterior P2P pura: relays Nostr são usados unicamente para o signaling (Kind 4), migrando a transmissão de dados subsequente para RTCDataChannel P2P invisível.",
+          "location": "ET-COSMIC/src/network/nostrMesh.ts:4-13",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [
+        "ET-COSMIC-Core",
+        "ET-COSMIC-Crypto"
+      ],
+      "algorithms": [
+        {
+          "name": "FSK Modulation/Demodulation with FEC",
+          "description": "Modulação de som em 18.5kHz e 19.5kHz com repetição 3x de bits para Forward Error Correction baseada em voto majoritário no receptor."
+        },
+        {
+          "name": "Multi-Channel Fallback Routing",
+          "description": "Roteamento determinístico baseado em cascata sequencial de canais de rádio, bluetooth, malha de abas de browser e internet."
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "ET-COSMIC-Finance",
+      "path": "ET-COSMIC/server/economy",
+      "purpose": "Módulo econômico e financeiro do ecossistema ET-COSMIC, responsável pelo gerenciamento de saldos em $SOV, conciliação de depósitos via canais Lightning/NWC (Bitcoin), controle de comissões/taxas de protocolo, e liquidação financeira do Bazaar e de recompensas de CDN/Mineração útil.",
+      "primary_files": [
+        "ET-COSMIC/src/economy/sovEconomyClient.ts",
+        "ET-COSMIC/src/b2b/commercialPricing.ts",
+        "ET-COSMIC/server/economy/sovLedger.js",
+        "ET-COSMIC/server/economy/binaryMarket.js",
+        "ET-COSMIC/server/economy/hostingRevenue.js",
+        "ET-COSMIC/server/economy/ethicalMining.js",
+        "ET-COSMIC/server/economy/pairedDeposit.js",
+        "ET-COSMIC/server/economy/economyPersistence.js",
+        "ET-COSMIC/server/economy/index.js"
+      ],
+      "functions": [
+        {
+          "name": "creditAccount",
+          "file": "ET-COSMIC/server/economy/sovLedger.js",
+          "params": [
+            "accountId: string",
+            "amountMicro: number",
+            "meta: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "debitAccount",
+          "file": "ET-COSMIC/server/economy/sovLedger.js",
+          "params": [
+            "accountId: string",
+            "amountMicro: number",
+            "meta: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "transferWithFee",
+          "file": "ET-COSMIC/server/economy/sovLedger.js",
+          "params": [
+            "fromId: string",
+            "toId: string",
+            "grossMicro: number",
+            "channel: string"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "publishArtifact",
+          "file": "ET-COSMIC/server/economy/binaryMarket.js",
+          "params": [
+            "body: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "purchaseArtifact",
+          "file": "ET-COSMIC/server/economy/binaryMarket.js",
+          "params": [
+            "artifactId: string",
+            "buyerId: string"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "recordHostingTraffic",
+          "file": "ET-COSMIC/server/economy/hostingRevenue.js",
+          "params": [
+            "siteId: string",
+            "metrics: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "submitEthicalWork",
+          "file": "ET-COSMIC/server/economy/ethicalMining.js",
+          "params": [
+            "workerId: string",
+            "body: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "createPairedDepositIntent",
+          "file": "ET-COSMIC/server/economy/pairedDeposit.js",
+          "params": [
+            "body: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "settlePairedDepositFromInvoice",
+          "file": "ET-COSMIC/server/economy/pairedDeposit.js",
+          "params": [
+            "invoice: Object"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "SOVAccount",
+          "fields": [
+            { "name": "accountId", "type": "string", "required": true },
+            { "name": "balanceMicro", "type": "number", "required": true },
+            { "name": "history", "type": "Object[]", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "SOVTransaction",
+          "fields": [
+            { "name": "id", "type": "string", "required": true },
+            { "name": "type", "type": "string", "required": true },
+            { "name": "amountMicro", "type": "number", "required": true },
+            { "name": "at", "type": "number", "required": true },
+            { "name": "channel", "type": "string", "required": false },
+            { "name": "from", "type": "string", "required": false },
+            { "name": "to", "type": "string", "required": false },
+            { "name": "fee", "type": "boolean", "required": false }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "MarketplaceArtifact",
+          "fields": [
+            { "name": "artifactId", "type": "string", "required": true },
+            { "name": "type", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
+            { "name": "version", "type": "string", "required": true },
+            { "name": "platform", "type": "string", "required": true },
+            { "name": "sha256", "type": "string", "required": true },
+            { "name": "sizeBytes", "type": "number", "required": true },
+            { "name": "priceMicro", "type": "number", "required": true },
+            { "name": "priceSov", "type": "number", "required": true },
+            { "name": "sellerId", "type": "string", "required": true },
+            { "name": "downloadUrl", "type": "string", "required": true },
+            { "name": "metadata", "type": "Object", "required": true },
+            { "name": "publishedAt", "type": "number", "required": true },
+            { "name": "sales", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "HostingSite",
+          "fields": [
+            { "name": "siteId", "type": "string", "required": true },
+            { "name": "ownerId", "type": "string", "required": true },
+            { "name": "origin", "type": "string", "required": true },
+            { "name": "plan", "type": "string", "required": true },
+            { "name": "stats", "type": "Object", "required": true },
+            { "name": "registeredAt", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "EthicalMiner",
+          "fields": [
+            { "name": "workerId", "type": "string", "required": true },
+            { "name": "nodeId", "type": "string", "required": false },
+            { "name": "limits", "type": "Object", "required": true },
+            { "name": "consent", "type": "boolean", "required": true },
+            { "name": "stats", "type": "Object", "required": true },
+            { "name": "registeredAt", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "PairedDeposit",
+          "fields": [
+            { "name": "depositId", "type": "string", "required": true },
+            { "name": "accountId", "type": "string", "required": true },
+            { "name": "amountSov", "type": "number", "required": true },
+            { "name": "amountMicro", "type": "number", "required": true },
+            { "name": "amountSat", "type": "number", "required": true },
+            { "name": "method", "type": "string", "required": true },
+            { "name": "reference", "type": "string", "required": false },
+            { "name": "status", "type": "string", "required": true },
+            { "name": "createdAt", "type": "number", "required": true },
+            { "name": "invoiceId", "type": "string", "required": false },
+            { "name": "settledAt", "type": "number", "required": false }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Taxação automática e redirecionamento de royalties: todas as transferências de fundos sofrem desconto automático de taxa de protocolo configurada em BPS, direcionada à carteira de tesouraria central da malha.",
+          "location": "ET-COSMIC/server/economy/sovLedger.js:36-39, 91-108",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Conversão de Bitcoin (Sats) para micro-SOV baseada em taxa pareada fixa: converte satoshis recebidos via faturas Lightning ou depósitos NWC em créditos µSOV com base na cotação SOV_SAT_RATE.",
+          "location": "ET-COSMIC/server/economy/pairedDeposit.js:8-19, 108-142",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Throttling de mineração por limite LSC: suspende recompensas de mineração útil se o consumo de CPU do minerador violar os limites configurados.",
+          "location": "ET-COSMIC/server/economy/ethicalMining.js:41-52",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [
+        "ET-COSMIC-Core",
+        "ET-COSMIC-Crypto",
+        "ET-COSMIC-Mesh"
+      ],
+      "algorithms": [
+        {
+          "name": "Protocol Fee Taxation Splitting",
+          "description": "Cálculo de divisão de valor e retenção de comissão em BPS sobre operações de transferência e liquidação de compra no mercado."
+        },
+        {
+          "name": "Satoshi to SOV Paired Exchange Conversion",
+          "description": "Algoritmo de conversão determinística baseado em limiares e taxas em satoshis de BTC para liberação de créditos no ledger local."
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "ET-COSMIC-Compute",
+      "path": "ET-COSMIC/src/compute",
+      "purpose": "Módulo de agendamento e execução de computação científica e criptográfica de alta performance (IMC/vHGPU) no cliente e sandbox local, integrando acceleration por WebGPU/WebGL e execução paralela em Rust via sandboxing de Docker/WASM.",
+      "primary_files": [
+        "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+        "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+        "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+        "ET-COSMIC/src/compute/pmuDomains.ts",
+        "ET-COSMIC/src/imc/imcClient.ts",
+        "ET-COSMIC/src/imc/thomasFermiWebgl.ts",
+        "ET-COSMIC/void_runner/src/main.rs",
+        "ET-COSMIC/void_runner/src/wasm_worker.rs",
+        "ET-COSMIC/void_runner/src/mapreduce.rs",
+        "ET-COSMIC/void_runner/src/ghost_docker.rs",
+        "ET-COSMIC/void_runner/src/lusus_tensor.rs",
+        "ET-COSMIC/void_runner/src/poh.rs",
+        "ET-COSMIC/void_runner/src/eco_net.rs",
+        "ET-COSMIC/server/imc/marketplace.js",
+        "ET-COSMIC/server/imc/core.js"
+      ],
+      "functions": [
+        {
+          "name": "runPmuVhgpuFrame",
+          "file": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+          "params": [
+            "domainId: PmuVhgpuDomainId",
+            "resolution: number"
+          ],
+          "returns": "Promise<PmuVhgpuFrameResult>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "runGeomWebgpuPass",
+          "file": "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+          "params": [
+            "resolution: number",
+            "cores: number"
+          ],
+          "returns": "Promise<GeomWebgpuPassResult>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "runLscMcmCoupledFrame",
+          "file": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+          "params": [
+            "resolution: number"
+          ],
+          "returns": "LscMcmCoupledResult",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "run_local_mapreduce",
+          "file": "ET-COSMIC/void_runner/src/mapreduce.rs",
+          "params": [
+            "wasm_bytes: &[u8]",
+            "host_entropy: &[u8]",
+            "job: &MapReduceJob"
+          ],
+          "returns": "Result<MapReduceResult>",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "run_tensor_contract",
+          "file": "ET-COSMIC/void_runner/src/lusus_tensor.rs",
+          "params": [
+            "req: TensorContractRequest"
+          ],
+          "returns": "Result<TensorContractResponse>",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "PmuVhgpuFrameResult",
+          "fields": [
+            { "name": "domain", "type": "string", "required": true },
+            { "name": "coresUsed", "type": "number", "required": true },
+            { "name": "backend", "type": "string", "required": true },
+            { "name": "method", "type": "string", "required": true },
+            { "name": "pmuSection", "type": "string", "required": true },
+            { "name": "metrics", "type": "Object", "required": true },
+            { "name": "durationMs", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "GeomWebgpuPassResult",
+          "fields": [
+            { "name": "webgpuUsed", "type": "boolean", "required": true },
+            { "name": "gpuDevice", "type": "string", "required": true },
+            { "name": "gpuIterations", "type": "number", "required": true },
+            { "name": "geomIterations", "type": "number", "required": true },
+            { "name": "spectralBands", "type": "number", "required": true },
+            { "name": "coresUsed", "type": "number", "required": true },
+            { "name": "topologyHash", "type": "string", "required": true },
+            { "name": "hashPrefix", "type": "string", "required": true },
+            { "name": "method", "type": "string", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "LscMcmCoupledResult",
+          "fields": [
+            { "name": "C_epsilon", "type": "number", "required": true },
+            { "name": "K_eff", "type": "number", "required": true },
+            { "name": "P_current", "type": "number", "required": true },
+            { "name": "collapseLambda", "type": "number", "required": true },
+            { "name": "coupledLambda", "type": "number", "required": true },
+            { "name": "gSaturation", "type": "number", "required": true },
+            { "name": "couplingGain", "type": "number", "required": true },
+            { "name": "memoryLayers", "type": "number", "required": true },
+            { "name": "coresUsed", "type": "number", "required": true },
+            { "name": "method", "type": "string", "required": true },
+            { "name": "theory", "type": "Object", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "VoidTask",
+          "fields": [
+            { "name": "wasm_uri", "type": "string", "required": true },
+            { "name": "func_name", "type": "string", "required": true },
+            { "name": "input", "type": "JSON", "required": true },
+            { "name": "parallel_shards", "type": "number", "required": true },
+            { "name": "preferred_region", "type": "string", "required": false }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "MapReduceJob",
+          "fields": [
+            { "name": "job_id", "type": "string", "required": true },
+            { "name": "func_name", "type": "string", "required": true },
+            { "name": "input", "type": "JSON", "required": true },
+            { "name": "shard_count", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Estágios obrigatórios de pipeline AMP por frame: antes de processar frames em domínios específicos (ex: geom_relativity), o scheduler valida assertivas do estágio atual (HCF ou DPL).",
+          "location": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts:110-120",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Proteção física e isolamento via containers Docker: a execução de tarefas WASM suspeitas delegadas por terceiros roda isolada em sandbox temporária Docker.",
+          "location": "ET-COSMIC/void_runner/src/ghost_docker.rs:1-12",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [
+        "ET-COSMIC-Core",
+        "ET-COSMIC-Crypto",
+        "ET-COSMIC-Mesh",
+        "ET-COSMIC-Finance"
+      ],
+      "algorithms": [
+        {
+          "name": "Leibniz Series MapReduce",
+          "description": "Divisão paralela de iterações de termos da série de Leibniz em shards com redução e agregação no coordenador central."
+        },
+        {
+          "name": "Quantum Tensor Contraction (LUSUS-Q)",
+          "description": "Multiplicação e contração rápida de tensores de matrizes MPS para simulação de estados quânticos no VPS."
+        }
+      ],
+      "complexity": "high"
+    },
+    {
+      "name": "ET-COSMIC-Server",
+      "path": "ET-COSMIC/server",
+      "purpose": "Servidor HTTP Express e gateway centralizador do backend do ecossistema ET-COSMIC, responsável por integrar canais Lightning Network, serviços de criptografia pós-quântica (PQC), emulação de física clássica e malhas econômicas.",
+      "primary_files": [
+        "ET-COSMIC/server/server.js",
+        "ET-COSMIC/server/pqcService.js",
+        "ET-COSMIC/server/loadEnv.js",
+        "ET-COSMIC/server/aqre/index.js",
+        "ET-COSMIC/server/eternet/index.js",
+        "ET-COSMIC/server/imc/index.js",
+        "ET-COSMIC/server/isossupra/index.js",
+        "ET-COSMIC/server/lusus/index.js",
+        "ET-COSMIC/server/mesh/liquidity.js",
+        "ET-COSMIC/server/silentMesh/index.js",
+        "ET-COSMIC/server/void/index.js"
+      ],
+      "functions": [
+        {
+          "name": "requireApiKey",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": ["req: Request", "res: Response", "next: NextFunction"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "generateKyberKeys",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": [],
+          "returns": "{ publicKey: string, privateKey: string, algorithm: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "generateDilithiumKeys",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": [],
+          "returns": "{ publicKey: string, privateKey: string, algorithm: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "kemEncapsulate",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": ["pkHex: string"],
+          "returns": "{ ciphertext: string, sharedSecret: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "kemDecapsulate",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": ["skHex: string", "ctHex: string"],
+          "returns": "{ sharedSecret: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "dsaSign",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": ["skHex: string", "msgHex: string"],
+          "returns": "{ signature: string, algorithm: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "dsaVerify",
+          "file": "ET-COSMIC/server/pqcService.js",
+          "params": ["pkHex: string", "msgHex: string", "sigHex: string"],
+          "returns": "{ valid: boolean, error?: string }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "storeSimulatedInvoice",
+          "file": "ET-COSMIC/server/server.js",
+          "params": [
+            "{ amountSat: number, amount?: string, currency?: string, memo: string, pairedDepositId?: string, mode?: string, lndError?: string }"
+          ],
+          "returns": "Object",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "applyPairedDepositSettlement",
+          "file": "ET-COSMIC/server/server.js",
+          "params": ["invoice: Object"],
+          "returns": "void",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "computeQuote",
+          "file": "ET-COSMIC/server/mesh/liquidity.js",
+          "params": ["poolId: string", "reputationScore: number", "units: number", "demandFactor: number"],
+          "returns": "{ baseMicro: number, reputationMultiplier: number, demandFactor: number, unitPriceMicro: number, totalMicro: number }",
+          "confidence": "confirmed"
+        },
+        {
+          "name": "runTierRenewalJob",
+          "file": "ET-COSMIC/server/server.js",
+          "params": [],
+          "returns": "void",
+          "confidence": "confirmed"
+        }
+      ],
+      "entities": [
+        {
+          "name": "developerKey",
+          "fields": [
+            { "name": "key", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
+            { "name": "balanceSat", "type": "number", "required": true },
+            { "name": "totalRequests", "type": "number", "required": true },
+            { "name": "createdAt", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "simulatedInvoice",
+          "fields": [
+            { "name": "id", "type": "string", "required": true },
+            { "name": "invoice", "type": "string", "required": true },
+            { "name": "paymentHash", "type": "string", "required": true },
+            { "name": "amountSat", "type": "number", "required": true },
+            { "name": "amount", "type": "string", "required": true },
+            { "name": "currency", "type": "string", "required": true },
+            { "name": "label", "type": "string", "required": true },
+            { "name": "pairedDepositId", "type": "string", "required": false },
+            { "name": "pairedCredited", "type": "boolean", "required": true },
+            { "name": "status", "type": "string", "required": true },
+            { "name": "mode", "type": "string", "required": true },
+            { "name": "lndError", "type": "string", "required": false },
+            { "name": "createdAt", "type": "number", "required": true },
+            { "name": "expiresAt", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        },
+        {
+          "name": "slaCommitment",
+          "fields": [
+            { "name": "commitmentId", "type": "string", "required": true },
+            { "name": "providerId", "type": "string", "required": true },
+            { "name": "poolId", "type": "string", "required": true },
+            { "name": "targetUptime", "type": "number", "required": true },
+            { "name": "collateralMicroSov", "type": "number", "required": true },
+            { "name": "payoutMicroSov", "type": "number", "required": true },
+            { "name": "status", "type": "string", "required": true },
+            { "name": "createdAt", "type": "number", "required": true }
+          ],
+          "confidence": "confirmed"
+        }
+      ],
+      "business_rules": [
+        {
+          "description": "Cobrança de satoshis por chamadas de API PQC: cada chamada autorizada para endpoints de Kyber ou Dilithium consome deterministicamente 1 satoshi da chave de API do desenvolvedor. A requisição é rejeitada com erro HTTP 402 se o saldo for inferior a 1 satoshi.",
+          "location": "ET-COSMIC/server/pqcService.js:54-83",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Fallback automático para simulação de faturamento Bitcoin: se a API LND REST estiver inacessível e a política de produção estrita permitir, o servidor desvia as chamadas de criação de faturas para o modo de simulação em memória de forma transparente.",
+          "location": "ET-COSMIC/server/server.js:319-338",
+          "confidence": "confirmed"
+        },
+        {
+          "description": "Cron de renovação automática de tiers de acesso: o servidor monitora contas ativas e renova automaticamente assinaturas devidas debitando SOV contábil em intervalos recorrentes configuráveis.",
+          "location": "ET-COSMIC/server/server.js:750-770",
+          "confidence": "confirmed"
+        }
+      ],
+      "dependencies": [
+        "ET-COSMIC-Core",
+        "ET-COSMIC-Crypto",
+        "ET-COSMIC-Mesh",
+        "ET-COSMIC-Finance",
+        "ET-COSMIC-Compute"
+      ],
+      "algorithms": [
+        {
+          "name": "ML-KEM Key Encapsulation (noble-post-quantum)",
+          "description": "Mecanismo de estabelecimento de chaves simétricas seguras pós-quânticas a partir de chaves públicas Kyber de 1024 bits."
+        },
+        {
+          "name": "ML-DSA Digital Signatures (noble-post-quantum)",
+          "description": "Geração e verificação de assinaturas digitais resistentes a computadores quânticos baseadas em reticulados Dilithium-87."
+        }
+      ],
+      "complexity": "high"
+    }
+  ]
+}

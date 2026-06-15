@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Crypto — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Crypto">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Crypto">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Crypto</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">Módulo ET-COSMIC-Crypto</h1>
+<br/>
+<p class="blockquote-content">Camada TypeScript no frontend que encapsula os bindings WebAssembly de segurança e gerencia a criptografia client-side.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O módulo <code>ET-COSMIC-Crypto</code> atua no frontend (React 19 / Vite) da aplicação. Ele serve como uma camada amigável e segura em TypeScript que encapsula a lógica e primitivas matemáticas em Rust WASM (<code>void_core</code>) e implementa fluxos complementares como cifragem híbrida pós-quântica, fragmentação de dados P2P e coleta local de assinaturas de ativação do software.</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li><strong>Bindings PQC TypeScript</strong>: Encapsular as chamadas ML-KEM e ML-DSA utilizando bibliotecas auxiliares de segurança.</li>
+<li><strong>Prevenção de Memória (Zero-fill)</strong>: Garantir a eliminação física de segredos e chaves da memória RAM após o uso.</li>
+<li><strong>Fragmentação Lagrange</strong>: Realizar interpolação de Lagrange local em TypeScript compatível com o comportamento em Rust.</li>
+<li><strong>Roteamento Disjunto MDNF</strong>: Associar shards QEL a diferentes interfaces de rede para dispersão de segredos.</li>
+<li><strong>Impressão Digital do Dispositivo</strong>: Coletar dados caóticos do browser ou OS móvel para autenticação de hardware.</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Cifragem Híbrida</strong> 🟢: O encapsulamento KEM é combinado com ChaCha20-Poly1305 para prover criptografia de mensagens no browser.</li>
+<li><strong>Prevenção de Ataques de Memória</strong> 🟢: Arrays contendo chaves privadas e segredos simétricos devem ser explicitamente apagados preenchendo a `Uint8Array` com `0` na RAM (`destroyPQCKeyPair` e `destroyEncapsulatedKey`).</li>
+<li><strong>Compatibilidade GF(2^8)</strong> 🟢: As funções locais em TypeScript de multiplicação e inversão no Corpo Galois devem produzir exatamente os mesmos resultados matemáticos obtidos no Rust WASM.</li>
+<li><strong>Roteamento de Shards</strong> 🟢: Mapear deterministicamente cada fragmento (índice % 4) para meios de transmissão separados (LoRa, BLE, WebRTC ou HCN local).</li>
+<li><strong>Entropia de Identificação de Hardware</strong> 🟢: Em builds nativos Capacitor/Android, a entropia deve ser obtida via plugin customizado `VoidAnimus.getDeviceEntropy()`. Em navegadores clássicos, usa-se browser fingerprinting estável.</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-CRY-01 | Cifragem Híbrida PQC | Must | Encapsular chaves com ML-KEM e cifrar o corpo com ChaCha20-Poly1305. |</p>
+<p>| RF-CRY-02 | Limpeza Criptográfica de RAM | Must | Chamar <code>.fill(0)</code> nas chaves privadas logo após a cifragem/decifragem. |</p>
+<p>| RF-CRY-03 | Fragmentação e Restauração local | Must | Dividir e restaurar segredos usando interpolação de Lagrange em TypeScript. |</p>
+<p>| RF-CRY-04 | Mapeamento de Rotas MDNF | Should | Anexar tags físicas de transporte disjunto a cada fragmento individual. |</p>
+<p>| RF-CRY-05 | Coleta de Fingerprint do Dispositivo | Must | Gerar hash SHA-256 estável de dados físicos ou do user-agent do browser. |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Segurança | Proteção contra dump de memória e vazamento lateral | <code>src/crypto/pqc.ts</code> | 🟢 |</p>
+<p>| Resiliência | Modulação local matemática sem depender de carregamento de WASM em caso de erro | <code>src/crypto/qel.ts</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/src/crypto/pqc.ts</code> | <code>hybridEncrypt</code> / <code>destroyPQCKeyPair</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/crypto/qel.ts</code> | <code>fragmentMessage</code> / <code>generateRoutingInfo</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/crypto/voidLicense.ts</code> | <code>getDeviceEntropy</code> / <code>validateLicense</code> | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">Módulo ET-COSMIC-Crypto, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificação de design técnico da camada TypeScript de criptografia.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<h3 class="subsection-title">Símbolos TS e Métodos Exportados</h3>
+<br/>
+<p>| Símbolo | Assinatura | Retorno | Observação |</p>
+<p>|---------|-----------|---------|------------|</p>
+<p>| <code>hybridEncrypt</code> | <code>(message: Uint8Array, receiverPubKey: Uint8Array) -> Promise<object></code> | <code>{ ciphertext, encapsulatedKey, nonce }</code> | Cifragem híbrida pós-quântica. |</p>
+<p>| <code>hybridDecrypt</code> | <code>(ciphertext: Uint8Array, encapsulatedKey: Uint8Array, nonce: Uint8Array, receiverPrivKey: Uint8Array) -> Promise<Uint8Array></code> | <code>Uint8Array</code> | Decifragem híbrida pós-quântica. |</p>
+<p>| <code>destroyPQCKeyPair</code> | <code>(keyPair: KeyPair) -> void</code> | <code>void</code> | Preenche chaves privadas com <code>0</code> na RAM. |</p>
+<p>| <code>fragmentMessage</code> | <code>(message: Uint8Array, k: number, n: number) -> object[]</code> | <code>Array</code> | Divide o segredo em shards. |</p>
+<p>| <code>reconstituteMessage</code> | <code>(shards: object[]) -> Uint8Array</code> | <code>Uint8Array</code> | Reconstitui a partir dos shards. |</p>
+<p>| <code>getDeviceEntropy</code> | <code>() -> Promise<string></code> | <code>string</code> | Retorna o fingerprint estável. |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal</h2>
+<br/>
+<h3 class="subsection-title">1. Cifragem Híbrida (`hybridEncrypt`)</h3>
+<p>1. <strong>Encapsulamento</strong>: Chama a biblioteca <code>@noble/post-quantum</code> para encapsular a chave simétrica efêmera usando a chave pública ML-KEM-1024 do destinatário.</p>
+<p>2. <strong>Derivação de Chave Simétrica</strong>: Os primeiros 32 bytes do segredo compartilhado derivado do Kyber são tomados como chave temporária do ChaCha20.</p>
+<p>3. <strong>Cifragem do Payload</strong>: A mensagem é criptografada com ChaCha20-Poly1305 usando um nonce de 12 bytes aleatórios.</p>
+<p>4. <strong>Retorno</strong>: Devolve <code>{ ciphertext, encapsulatedKey (Kyber payload), nonce }</code>.</p>
+<p>5. <strong>Limpeza de Memória</strong>: O segredo compartilhado em formato byte array é explicitamente limpo via <code>.fill(0)</code>.</p>
+<br/>
+<h3 class="subsection-title">2. Dispersão de Fragmentos e Roteamento MDNF (`qel.ts`)</h3>
+<p>1. <strong>Geração de Shards</strong>: Aplica interpolação de Lagrange localmente em TypeScript (aproveitando as tabelas em <code>gf256.ts</code>).</p>
+<p>2. <strong>Cifragem de Shards</strong>: Criptografa cada shard com a chave de sessão correspondente.</p>
+<p>3. <strong>Mapeamento MDNF</strong>: A função <code>generateRoutingInfo</code> anexa os metadados físicos, associando cada shard indexado à sua rota:</p>
+<ul>
+<li>Shard 0 -> BLE</li>
+<li>Shard 1 -> LoRa</li>
+<li>Shard 2 -> WebRTC (Nostr)</li>
+<li>Shard 3 -> HCN / Local Storage</li>
+</ul>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li>`@noble/post-quantum`: Implementação em Javascript de Kyber ML-KEM e Dilithium ML-DSA.</li>
+<li>`@noble/ciphers/chacha`: Cifra simétrica estável ChaCha20-Poly1305.</li>
+<li>`gf256.ts`: Aritmética local no Corpo Galois.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Uso do método <code>.fill(0)</code> para mitigar ataques de cold-boot em memória do navegador | <code>pqc.ts:98</code> | 🟢 |</p>
+<p>| Roteamento físico disjunto e dissimulado (MDNF) no client-side | <code>qel.ts:145</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<p>Esta unit é stateless.</p>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

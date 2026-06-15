@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Mesh — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Mesh">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Mesh">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Mesh</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">ET-COSMIC-Mesh</h1>
+<br/>
+<p class="blockquote-content">Módulo de malha e comunicação descentralizada P2P do ecossistema ET-COSMIC.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O módulo <strong>ET-COSMIC-Mesh</strong> gerencia a comunicação descentralizada P2P e rede de malha (mesh) do ecossistema. Ele abstrai canais de comunicação físicos e digitais heterogêneos (WebRTC, Bluetooth LE, Rádio LoRa, Acústico FSK, BroadcastChannel) e orquestra o roteamento redundante e fallbacks dinâmicos de shards criptográficos (QEL) sob estritas barreiras de consumo de recursos locais (LSC).</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li>Abstrair múltiplos modais de transporte sob uma interface de comunicação unificada.</li>
+<li>Estabelecer conexões P2P WebRTC usando Nostr como camada de sinalização de metadados.</li>
+<li>Transmitir pacotes fragmentados (QEL shards) através de modais físicos como Bluetooth LE (GATT) e Rádio LoRa (comandos AT via Web Serial).</li>
+<li>Oferecer uma rota de fallback de dados via modulação acústica (FSK ultrassônico).</li>
+<li>Realizar roteamento disjunto e cascata de fallbacks automatizada de forma invisível à aplicação.</li>
+<li>Impor limites de processamento e bateria (LSC Guard) para suspender tráfego em background e preservar o dispositivo físico do usuário.</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>RN-01: Dispersão Disjunta Determinística (MDNF)</strong>. Cada shard de mensagem gerado pelo QEL deve ser transmitido por um meio físico diferente (`index % 4` mapeado para BLE, LoRa, HCN/Local ou WebRTC) para garantir que um único atacante local não consiga interceptar fragmentos suficientes para reconstituir o segredo. 🟢</li>
+<li><strong>RN-02: Sincronização Dinâmica de Relays</strong>. O sistema deve sondar os relays Nostr a cada 30 segundos, suspendendo relays com mais de 3 falhas consecutivas e priorizando nós saudáveis de baixa latência. 🟢</li>
+<li><strong>RN-03: Barreira Térmica e de Bateria LSC</strong>. A execução de tarefas de malha em segundo plano (como roteamento de tráfego de terceiros) deve ser imediatamente interrompida ou estrangulada se o consumo instantâneo de CPU do dispositivo ultrapassar 5% ou se a bateria cair abaixo de 20%. 🟢</li>
+<li><strong>RN-04: Resiliência Acústica por Voto Majoritário (FEC x3)</strong>. Devido a ruídos ambientais no transporte ultrassônico FSK, cada bit individual de dados deve ser transmitido 3 vezes e o receptor deve aplicar a decisão por maioria para anular interferências de áudio. 🟢</li>
+<li><strong>RN-05: Tolerância a Colisões de Mídia Física (LoRa/FSK)</strong>. Como o rádio LoRa opera em modo "burst-fire" de shards curtos (< 200 bytes) com duty cycle de 1%, o rádio envia os 3 shards com intervalo fixo de 500ms. Colisões eventuais são mitigadas pelo design da fragmentação de Shamir ($K=2, N=3$), onde a perda de 1 fragmento não impede a reconstrução. Portanto, colisões físicas são aceitáveis por design e não requerem algoritmos de CSMA/CA adicionais em nível de software. 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-01 | Estabelecer conexões WebRTC P2P diretas via sinalização em relays Nostr usando eventos Kind 4 (DMs encriptadas). | Must | Conexão estabelecida com canal de dados <code>"void_shard_channel"</code> funcional, mesmo atrás de NATs simétricos (STUN). |</p>
+<p>| RF-02 | Fatiar e transmitir shards de mensagens via Bluetooth LE respeitando o MTU máximo configurado de 500 bytes. | Must | Remontagem íntegra dos shards de entrada pela característica BLE <code>VOID_BLE_SHARD_CHAR_UUID</code>. |</p>
+<p>| RF-03 | Enviar dados e configurar modens de Rádio LoRa (Reyax RYLR) usando comandos AT serializados in JavaScript. | Must | Transmissão bem-sucedida pelo driver serial e captura de retornos de dados recebidos (<code>+RCV</code>). |</p>
+<p>| RF-04 | Modular dados binários em sinais sonoros FSK (18.5 kHz / 19.5 kHz) usando a Web Audio API nativa. | Should | Recepção acústica com decodificação sem perda de pacotes em distância curta com ruído simulado. |</p>
+<p>| RF-05 | Roteamento disjunto de fragmentos com cascata automática para o próximo modal em caso de falha física. | Must | Na ausência de sinal LoRa/BLE, redirecionar o shard para o BroadcastChannel local (<code>HCN_MESH</code>). |</p>
+<p>| RF-06 | Bloquear e estrangular processamento em background ao atingir barreiras LSC críticas. | Must | Desativação imediata de tarefas ativas de CDN/Mesh quando o estado da bateria reporta < 20% ou CPU > 5%. |</p>
+<p>| RF-07 | Registrar a métrica de "taxa de sucesso por shard" na telemetria. | Should | O log de telemetria deve permitir avaliar a perda individual de pacotes em cada canal de envio. 🟢 |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Performance | Monitoramento de latência e pings contínuos com intervalo de 30 segundos. | <code>ET-COSMIC/src/network/nostrMesh.ts:L345</code> | 🟢 |</p>
+<p>| Segurança | Criptografia ponta a ponta nas mensagens de sinalização SDP via Nostr Kind 4. | <code>ET-COSMIC/src/network/nostrMesh.ts:L112</code> | 🟢 |</p>
+<p>| Disponibilidade | Backoff exponencial para restabelecimento de conexões aos relays Nostr (máx. 5 tentativas). | <code>ET-COSMIC/src/network/nostrMesh.ts:L410</code> | 🟢 |</p>
+<p>| Confiabilidade | Redundância de transmissão com repetição 3x em canais acústicos de baixa fidelidade. | <code>ET-COSMIC/src/network/acousticDriver.ts:L182</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Critérios de Aceitação</h2>
+<br/>
+<div class="code-block"><pre><code class="language-gherkin">
+Dado que o remetente gerou 3 shards QEL para envio
+
+Quando a DistanceBridge processa o roteamento dos shards
+
+Então o Shard 0 deve ser despachado via BLE, o Shard 1 via LoRa e o Shard 2 via WebRTC (conforme index % 4)
+
+
+
+Dado que a conexão física BLE del dispositivo está desativada
+
+Quando a DistanceBridge tenta enviar o Shard 0
+
+Então o sistema deve registrar falha no canal BLE e rotear o Shard 0 para a próxima rota saudável disponível (LoRa)
+
+
+
+Dado que a bateria do celular do usuário caiu para 19%
+
+Quando o loop de background da malha de CDN tenta rodar
+
+Então a barreira LSC deve bloquear a execução retornando falso e suspender as atividades de rede
+
+</code></pre></div>
+<br/>
+<h2 class="section-title">Prioridade (MoSCoW)</h2>
+<br/>
+<p>| Requisito | MoSCoW | Justificativa |</p>
+<p>|-----------|--------|---------------|</p>
+<p>| Roteamento Disjunto e Fallbacks | Must | Essencial para a privacidade criptográfica e entrega resiliente. |</p>
+<p>| Sinalização WebRTC via Nostr | Must | Principal canal de transporte digital do ecossistema. |</p>
+<p>| Barreiras de Recursos LSC Guard | Must | Protege a experiência do usuário e a integridade de dispositivos móveis. |</p>
+<p>| Drivers Físicos (BLE, LoRa) | Must | Viabilizam a malha de comunicação local offline. |</p>
+<p>| Driver Acústico FSK | Should | Canal de contingência opcional para browsers bloqueados. |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/src/mesh/liquidityMeshClient.ts</code> | <code>LiquidityMeshClient</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/network/nostrMesh.ts</code> | <code>NostrWebRTCMesh</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/network/bleChatTransport.ts</code> | <code>BLEChatTransport</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/network/loraDriver.ts</code> | <code>LoraDriver</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/network/acousticDriver.ts</code> | <code>AcousticFSKDriver</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/network/distanceBridge.ts</code> | <code>DistanceBridge</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/silentMesh/lscResourceGuard.ts</code> | <code>LSCResourceGuard</code> | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">ET-COSMIC-Mesh, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificações do design de arquitetura e implementação física do módulo de malha heterogênea.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<h3 class="subsection-title">Estrutura de Tipos e Assinaturas Principais</h3>
+<br/>
+<div class="code-block"><pre><code class="language-typescript">
+export type DistanceBridgeChannel = "BLE" | "LoRa" | "HCN_MESH" | "WEBRTC";
+
+
+
+export interface DistanceBridgeDeps {
+
+  ble: {
+
+    isSupported(): boolean;
+
+    startAdvertising(shardData: Uint8Array): Promise&lt;void&gt;;
+
+  };
+
+  lora: {
+
+    isSupported(): boolean;
+
+    sendData(destAddress: number, payload: string): Promise&lt;void&gt;;
+
+  };
+
+  meshChannel: {
+
+    postMessage(message: unknown): void;
+
+  };
+
+  broadcastWebRTC(shard: Shard): void;
+
+  meshSender?(): string;
+
+}
+
+
+
+export interface DistanceBridgeRouteResult {
+
+  preferred: DistanceBridgeChannel;
+
+  channel: DistanceBridgeChannel;
+
+  attempted: DistanceBridgeChannel[];
+
+  fallbackUsed: boolean;
+
+}
+
+</code></pre></div>
+<br/>
+<h3 class="subsection-title">Métodos e Classes do Módulo</h3>
+<br/>
+<p>| Símbolo | Assinatura | Retorno | Observação |</p>
+<p>|---------|-----------|---------|------------|</p>
+<p>| <code>DistanceBridge.selectPreferredChannel</code> | <code>(index: number)</code> | <code>DistanceBridgeChannel</code> | Seleção determinística baseada em <code>index % 4</code>. 🟢 |</p>
+<p>| <code>DistanceBridge.routeShard</code> | <code>(shard: Shard, shardIndex: number, preferredOverride?: DistanceBridgeChannel)</code> | <code>Promise<DistanceBridgeRouteResult></code> | Tenta o canal primário e avança em fallback. 🟢 |</p>
+<p>| <code>DistanceBridge.getMetrics</code> | <code>()</code> | <code>DistanceBridgeMetrics</code> | Retorna estatísticas agregadas de rotas. 🟢 |</p>
+<p>| <code>NostrWebRTCMesh.connect</code> | <code>(relayUrl: string)</code> | <code>Promise<void></code> | Conecta ao relay Nostr para escutar SDP. 🟢 |</p>
+<p>| <code>BLEChatTransport.transmit</code> | <code>(data: Uint8Array)</code> | <code>Promise<void></code> | Divide a mensagem e escreve nos blocos BLE GATT. 🟢 |</p>
+<p>| <code>LoraDriver.sendData</code> | <code>(destAddress: number, payload: string)</code> | <code>Promise<void></code> | Escreve comandos AT na porta Web Serial. 🟢 |</p>
+<p>| <code>AcousticFSKDriver.transmit</code> | <code>(payload: Uint8Array)</code> | <code>Promise<void></code> | Modula o payload acústico com FEC x3. 🟢 |</p>
+<p>| <code>LSCResourceGuard.allowsWork</code> | <code>()</code> | <code>boolean</code> | Executa validação de estresse térmico/bateria. 🟢 |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal (Orquestração de Rotas)</h2>
+<br/>
+<p>O fluxo de envio de fragmentos pela <code>DistanceBridge</code> ocorre da seguinte forma:</p>
+<p>1. <strong>Determinação de Rota:</strong> Para um determinado <code>shard</code> e seu respectivo índice, o sistema escolhe a rota primária chamando <code>selectPreferredChannel</code> em <code>distanceBridge.ts:L70</code>.</p>
+<p>2. <strong>Ciclo de Tentativas:</strong> Obtém a ordem de prioridade dos canais (<code>getFallbackOrder</code>). Tenta sequencialmente transmitir o payload chamando a função correspondente ao canal em <code>distanceBridge.ts:L157-181</code>.</p>
+<p>3. <strong>Escalada de Fallback:</strong></p>
+<ul>
+<li><strong>BLE:</strong> Se suportado, envia até `BLE_MAX_AD_BYTES` via `startAdvertising()`.</li>
+<li><strong>LoRa:</strong> Se suportado, serializa o fragmento em Base64 e transmite via porta serial do Reyax.</li>
+<li><strong>WebRTC:</strong> Transmite o fragmento na conexão de malha peer-to-peer.</li>
+<li><strong>HCN_MESH:</strong> Posta a mensagem no canal BroadcastChannel nativo do browser para sincronizar com outras abas locais.</li>
+</ul>
+<p>4. <strong>Resgate (Recovery):</strong> Se todas as tentativas falharem, o sistema força a transmissão via <code>HCN_MESH</code> (BroadcastChannel local) como garantia mínima.</p>
+<p>5. <strong>Atualização de Telemetria:</strong> Atualiza métricas de sucesso, falha e latência em <code>metrics.recentRoutes</code>.</p>
+<br/>
+<h2 class="section-title">Fluxos Alternativos e de Contingência</h2>
+<br/>
+<ul>
+<li><strong>QEL Fragment Reconstitution (Recepção):</strong></li>
+<li>O `BLEChatTransport` ou `NostrWebRTCMesh` recebe shards de entrada.</li>
+<li>O receptor armazena os shards em um pool associado à chave de sessão.</li>
+<li>Assim que $K=2$ fragmentos válidos são reunidos, o sistema executa a interpolação de Lagrange para reconstituir o segredo original.</li>
+<li><strong>Barreira LSC Ativa:</strong></li>
+<li>O driver de loop de background executa periodicamente `LSCResourceGuard.allowsWork()`.</li>
+<li>Se retornar falso (CPU > 5% ou Bateria < 20%), a malha interrompe temporariamente novos pacotes de CDN e entra em repouso.</li>
+</ul>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<br/>
+<ul>
+<li>`@noble/post-quantum`: Biblioteca para chaves Kyber/Dilithium e assinatura/cifragem.</li>
+<li>Crate `bulletproofs` (WASM Rust): Responsável pelas provas confidenciais e de intervalo.</li>
+<li>Web Serial API: Utilizada para comunicação com rádios Reyax RYLR.</li>
+<li>Web Audio API: Utilizada para geração e processamento de ondas acústicas senoidais (FSK).</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Roteamento Determinístico Disjunto | <code>distanceBridge.ts:L58-72</code> | 🟢 |</p>
+<p>| Fallback para BroadcastChannel local | <code>distanceBridge.ts:L104-111</code> | 🟢 |</p>
+<p>| Transmissão FSK em 18.5kHz / 19.5kHz | <code>acousticDriver.ts:L42-55</code> | 🟢 |</p>
+<p>| Fatiamento de MTU BLE em 500 bytes | <code>bleChatTransport.ts:L22</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<br/>
+<p>O módulo mantém estado efêmero e estatísticas de telemetria na memória local do browser:</p>
+<ul>
+<li>`metrics.channels`: Registra tentativas (`attempts`), sucessos (`successes`) e falhas (`failures`) para cada um dos 4 canais físicos de roteamento.</li>
+<li>`metrics.recentRoutes`: Um buffer circular das últimas 40 rotas executadas contendo timestamps, rotas, uso de fallbacks e latência total em milissegundos.</li>
+</ul>
+<br/>
+<h2 class="section-title">Observabilidade</h2>
+<br/>
+<ul>
+<li><strong>Logs de Roteamento:</strong> Emite telemetria com as durações e canais escolhidos em `DistanceBridge.getMetrics()`. 🟢</li>
+<li><strong>Pings de Relays Nostr:</strong> Registra pings na conexão para cálculo de saúde dos relays em `nostrMesh.ts:L345`. 🟢</li>
+<li><strong>Sinalizadores de Erros Físicos:</strong> Registra falhas na porta Web Serial ou Web Bluetooth na tela de diagnóstico do usuário. 🟢</li>
+</ul>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

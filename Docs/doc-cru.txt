@@ -1,0 +1,1151 @@
+doc-cru:
+
+
+---
+
+
+## ET-COSMIC: Ecossistema de Produtos por Demanda
+
+
+### Princípio Central
+
+
+> **O código é 100% livre (AGPL-3.0). O valor está no *deploy*, *integração* e *operação*.**
+
+
+Ninguém compra licença. Compra-se **tempo**, **conveniência** e **garantia**.
+
+
+---
+
+
+## Catálogo de Produtos
+
+
+### Tier 1: Infraestrutura de Identidade (Layer 0-1)
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **GhostID Deploy** | Configuração de identidade efêmera PQC para sua organização | $50/setup + $5/mês/identidade ativa | Repositório configurado + relay Nostr dedicado |
+
+| **Shamir Vault** | Fragmentação K=2,N=3 com ChaCha20-Poly1305 para segredos críticos | $100/setup + $0.01/fragmento/mês | WASM module + configuração de relays |
+
+| **Entropy Bootstrap** | Geração de entropia biométrica + Argon2id para cold wallets | $200/auditoria | Relatório de entropia + configuração |
+
+
+**Stack técnico:** `ghostid.ts`, `qel.ts`, Argon2id WASM, Nostr relays privados
+
+
+---
+
+
+### Tier 2: Transporte e Mesh (Layer 2)
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **NOSTR Bridge Enterprise** | Relay privado com criptografia end-to-end para comunicação interna | $30/mês + $0.001/evento | Relay Docker container + config |
+
+| **BLE/LoRa Gateway** | Ponte offline para dispositivos IoT em campo | $150/hardware + $20/mês | Firmware + gateway config |
+
+| **Acoustic FSK Module** | Comunicação por áudio para air-gapped devices | $500 (único) | Código + especificação de hardware |
+
+
+**Stack técnico:** `distanceBridge.ts`, relay Nostr customizado, drivers serial
+
+
+---
+
+
+### Tier 3: Pagamentos (Layer 3) — **GitPay Extended**
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **GitPay Merchant** | Checkout BTC non-custodial com sua marca | 1% por transação (já existente) | Embed script + dashboard |
+
+| **GitPay Multi-Asset** | Adiciona Lightning + Liquid + Monero | $100/setup + 1.5% tx | Módulo adicional no embed |
+
+| **GitPay Payroll** | Pagamento recorrente em crypto para equipes | $50/mês + 0.5% tx | Cron Nostr + derivação automática |
+
+| **Pedersen POS** | Ponto de venda com commitments ocultos (privacidade de saldo) | $200/setup + $10/mês/terminal | PWA + hardware QR opcional |
+
+
+**Stack técnico:** `utxo.ts`, Bulletproofs WASM, GitPay core, Nostr Kinds customizados
+
+
+---
+
+
+### Tier 4: Consenso e Auditoria (Layer 4)
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **ZKP Notary** | Provas de conhecimento zero para auditoria sem exposição de dados | $500/auditoria + $50/mês | o1js circuito + relatório |
+
+| **Anchor Sepolia** | Registro imutável de estado em Ethereum testnet/mainnet | $100/setup + gas fees | Smart contract deploy + monitoramento |
+
+| **Compliance Bridge** | Gera relatórios regulatórios (KYC/AML) sem expor dados brutos | $1000/setup + $200/mês | ZKP circuito + dashboard |
+
+
+**Stack técnico:** `zkp.ts`, `ETRNETAnchor.sol`, o1js, Sepolia RPC
+
+
+---
+
+
+### Tier 5: Criptografia Pós-Quântica (Layer 5) — **PQC-as-a-Module**
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **PQC Migration Audit** | Avaliação de vulnerabilidade PQC da sua infra atual | $2000 (único) | Relatório técnico + roadmap |
+
+| **ML-KEM Envelope** | Troca de chaves PQC para sua aplicação existente | $300/setup + $10/mês | WASM module + API wrapper |
+
+| **ML-DSA Signer** | Assinatura digital PQC para documentos/JSON Web Tokens | $200/setup + $0.01/assinatura | Serviço de assinatura + verificador |
+
+| **Hybrid PQ-TLS** | TLS 1.3 com X25519Kyber768 para servidores | $500/setup + $50/mês | Configuração nginx/HAProxy |
+
+
+**Stack técnico:** `pqc.rs` (Rust), `pqc.ts` (bindings), liboqs, ML-KEM-1024, ML-DSA-87
+
+
+---
+
+
+### Tier 6: Computação Avançada (Layers 6-7) — **QRC/vHGPU On-Demand**
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **Tensor Sandbox** | Ambiente WebGPU para experimentação com redes tensoriais | $20/mês + $0.10/hour GPU | URL + token de acesso |
+
+| **LUSUS-Q Compressor** | Compressão de estados quânticos simulados para pesquisa | $100/mês + $0.50/GB processado | API endpoint + documentação |
+
+| **D-LQA Solver** | Otimizador para problemas tipo Max-Cut/Ising em SKU industrial | $500/setup + $2/hour compute | Job queue + resultados |
+
+| **vHGPU Cluster** | Aluguel de cluster WebGPU distribuído (4-16 navegadores) | $50/mês + $1/hour/navegador | Dashboard + API de submissão |
+
+
+**Stack técnico:** `webgpuTensorEngine.ts`, `qrcMotor.ts`, `pmuVhgpuScheduler.ts`, WGSL shaders
+
+
+**Nota importante:** Tudo é **simulação clássica acelerada por GPU**. Não alegamos vantagem quântica real. O valor é o **modelo matemático** (Bruno Theory como heurística de otimização) e a **conveniência** de não configurar CUDA.
+
+
+---
+
+
+### Tier 7: Integração e Suporte (Cross-Layer)
+
+
+| Produto | O Que É | Preço | Entrega |
+
+|---|---|---|---|
+
+| **ET-COSMIC Bootstrap** | Arquitetura completa customizada para seu caso de uso | $5000 (único) | Design doc + repos configurados + 10h consultoria |
+
+| **Sovereign Health Check** | Monitoramento 24/7 da saúde da sua mesh P2P | $200/mês | Dashboard + alertas Nostr |
+
+| **Emergency Recovery** | Serviço de recuperação de segredos fragmentados (K-of-N) | $1000/incidente | Procedimento + execução |
+
+| **Code Escrow** | Cópia criptografada do código em caso de suspensão do repo | $50/mês | IPFS pin + multi-sig |
+
+
+---
+
+
+## Modelo de Monetização: "Open Core + Serviço"
+
+
+```
+
+┌─────────────────────────────────────────────┐
+
+│  CÓDIGO (AGPL-3.0) — GRÁTIS, SEMPRE      │
+
+│  ────────────────────────────────────────   │
+
+│  • Todo o repo ET-COSMIC no GitHub          │
+
+│  • Documentação completa                    │
+
+│  • Comunidade (Discord/Nostr)             │
+
+│  • Self-host DIY                            │
+
+└─────────────────────────────────────────────┘
+
+                    │
+
+                    ▼ (você paga se quiser)
+
+┌─────────────────────────────────────────────┐
+
+│  SERVIÇO — PAGO, SOB DEMANDA                │
+
+│  ────────────────────────────────────────     │
+
+│  • Deploy configurado e testado             │
+
+│  • Relays Nostr dedicados (SLA 99.9%)       │
+
+│  • Suporte técnico prioritário              │
+
+│  • Auditoria de segurança                   │
+
+│  • Integração customizada                   │
+
+│  • Escalabilidade garantida                 │
+
+└─────────────────────────────────────────────┘
+
+```
+
+
+---
+
+
+## Fluxo de Compra (GitPay Integrado)
+
+
+```
+
+Usuário visita github.io/et-cosmic/products
+
+        │
+
+        ▼
+
+┌─────────────────┐
+
+│  Escolhe produto│  ← "PQC Migration Audit" = $2000
+
+│  no catálogo    │
+
+└────────┬────────┘
+
+         │
+
+         ▼
+
+┌─────────────────┐
+
+│  GitPay Invoice │  ← Gerado automaticamente
+
+│  (BTC on-chain  │  ← 1% fee routing para dev
+
+│   ou Lightning) │
+
+└────────┬────────┘
+
+         │
+
+         ▼
+
+┌─────────────────┐
+
+│  Pagamento      │
+
+│  confirmado     │
+
+└────────┬────────┘
+
+         │
+
+         ▼
+
+┌─────────────────┐
+
+│  Acesso ao      │  ← Repositório privado temporário
+
+│  "delivery repo"│  ← Ou Nostr DM com instruções
+
+│  (GitHub/GitLab)│  ← Ou container Docker pull
+
+└─────────────────┘
+
+```
+
+
+**O "delivery repo"** é um repo privado (GitLab free tier) com:
+
+- Código já configurado para seu caso de uso
+
+- Variáveis de ambiente preenchidas
+
+- Scripts de deploy one-command
+
+- Documentação específica
+
+
+---
+
+
+## Vantagens deste Modelo
+
+
+| Para Você | Para Cliente |
+
+|---|---|
+
+| Receita recorrente (mensal) | Não paga pelo que não usa |
+
+| Margem alta (código já existe) | Código auditável (AGPL) |
+
+| Escalabilidade sem infra pesada | Sem vendor lock-in (pode forkar) |
+
+| Comunidade contribui código | Transparência total |
+
+| GitPay valida pagamentos | Privacidade financeira |
+
+
+---
+
+
+## Riscos e Mitigações
+
+
+| Risco | Mitigação |
+
+|---|---|
+
+| Cliente fork e não paga mais | OK — AGPL obriga publicar melhorias. Você ganha código de volta. |
+
+| Concorrência copia e vende mais barato | Diferenciação pelo **conhecimento tácito** (como integrar, edge cases, otimizações). |
+
+| GitHub suspende repo | Mirror GitLab + IPFS + Nostr como canal principal de distribuição. |
+
+| Cliente não entende AGPL | Documentação clara: "Você pode usar, modificar, redistribuir. Se modificar e servir na rede, publique o código." |
+
+
+---
+
+
+---
+
+
+## 1. A Armadilha do SLA 99.9%: A Solução é Não Ter SLA
+
+
+### O problema
+
+SLA 99.9% = **43 minutos de downtime permitido por mês**. Como solo dev, um incidente às 3h da manhã consome 6h de sono + 2h de recuperação + 1 dia de produtividade destruída. Receita do relay: $30. Custo real: $300+ em tempo de vida. **ROI: -$270/mês.**
+
+
+### A solução: "Resiliência Anti-Fragil" em vez de "Disponibilidade Garantida"
+
+
+Mude o discurso. O cliente não compra "uptime" — compra **sobrevivência**. Nostr já é descentralizado por design. Use isso como vantagem, não como defeito a esconder.
+
+
+| Antes (errado) | Depois (correto) |
+
+|---|---|
+
+| "Relay dedicado com SLA 99.9%" | **"Mesh relay com 6-9 nós públicos + 1 seu. Se o seu cai, a mesh continua."** |
+
+| "Monitoramento 24/7" | **"Health check auto-reportado via Nostr. Você vê o status. Eu vejo quando acordo."** |
+
+| "Suporte prioritário" | **"Suporte best-effort em horário comercial (UTC-3). Crítico? Pague por um segundo operador da comunidade."** |
+
+
+### Implementação operacional
+
+
+```
+
+┌─────────────────────────────────────────┐
+
+│  SEU RELAY (nó 1) — best effort         │
+
+│  Roda onde você puder (VPS barato,      │
+
+│  Raspberry, ou até seu notebook quando    │
+
+│  ligado). Não prometa uptime.             │
+
+├─────────────────────────────────────────┤
+
+│  RELAYS PÚBLICOS (nós 2-7) — fallback   │
+
+│  wss://relay.damus.io                     │
+
+│  wss://relay.nostr.band                   │
+
+│  wss://nos.lol                            │
+
+│  wss://relay.snort.social                 │
+
+│  + 3 da comunidade ET-COSMIC              │
+
+├─────────────────────────────────────────┤
+
+│  CLIENTE (nó 8) — cache local             │
+
+│  IndexedDB + Service Worker guarda        │
+
+│  últimos 7 dias de eventos. Se TUDO      │
+
+│  cai, o cliente opera offline.            │
+
+└─────────────────────────────────────────┘
+
+```
+
+
+**Preço ajustado:**
+
+- **"Sovereign Relay"**: $10/mês (sem SLA) — você roda um relay, mas é best-effort
+
+- **"Mesh Insurance"**: $30/mês — configuração de 7 relays públicos + 1 seu + fallback offline
+
+- **"Community Ops"**: $50/mês — você paga um segundo operador da comunidade (outro dev do ecossistema) para cobrir quando você dormir
+
+
+**O valor não é o uptime. O valor é a arquitetura que não morre quando um nó cai.**
+
+
+---
+
+
+## 2. Responsabilidade K-of-N: Não Recupere Segredos de Ninguém
+
+
+### O problema
+
+Se você fizer 10 recoveries por ano com 99% de sucesso, a probabilidade de **pelo menos uma falha** é **9.56%**. Em ~10 anos, você **quebra um segredo crítico de alguém**. Custo estimado: $50.000 em liability. Receita anual: $10.000. **O risco supera o retorno.**
+
+
+### A solução: "Cerimônia Social" — Você Vende a Ferramenta, Não o Ato
+
+
+Não ofereça **"Emergency Recovery"** como serviço. Ofereça **"Cerimônia de Recuperação"** como protocolo. O cliente recupera sozinho, com a ferramenta que você vendeu. Você nunca toca no segredo.
+
+
+| Antes (errado) | Depois (correto) |
+
+|---|---|
+
+| "Emergency Recovery $1000/incidente" | **"Recovery Kit: $500 (único) + cerimônia self-service"** |
+
+| Você executa o recovery | **O cliente executa. Você vende o script verificável.** |
+
+| Risco de erro humano seu | **Risco distribuído entre 3 partes designadas pelo cliente** |
+
+
+### O protocolo (vendido como produto, não serviço)
+
+
+```
+
+ETAPA 1: SETUP (único, $500)
+
+  Cliente define 3 "guardiões" (pessoas/empresas de confiança)
+
+  Cada guardião recebe 1 fragmento Shamir (nunca você)
+
+  Você vende o script que valida K=2-of-N=3
+
+
+ETAPA 2: RECOVERY (gratuito, self-service)
+
+  Quando o cliente precisa:
+
+    1. Cliente inicia cerimônia no app ET-COSMIC
+
+    2. App envia Nostr DM para 3 guardiões
+
+    3. 2 guardiões respondem com seus fragmentos
+
+    4. Script local reconstitui o segredo NO DISPOSITIVO DO CLIENTE
+
+    5. Você NUNCA vê o segredo reconstituído
+
+
+ETAPA 3: AUDITORIA (opcional, $200)
+
+  Se o cliente quiser, você audita o LOG da cerimônia
+
+  (timestamps Nostr, assinaturas, NÃO o conteúdo)
+
+```
+
+
+**Por que funciona:**
+
+- Você nunca toca no segredo = **zero liability**
+
+- O cliente tem autonomia = **soberania real**
+
+- Você vende uma **ferramenta** (AGPL, pode forkar) = **escala infinita sem seu tempo**
+
+
+**Preço ajustado:**
+
+- **"Shamir Recovery Kit"**: $500 (setup único, inclui script + 2h de consultoria para configurar guardiões)
+
+- **"Recovery Audit"**: $200 (se o cliente quiser revisar logs pós-cerimônia)
+
+- **"Emergency Recovery"**: **REMOVIDO DO CATÁLOGO**
+
+
+---
+
+
+## 3. Precificação do Bootstrap: Filtre Clientes pelo Preço
+
+
+### O problema
+
+$5.000 por design doc + repos + 10h de consultoria em PQC + ZKP + Nostr + ML-KEM/ML-DSA é **86% abaixo do mercado**. O resultado: clientes que pagam pouco consomem **3x mais suporte**. Taxa horária efetiva: **$166/h** — menos que um freelancer junior.
+
+
+### A solução: Preço de "Admissão" + Barreira de Contribuição
+
+
+Empresas sérias **desconfiam** de coisas baratas em criptografia. Preço baixo sinaliza: "isso é experimento", "não tem suporte", "ou é golpe". Você precisa filtrar.
+
+
+| Tier | Preço | O Que Inclui | Filtro |
+
+|---|---|---|---|
+
+| **ET-COSMIC Starter** | **$5.000** | 1 módulo (ex: apenas GitPay deploy), 4h consultoria | Para startups/ONGs. Sem suporte contínuo. |
+
+| **ET-COSMIC Professional** | **$15.000** | 3 módulos, design doc completo, 16h consultoria, 3 meses de "best-effort" suporte | Para empresas de médio porte. |
+
+| **ET-COSMIC Enterprise** | **$35.000+** | Stack completo (7 layers), arquitetura customizada, 40h consultoria, 6 meses suporte, audit trail Nostr | Para enterprise. Pagamento via GitPay (BTC) com invoice em Nostr. |
+
+| **ET-COSMIC Sovereign** | **$50.000+** | Tudo do Enterprise + treinamento interno da equipe do cliente + 1 ano de revisão trimestral | Para governos/instituições. |
+
+
+### A barreira de contribuição (mecanismo anti-vampiro)
+
+
+Antes de vender o Bootstrap, exija **proof-of-work social**:
+
+
+1. **Contribuição mínima**: O cliente deve ter aberto 1 issue ou 1 PR no repo ET-COSMIC (mesmo que documentação). Isso prova que leu o código.
+
+2. **Questionário técnico**: 5 perguntas sobre PQC/Nostr. Se errar 2, recusa o projeto. Não é arrogância — é proteção mútua.
+
+3. **Pagamento adiantado**: 50% no invoice GitPay antes de iniciar. Sem exceção.
+
+
+**Isso filtra 80% dos "energy vampires" antes do primeiro call.**
+
+
+---
+
+
+## Catálogo Revisado (Realista para Solo Dev)
+
+
+| Produto | Preço | SLA/Suporte | Nota |
+
+|---|---|---|---|
+
+| **Sovereign Relay** | $10/mês | Best-effort | Sem garantia de uptime. Mesh como resiliência. |
+
+| **Mesh Insurance** | $30/mês | Best-effort + config | 7 relays públicos + 1 seu + offline cache. |
+
+| **Community Ops** | $50/mês | 2 operadores (você + 1 da comunidade) | Para clientes que realmente precisam de cobertura. |
+
+| **Shamir Recovery Kit** | $500 (único) | Self-service | Você NUNCA toca no segredo. |
+
+| **Recovery Audit** | $200 (opcional) | Pós-cerimônia | Revisão de logs Nostr, não conteúdo. |
+
+| **PQC Migration Audit** | $2.000 (único) | Relatório em 5 dias úteis | Sem implementação. Só diagnóstico. |
+
+| **ML-KEM Envelope** | $300/setup + $10/mês | Best-effort | WASM module. Cliente self-host. |
+
+| **ET-COSMIC Starter** | $5.000 | 4h consultoria | 1 módulo apenas. |
+
+| **ET-COSMIC Professional** | $15.000 | 16h + 3 meses best-effort | 3 módulos. |
+
+| **ET-COSMIC Enterprise** | $35.000+ | 40h + 6 meses | Stack completo. |
+
+| **ET-COSMIC Sovereign** | $50.000+ | 1 ano revisão trimestral | Treinamento interno do cliente. |
+
+
+---
+
+
+## O Modelo Mental Correto
+
+
+> **Você não é uma empresa de SaaS. Você é um arquiteto de soberania digital vendendo blueprints.**
+
+
+A diferença é crucial:
+
+- **SaaS**: Você opera a infra. Cliente paga por uso. Escalabilidade = sua dor de cabeça.
+
+- **Blueprints**: Você vende a arquitetura. Cliente opera. Escalabilidade = infinita (AGPL permite fork).
+
+
+**O que você vende é conhecimento tácito** — como integrar ML-KEM com Nostr, como configurar Shamir para não perder chaves, como fazer um relay sobreviver a censura. Isso não escala pelo preço. Escala pelo **prestígio**.
+
+
+---
+
+
+## Resumo das Mudanças
+
+
+| Problema | Solução | Impacto no Seu Tempo |
+
+|---|---|---|
+
+| SLA 99.9% impossível | **Mesh anti-fragil + best-effort** | Reduz de 6h/mês para 0h (automação) |
+
+| Recovery K-of-N liability | **Self-service + cerimônia social** | Reduz de "on-call" para "vendeu kit, acabou" |
+
+| Bootstrap barato demais | **$15K-$50K + filtro de contribuição** | Filtra vampiros, atrai clientes sérios |
+
+
+**A regra de ouro:** Se o cliente não consegue operar sozinho depois de 3 meses, você vendeu **serviço** (escravatura), não **produto** (liberdade). O ET-COSMIC é sobre soberania — comece pela sua.
+
+
+
+
+Agora vou detalhar cada etapa com os artefatos operacionais reais — questionário, proposta, invoice GitPay, e cronograma de execução.
+
+
+---
+
+
+## ET-COSMIC Bootstrap Professional — Detalhamento Operacional
+
+
+### 1. Lead Inbound
+
+
+**Canais:**
+
+- Site: `bmcc-dev.github.io/et-cosmic/products` (GitHub Pages)
+
+- Nostr: `npub1...` com anúncio de produtos (Kind 30023)
+
+- GitHub: Issues marcadas `professional-client` no repo
+
+- Indicação: Clientes existentes ganham 10% de rebate em SOV tokens
+
+
+**Nenhum formulário de contato direto.** O lead DEVE passar pelo questionário. Isso já filtra 60% dos curiosos.
+
+
+---
+
+
+### 2. Questionário Técnico (Filtro Principal)
+
+
+**URL:** `bmcc-dev.github.io/et-cosmic/qualify` (form estático, sem backend, dados enviados via Nostr DM ou email)
+
+
+| # | Pergunta | Tipo | Pontuação |
+
+|---|---|---|---|
+
+| 1 | **Qual sua experiência com criptografia pós-quântica?**<<br>• Nunca ouvi falar (0)<br>• Conheço conceitualmente (1)<br>• Já implementei ML-KEM ou ML-DSA (2)<br>• Tenho certificação/trabalho publicado (3) | Seleção | 0-3 |
+
+| 2 | **Você já operou um relay Nostr ou nó Lightning?**<<br>• Não (0)<br>• Já configurei um relay público (1)<br>• Opero relay privado para minha org (2)<br>• Contribuo para protocolo Nostr/LN (3) | Seleção | 0-3 |
+
+| 3 | **Qual sua necessidade de privacidade?**<<br>• Compliance básico (GDPR/LGPD) (1)<br>• Proteção contra análise de blockchain (2)<br>• Resistência a censura estatal (3) | Seleção | 1-3 |
+
+| 4 | **Você tem orçamento aprovado para infraestrutura criptográfica?**<<br>• Ainda estamos pesquisando (0)<br>• Orçamento < $5K (1)<br>• Orçamento $5K-$20K (2)<br>• Orçamento > $20K (3) | Seleção | 0-3 |
+
+| 5 | **Contribuição para código aberto:**<<br>• Nunca contribuí (0)<br>• Reportei bugs (1)<br>• Abri PR ou escrevi documentação (2)<br>• Sou mantenedor de projeto open source (3) | Seleção | 0-3 |
+
+
+**Regra de aprovação:**
+
+- **Score ≥ 3** em pelo menos 3 perguntas
+
+- **E** contribuição GitHub ≥ 1 (prova de engajamento com código aberto)
+
+
+**Se rejeitado:**
+
+> "Obrigado pelo interesse. O ET-COSMIC Bootstrap Professional requer familiaridade prévia com PQC e Nostr. Recomendamos:
+
+> 1. Começar com o **Starter** ($5K, 1 módulo)
+
+> 2. Contribuir com uma issue ou documentação no repo
+
+> 3. Retornar em 30 dias"
+
+
+---
+
+
+### 3. Gate: Score + Contribuição
+
+
+**Verificação automática:**
+
+- Script checa se o GitHub handle do lead tem atividade no repo `bmcc-DEV/ET-COSMIC` (stars, forks, issues, PRs)
+
+- Se não tiver, envia mensagem padrão de rejeição
+
+
+**Se aprovado:**
+
+- Nostr DM automático: "Parabéns. Agende seu Discovery Call: [calendly-link]"
+
+
+---
+
+
+### 4. Discovery Call (30 minutos — não mais)
+
+
+**Agenda rígida:**
+
+```
+
+0:00-0:05  → Apresentação mútua (2 min cada)
+
+0:05-0:15  → Mapear dor real: "Qual segredo você precisa proteger e de quem?"
+
+0:15-0:20  → Verificar orçamento: "O orçamento de $15K está aprovado ou precisa de aprovação?"
+
+0:20-0:25  → Definir 3 módulos: "Dos 7 disponíveis, quais 3 são críticos para MVP?"
+
+0:25-0:30  → Próximos passos: "Vou enviar proposta em 48h. Invoice de 50% após aprovação."
+
+```
+
+
+**Regras:**
+
+- Se orçamento não está aprovado → **arquivar lead**, não perseguir
+
+- Se cliente quer mais de 3 módulos → **redirecionar para Enterprise** ($35K+)
+
+- Se cliente não sabe qual dor → **rejeitar**, não é hora de vender
+
+
+---
+
+
+### 5. Gate: Budget + Fit
+
+
+**Checklist:**
+
+- [ ] Orçamento $15K aprovado e disponível
+
+- [ ] 3 módulos definidos e factíveis em 4 semanas
+
+- [ ] Stakeholder técnico disponível para calls semanais (30 min)
+
+- [ ] Cliente aceita pagamento em BTC via GitPay
+
+
+**Se qualquer item falhar:**
+
+> "Parece que o timing não é ideal. Recomendamos o **Starter** ($5K) para validar um módulo primeiro. Quando estiverem prontos para escalar, retornamos."
+
+
+---
+
+
+### 6. Proposta Técnica
+
+
+**Formato:** Markdown de 1-2 páginas, enviado via Nostr DM (Kind 4) e email
+
+
+**Template:**
+
+
+```markdown
+
+# ET-COSMIC Bootstrap Professional — Proposta [CLIENTE]
+
+
+## Escopo (3 Módulos)
+
+| # | Módulo | Descrição | Entregável |
+
+|---|--------|-----------|------------|
+
+| 1 | [Módulo escolhido] | [1 frase] | Repo configurado + testes |
+
+| 2 | [Módulo escolhido] | [1 frase] | Repo configurado + testes |
+
+| 3 | [Módulo escolhido] | [1 frase] | Repo configurado + testes |
+
+
+## Cronograma (4 semanas)
+
+- Semana 1: Arquitetura + repos + configuração inicial
+
+- Semana 2: Módulo 1 + testes de integração
+
+- Semana 3: Módulos 2-3 + integração cruzada
+
+- Semana 4: Documentação + handoff + treinamento (1h)
+
+
+## Investimento
+
+- **Total:** $15.000 (BTC, via GitPay)
+
+- **Parcela 1:** $7.500 (50% adiantado, invoice após aprovação)
+
+- **Parcela 2:** $7.500 (50% restante, invoice após handoff aprovado)
+
+
+## O Que Não Está Incluído
+
+- SLA de uptime (relay é best-effort, mesh como resiliência)
+
+- Suporte além de 3 meses best-effort
+
+- Manutenção contínua de infraestrutura
+
+- Migração de dados legados
+
+
+## Próximos Passos
+
+1. Aprovar proposta (responder "APROVADO" nesta thread)
+
+2. Receber invoice GitPay para 50% adiantado
+
+3. Iniciar Semana 1 em [DATA]
+
+
+---
+
+
+Assinado: [Seu nome]
+
+Nostr: [Seu npub]
+
+Data: [DATA]
+
+```
+
+
+---
+
+
+### 7. Gate: Aprovação da Proposta
+
+
+**Cliente responde "APROVADO"** → Gera invoice GitPay automaticamente
+
+
+**Se cliente pede alterações:**
+
+- Máximo 1 rodada de revisão
+
+- Se pedir mais que isso → **rejeitar**, cliente não sabe o que quer
+
+
+**Se cliente não responde em 7 dias:**
+
+- Nostr DM de follow-up: "A proposta expira em 24h"
+
+- Se não responder → **arquivar**
+
+
+---
+
+
+### 8. Invoice GitPay (50% Adiantado — $7.500)
+
+
+**Processo automatizado:**
+
+
+```typescript
+
+// Pseudo-código do gerador de invoice
+
+function generateBootstrapInvoice(clientNpub: string, amountUSD: number): Invoice {
+
+  // 1. Deriva endereço BTC do merchant xpub
+
+  const address = deriveAddressFromXpub(MERCHANT_XPUB, invoiceIndex);
+
+
+
+  // 2. Cria invoice criptografada
+
+  const invoice = {
+
+    id: sha256(address + timestamp),
+
+    amount: amountUSD,
+
+    btcAmount: convertUSDToBTC(amountUSD, currentRate),
+
+    address: address,
+
+    expires: now + 7 * 24 * 60 * 60 * 1000, // 7 dias
+
+    client: clientNpub,
+
+    product: "ET-COSMIC Bootstrap Professional — Parcela 1",
+
+  };
+
+
+
+  // 3. Criptografa payload
+
+  const encrypted = aesGcmEncrypt(JSON.stringify(invoice), INVOICE_KEY);
+
+
+
+  // 4. Publica no Nostr (Kind 30023)
+
+  const event = {
+
+    kind: 30023,
+
+    content: encrypted,
+
+    tags: [
+
+      ["d", sha256(address)], // index por hash do endereço
+
+      ["client", clientNpub],
+
+      ["amount", invoice.btcAmount.toString()],
+
+      ["expires", invoice.expires.toString()],
+
+    ],
+
+  };
+
+
+
+  // 5. Envia link de pagamento ao cliente
+
+  const paymentLink = `https://bmcc-dev.github.io/GitPay/?invoice=${invoice.id}#key=${INVOICE_KEY}`;
+
+
+
+  return { event, paymentLink };
+
+}
+
+```
+
+
+**Comunicação ao cliente:**
+
+> "Invoice gerada. Valor: $7.500 (~0.XX BTC no endereço [ADDRESS]).
+
+> Pague em até 7 dias. Após confirmação na blockchain (1 confirmação), iniciamos Semana 1.
+
+> Link: [paymentLink]"
+
+
+---
+
+
+### 9. Gate: BTC Confirmado
+
+
+**Verificação automática:**
+
+- Script monitora mempool.space API para o endereço
+
+- Após 1 confirmação → Nostr DM: "Pagamento confirmado. Iniciando Semana 1."
+
+- Após 7 dias sem pagamento → Invoice expira, lead arquivado
+
+
+**Se cliente pede prazo:**
+
+- Máximo 3 dias adicionais
+
+- Se não pagar → **rejeitar**, não negociar
+
+
+---
+
+
+### 10. Execução (4 Semanas)
+
+
+**Semana 1: Arquitetura + Repos**
+
+- Call de 30 min: alinhamento técnico
+
+- Entrega: Repos privados (GitLab) com estrutura base
+
+- Cliente valida: "Arquitetura aprovada?"
+
+
+**Semana 2: Módulo 1**
+
+- Call de 30 min: review do Módulo 1
+
+- Entrega: Código + testes + documentação
+
+- Cliente valida: "Módulo 1 aprovado?"
+
+
+**Semana 3: Módulos 2-3 + Integração**
+
+- Call de 30 min: review de integração
+
+- Entrega: Stack completo funcionando localmente
+
+- Cliente valida: "Integração aprovada?"
+
+
+**Semana 4: Documentação + Handoff**
+
+- Call de 1h: treinamento da equipe do cliente
+
+- Entrega: Design doc final, runbooks, repos transferidos para conta do cliente
+
+- Cliente valida: "Handoff aprovado?"
+
+
+**Regra de ouro:** Se cliente não valida em 48h, considera aprovado por default. Não espere.
+
+
+---
+
+
+### 11. Invoice Final GitPay (50% Restante — $7.500)
+
+
+**Só gerada após "Handoff aprovado"**
+
+
+```typescript
+
+function generateFinalInvoice(clientNpub: string, originalInvoiceId: string): Invoice {
+
+  // Mesmo processo, mas com referência ao invoice original
+
+  // Link de pagamento enviado após handoff
+
+  // Nostr receipt (Kind 23001) publicado pelo cliente após pagamento
+
+}
+
+```
+
+
+**Comunicação:**
+
+> "Handoff aprovado. Invoice final: $7.500 (~0.XX BTC).
+
+> Após pagamento, ativamos 3 meses de suporte best-effort.
+
+> Link: [paymentLink]"
+
+
+**Se cliente não paga em 7 dias:**
+
+- Suporte não ativa
+
+- Código permanece AGPL (cliente pode usar, mas sem suporte)
+
+- Não perseguir
+
+
+---
+
+
+### 12. Suporte (3 Meses — Best-Effort)
+
+
+**Canais:**
+
+- Nostr DM (Kind 4) — preferencial
+
+- GitHub issues no repo do cliente (público, AGPL obriga)
+
+- **Não** email pessoal, **não** WhatsApp, **não** calls ad-hoc
+
+
+**SLA de resposta:**
+
+- Horário comercial (UTC-3): 24h
+
+- Fora do horário: 72h
+
+- **Não** é 24/7. Se for crítico, contrate Community Ops ($50/mês)
+
+
+**Escopo:**
+
+- Bugs no código entregue
+
+- Dúvidas de integração
+
+- **Não** inclui: novas features, migração de infra, treinamento adicional
+
+
+**Após 3 meses:**
+
+- Suporte encerra automaticamente
+
+- Cliente pode renovar: $200/mês (best-effort) ou $500/mês (Community Ops)
+
+- Ou self-support via comunidade Nostr
+
+
+---
+
+
+## Métricas de Funnel (Esperadas)
+
+
+| Etapa | Taxa de Conversão | Leads/mês | Receita esperada |
+
+|---|---|---|---|
+
+| Lead inbound | 100% | 20 | - |
+
+| Questionário aprovado | 30% | 6 | - |
+
+| Discovery call realizada | 50% | 3 | - |
+
+| Proposta enviada | 80% | 2.4 | - |
+
+| Proposta aprovada | 40% | 1 | - |
+
+| Invoice 1 pago | 80% | 0.8 | $6.000 |
+
+| Handoff aprovado | 90% | 0.72 | - |
+
+| Invoice 2 pago | 85% | 0.61 | $4.575 |
+
+| **Total/mês** | **3%** | **0.61** | **$10.575** |
+
+
+**Anual:** ~$127K para 7-8 clientes, com ~160h de consultoria (20h/cliente). Taxa horária efetiva: **~$793/h**.
+
+
+---

@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-06-14T01:51:00Z",
+  "project_root": "/run/media/bruno/Bruno/ET-COSMIC-GitPay",
+  "languages": [
+    { "name": "TypeScript", "extensions": [".ts", ".tsx"], "file_count": 572 },
+    { "name": "JavaScript", "extensions": [".js", ".mjs", ".cjs"], "file_count": 147 },
+    { "name": "Rust", "extensions": [".rs"], "file_count": 16 },
+    { "name": "Python", "extensions": [".py"], "file_count": 18 },
+    { "name": "Shell", "extensions": [".sh"], "file_count": 52 },
+    { "name": "Solidity", "extensions": [".sol"], "file_count": 1 }
+  ],
+  "primary_language": "TypeScript",
+  "frameworks": [
+    { "name": "React", "version": "19.2.6", "source": "ET-COSMIC/package.json" },
+    { "name": "Vite", "version": "7.3.2", "source": "ET-COSMIC/package.json" },
+    { "name": "TailwindCSS", "version": "4.1.17", "source": "ET-COSMIC/package.json" },
+    { "name": "Capacitor", "version": "8.3.3", "source": "ET-COSMIC/package.json" },
+    { "name": "Hardhat", "version": "2.22.0", "source": "ET-COSMIC/package.json" }
+  ],
+  "package_manager": "npm",
+  "entry_points": [
+    { "path": "ET-COSMIC/index.html", "type": "app_entry" },
+    { "path": "ET-COSMIC/src/main.tsx", "type": "app_entry" },
+    { "path": "ET-COSMIC/server/server.js", "type": "server_entry" },
+    { "path": "GitPay/index.html", "type": "app_entry" },
+    { "path": "GitPay/app.js", "type": "app_entry" },
+    { "path": "GitPay/lib-entry.js", "type": "library_entry" }
+  ],
+  "config_files": [
+    "ET-COSMIC/tsconfig.json",
+    "ET-COSMIC/eslint.config.mjs",
+    "ET-COSMIC/hardhat.config.cjs",
+    "ET-COSMIC/config/Caddyfile.cqr",
+    "ET-COSMIC/config/rtl.json",
+    "ET-COSMIC/config/nostr.toml",
+    "ET-COSMIC/config/nginx-cqr-proxy.conf",
+    "GitPay/manifest.json"
+  ],
+  "ci_cd": [],
+  "docker": {
+    "dockerfile": "ET-COSMIC/Dockerfile"
+  },
+  "database_hints": [
+    { "path": "ET-COSMIC/src/storage/", "type": "storage_dir" }
+  ],
+  "test_framework": "Vitest, Hardhat",
+  "test_file_count": 89,
+  "modules": [
+    "GitPay",
+    "ET-COSMIC-Core",
+    "ET-COSMIC-Crypto",
+    "ET-COSMIC-Mesh",
+    "ET-COSMIC-Finance",
+    "ET-COSMIC-Compute",
+    "ET-COSMIC-Server"
+  ],
+  "total_files": 1011,
+  "organization_suggestion": {
+    "granularity": "hybrid",
+    "rationale": "Múltiplos sinais detectados: a estrutura de pastas top-level em src/ divide-se em domínios lógicos, e há um roteador centralizado com catálogo de rotas B2B (router.tsx).",
+    "signals": [
+      { "type": "top_level_domain_folders", "evidence": ["ET-COSMIC/src/crypto/", "ET-COSMIC/src/mesh/", "ET-COSMIC/src/b2b/"] },
+      { "type": "centralized_routing", "evidence": ["ET-COSMIC/src/router.tsx", "ET-COSMIC/src/b2b/routeCatalog.ts"] }
+    ],
+    "features": []
+  }
+}

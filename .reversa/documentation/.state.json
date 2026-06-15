@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-06-14T19:15:10-03:00",
+  "lastCheckpoint": "2026-06-14T19:15:10-03:00",
+  "pipelineDurationMs": 4200,
+  "completedAgents": [
+    "mapper",
+    "analyst",
+    "storyteller",
+    "publisher"
+  ],
+  "pendingAgents": [],
+  "pages": {
+    "index.html": {
+      "status": "created",
+      "agent": "reversa-docs-publisher"
+    },
+    "arquitetura.html": {
+      "status": "created",
+      "agent": "reversa-docs-mapper"
+    },
+    "modulos.html": {
+      "status": "created",
+      "agent": "reversa-docs-mapper"
+    },
+    "topologia.html": {
+      "status": "created",
+      "agent": "reversa-docs-mapper"
+    },
+    "metricas.html": {
+      "status": "created",
+      "agent": "reversa-docs-analyst"
+    },
+    "features/ET-COSMIC-Compute.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/ET-COSMIC-Core.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/ET-COSMIC-Crypto.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/ET-COSMIC-Finance.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/ET-COSMIC-Mesh.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/ET-COSMIC-Server.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    },
+    "features/GitPay.html": {
+      "status": "created",
+      "agent": "reversa-docs-storyteller"
+    }
+  },
+  "pagesGenerated": [
+    "index.html",
+    "arquitetura.html",
+    "modulos.html",
+    "topologia.html",
+    "metricas.html",
+    "features/ET-COSMIC-Compute.html",
+    "features/ET-COSMIC-Core.html",
+    "features/ET-COSMIC-Crypto.html",
+    "features/ET-COSMIC-Finance.html",
+    "features/ET-COSMIC-Mesh.html",
+    "features/ET-COSMIC-Server.html",
+    "features/GitPay.html"
+  ],
+  "pagesOmitted": [
+    {
+      "page": "timeline.html",
+      "reason": ".reversa/chronicle.md não encontrado"
+    },
+    {
+      "page": "glossario.html",
+      "reason": ".reversa/soul.md não encontrado"
+    },
+    {
+      "page": "deck.html",
+      "reason": ".reversa/soul.md não encontrado"
+    }
+  ],
+  "auxiliaryHtmls": [],
+  "auxiliaryHtmlsDiscovered": 0,
+  "auxiliaryDiscoveryAborted": false,
+  "cdnFallbackUsed": true,
+  "cdnFallbackDetails": [],
+  "vendorMissing": [],
+  "smokeTestFailed": false,
+  "smokeTestErrors": [],
+  "brokenLinks": []
+}

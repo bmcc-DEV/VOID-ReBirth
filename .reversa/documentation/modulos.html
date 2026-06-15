@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafo de Módulos — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="modulos">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/nav.js"></script>
+  
+  <script src="assets/vendor/d3.v7.min.js"></script>
+</head>
+<body data-page-id="modulos">
+  <main class="reversa-content">
+    
+<div class="page-header">
+  <h1>Grafo de <span>Módulos</span></h1>
+  <p>Grafo de dependências entre arquivos do sistema legado. Nós em vermelho indicam participação em ciclos de importação circular que necessitam de desacoplamento.</p>
+</div>
+
+<div class="page-layout-with-sidebar">
+  <div class="viewport-container" id="d3-container" style="background:#0c0f17;">
+    <!-- D3 renderiza o SVG aqui -->
+  </div>
+  
+  <div class="control-sidebar">
+    <div class="sidebar-section">
+      <h3>Filtros</h3>
+      <div class="control-group">
+        <label for="repulsion-strength">Força de Repulsão</label>
+        <input type="range" id="repulsion-strength" min="-100" max="-10" step="5" value="-40">
+      </div>
+      <div class="control-group">
+        <label for="link-distance">Distância de Link</label>
+        <input type="range" id="link-distance" min="15" max="150" step="5" value="45">
+      </div>
+      <div class="control-group">
+        <label for="cycles-only">Filtrar Ciclos Circular</label>
+        <select id="cycles-only">
+          <option value="all">Exibir Todos os Módulos</option>
+          <option value="cycles">Exibir Apenas Ciclos</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h3>Inspecionar Nó</h3>
+      <div id="node-empty" class="text-muted" style="font-size: 0.85rem;">
+        Clique em um nó do grafo para visualizar os detalhes de dependências e caminhos.
+      </div>
+      <div id="node-content" class="detail-panel" style="display: none;">
+        <h4 id="node-name">arquivo.ts</h4>
+        <p><strong>Caminho:</strong> <span id="node-path">src/arquivo.ts</span></p>
+        <p><strong>Ciclo Circular:</strong> <span id="node-cycle-status">Não</span></p>
+        <p><strong>Dependências:</strong> <span id="node-deps-count">0</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// D3 Force Graph
+const container = document.getElementById("d3-container");
+const width = container.clientWidth;
+const height = container.clientHeight;
+
+const svg = d3.select("#d3-container")
+  .append("svg")
+  .attr("width", "100%")
+  .attr("height", "100%")
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .append("g");
+
+// Zoom/Pan
+const zoom = d3.zoom()
+  .scaleExtent([0.1, 8])
+  .on("zoom", (event) => {
+    svg.attr("transform", event.transform);
+  });
+d3.select("#d3-container svg").call(zoom);
+
+// Carregar Dados
+const data = window.RV_DATA.deps;
+const cycleNodes = new Set(data.cycles);
+
+let currentNodes = [...data.nodes];
+let currentLinks = [...data.links];
+
+const simulation = d3.forceSimulation(currentNodes)
+  .force("link", d3.forceLink(currentLinks).id(d => d.id).distance(45))
+  .force("charge", d3.forceManyBody().strength(-40))
+  .force("center", d3.forceCenter(width / 2, height / 2))
+  .force("x", d3.forceX(width / 2).strength(0.05))
+  .force("y", d3.forceY(height / 2).strength(0.05));
+
+// Adicionar setas para direcionamento do link
+d3.select("#d3-container svg").append("defs").append("marker")
+  .attr("id", "arrow")
+  .attr("viewBox", "0 -5 10 10")
+  .attr("refX", 18)
+  .attr("refY", 0)
+  .attr("markerWidth", 6)
+  .attr("markerHeight", 6)
+  .attr("orient", "auto")
+  .append("path")
+  .attr("d", "M0,-5L10,0L0,5")
+  .attr("fill", "#516280");
+
+let linkG = svg.append("g").attr("class", "links");
+let nodeG = svg.append("g").attr("class", "nodes");
+
+function updateGraph() {
+  // Links
+  const link = linkG.selectAll("line")
+    .data(currentLinks)
+    .join("line")
+    .attr("stroke", "#212836")
+    .attr("stroke-width", 1.5)
+    .attr("marker-end", "url(#arrow)")
+    .attr("opacity", 0.6);
+
+  // Nodes
+  const node = nodeG.selectAll("circle")
+    .data(currentNodes)
+    .join("circle")
+    .attr("r", d => cycleNodes.has(d.id) ? 8 : 5)
+    .attr("fill", d => cycleNodes.has(d.id) ? "#ef4444" : "#d4af37")
+    .attr("stroke", d => cycleNodes.has(d.id) ? "#b91c1c" : "#b8952b")
+    .attr("stroke-width", 1.5)
+    .call(d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended));
+
+  node.append("title").text(d => d.id);
+
+  node.on("click", (event, d) => {
+    // Exibir painel
+    document.getElementById("node-empty").style.display = "none";
+    document.getElementById("node-content").style.display = "block";
+    document.getElementById("node-name").textContent = d.id.split("/").pop();
+    document.getElementById("node-path").textContent = d.id;
+    document.getElementById("node-cycle-status").textContent = cycleNodes.has(d.id) ? "SIM (Circular)" : "Não";
+    document.getElementById("node-cycle-status").style.color = cycleNodes.has(d.id) ? "#ef4444" : "#8b949e";
+    
+    // Contar dependências
+    const edgesCount = currentLinks.filter(l => l.source.id === d.id || l.source === d.id).length;
+    document.getElementById("node-deps-count").textContent = edgesCount;
+    
+    // Destacar conexões
+    node.attr("opacity", n => (n.id === d.id || currentLinks.some(l => (l.source.id === d.id && l.target.id === n.id) || (l.target.id === d.id && l.source.id === n.id))) ? 1.0 : 0.2);
+    link.attr("opacity", l => (l.source.id === d.id || l.target.id === d.id) ? 1.0 : 0.05);
+    
+    event.stopPropagation();
+  });
+
+  simulation.on("tick", () => {
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    node
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y);
+  });
+  
+  simulation.alpha(1).restart();
+}
+
+updateGraph();
+
+// Fechar destaque ao clicar no fundo
+d3.select("#d3-container svg").on("click", () => {
+  nodeG.selectAll("circle").attr("opacity", 1.0);
+  linkG.selectAll("line").attr("opacity", 0.6);
+  document.getElementById("node-empty").style.display = "block";
+  document.getElementById("node-content").style.display = "none";
+});
+
+// Drag handlers
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+// Filtros na Sidebar
+document.getElementById("repulsion-strength").addEventListener("input", (e) => {
+  const val = parseInt(e.target.value);
+  simulation.force("charge").strength(val);
+  simulation.alpha(0.5).restart();
+});
+
+document.getElementById("link-distance").addEventListener("input", (e) => {
+  const val = parseInt(e.target.value);
+  simulation.force("link").distance(val);
+  simulation.alpha(0.5).restart();
+});
+
+document.getElementById("cycles-only").addEventListener("change", (e) => {
+  const mode = e.target.value;
+  if (mode === "cycles") {
+    currentNodes = data.nodes.filter(n => cycleNodes.has(n.id));
+    currentLinks = data.links.filter(l => cycleNodes.has(l.source) && cycleNodes.has(l.target));
+  } else {
+    currentNodes = [...data.nodes];
+    currentLinks = [...data.links];
+  }
+  
+  simulation.nodes(currentNodes);
+  simulation.force("link").links(currentLinks);
+  updateGraph();
+});
+</script>
+
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

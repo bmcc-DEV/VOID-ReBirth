@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Finance — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Finance">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Finance">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Finance</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">ET-COSMIC-Finance</h1>
+<br/>
+<p class="blockquote-content">Requisitos funcionais e de negócio do módulo de finanças e economia circular.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O módulo <strong>ET-COSMIC-Finance</strong> orquestra todas as atividades econômicas e o ledger financeiro circular do ecossistema ET-COSMIC. Ele unifica e coordena o controle de saldos de $SOV, canais de depósito Lightning/NWC (Bitcoin), o Bazaar de binários, e as recompensas de hospedagem e mineração ética.</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li>Centralizar o controle contábil da moeda nativa $SOV. 🟢</li>
+<li>Garantir a aplicação das taxas de protocolo de transações em toda a malha. 🟢</li>
+<li>Coordenar os depósitos baseados em Lightning/NWC e a distribuição de recompensas de CDN e computação útil. 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Royalty de Transação</strong>: Toda transação de transferência ou bazaar sofre dedução da taxa de protocolo padrão de 10 BPS (0.1%), configurada por `VITE_PROTOCOL_ROYALTY_BPS`. 🟢</li>
+<li><strong>Tesouraria Central</strong>: A conta destinatária de todas as taxas de protocolo é `"treasury:montelauro"`. 🟢</li>
+<li><strong>Sub-unidades de Precisão</strong>: Toda a contabilidade interna opera em micro-SOVs (`1 SOV = 1.000.000 µSOV`). 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-01 | Integração de saldo unificado de $SOV | Must | Validar integridade contábil das carteiras após transações de bazaar e mineração. |</p>
+<p>| RF-02 | Aplicação de comissão/taxa de protocolo | Must | Reter a porcentagem de comissão e encaminhar para a tesouraria <code>"treasury:montelauro"</code>. |</p>
+<p>| RF-03 | Persistência assíncrona agendada | Should | Garantir que alterações de saldo disparem gravação no arquivo JSON de banco contábil com agrupamento (debounce). |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Performance | Debounce de persistência de disco | <code>sovLedger.js</code> via <code>schedulePersist()</code> | 🟢 |</p>
+<p>| Segurança | Validação estrita de saldos locais | <code>sovLedger.js:transferWithFee</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Critérios de Aceitação</h2>
+<br/>
+<div class="code-block"><pre><code class="language-gherkin">
+Dado que o remetente tem 10.000 µSOV
+
+E a taxa de protocolo é de 10 BPS (0.1%)
+
+Quando o remetente transfere 5.000 µSOV para o destinatário
+
+Então o remetente fica com 5.000 µSOV
+
+E o destinatário recebe 4.995 µSOV
+
+E a tesouraria "treasury:montelauro" recebe 5 µSOV
+
+
+
+Dado que o remetente tem 2.000 µSOV
+
+Quando o remetente tenta transferir 3.000 µSOV
+
+Então o sistema rejeita a transação por saldo insuficiente
+
+</code></pre></div>
+<br/>
+<h2 class="section-title">Prioridade (MoSCoW)</h2>
+<br/>
+<p>| Requisito | MoSCoW | Justificativa |</p>
+<p>|-----------|--------|---------------|</p>
+<p>| Ledger Soberano de $SOV | Must | Mecanismo contábil principal do ecossistema |</p>
+<p>| Taxação de protocolo | Must | Modelo de monetização e sustentabilidade da malha |</p>
+<p>| bazaar de binários | Should | Principal utilidade econômica de compra e venda |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/src/economy/sovLedger.js</code> | <code>transferWithFee</code>, <code>schedulePersist</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/economy/pairedDeposit.js</code> | <code>settlePairedDepositFromInvoice</code> | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">ET-COSMIC-Finance, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificação técnica de design do módulo de finanças.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<h3 class="subsection-title">Classes/Funções principais</h3>
+<br/>
+<p>| Símbolo | Assinatura | Retorno | Observação |</p>
+<p>|---------|-----------|---------|------------|</p>
+<p>| <code>transferWithFee</code> | <code>(fromId: string, toId: string, grossMicro: number, channel: string)</code> | <code>boolean</code> | Realiza transferência de micro-SOV aplicando royalties de 10 BPS. 🟢 |</p>
+<p>| <code>schedulePersist</code> | <code>()</code> | <code>void</code> | Agenda a gravação em lote do estado de saldos em formato JSON. 🟢 |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal</h2>
+<p>1. O módulo inicializa carregando o estado de saldos do arquivo JSON local.</p>
+<p>2. Intercepta requisições de transações e bazaar aplicando a taxa <code>VITE_PROTOCOL_ROYALTY_BPS</code>.</p>
+<p>3. Direciona as taxas cobradas para <code>"treasury:montelauro"</code>.</p>
+<p>4. Salva as atualizações de carteiras de forma assíncrona com atraso controlado (debounce).</p>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li>`pairedDeposit.js`: para gateways de depósito Lightning/NWC.</li>
+<li>`binaryMarket.js`: para transações comerciais do Bazaar.</li>
+<li>`hostingRevenue.js` & `ethicalMining.js`: para alimentar o pagamento de recompensas.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Taxação de 10 BPS por padrão | <code>sovLedger.js</code> | 🟢 |</p>
+<p>| Banco contábil local persistido em arquivo JSON | <code>sovLedger.js</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<ul>
+<li>Mantém em memória um mapa de IDs de contas para saldos contábeis correspondentes (expresso em micro-SOVs).</li>
+</ul>
+<br/>
+<h2 class="section-title">Observabilidade</h2>
+<ul>
+<li>Emite logs de auditoria contendo `transactionId`, `fromId`, `toId`, `netAmount`, `feeAmount` e timestamps.</li>
+</ul>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

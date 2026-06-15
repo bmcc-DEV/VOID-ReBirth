@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Server — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Server">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Server">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Server</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">ET-COSMIC-Server</h1>
+<br/>
+<p class="blockquote-content">Requisitos funcionais e de negócio do servidor central do ecossistema ET-COSMIC.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O módulo <strong>ET-COSMIC-Server</strong> é a camada centralizadora e orquestradora do backend HTTP do ecossistema ET-COSMIC. Ele expõe uma API REST robusta que integra de forma híbrida os pagamentos via canais Lightning Network, serviços de criptografia pós-quântica (PQC-as-a-Service), emuladores de física exótica (LUSUS, AQRE, ETERNET, Isossupra, IMC), malha P2P/CDN (SilentMesh) e controle financeiro de tiers e reputação.</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li>Inicializar a API HTTP baseada no Express e gerenciar políticas de segurança CORS. 🟢</li>
+<li>Prover resiliência a falhas na conexão ao nó LND local com desvio para modo de simulação. 🟢</li>
+<li>Servir assinaturas e chaves de criptografia pós-quântica ML-KEM/ML-DSA. 🟢</li>
+<li>Roteamento unificado RPC via `/api/void` para serviços internos e de malha. 🟢</li>
+<li>Gerenciar pools de recursos, conciliação de SLAs e renovação automática de tiers. 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Fallback de Pagamento</strong>: Se a URL do REST LND estiver indisponível e a variável `LND_FALLBACK_SIM` for verdadeira, ativa a simulação em memória das invoices. 🟢</li>
+<li><strong>PQC-as-a-Service Monetizado</strong>: Cada requisição feita nos endpoints de criptografia ML-KEM ou ML-DSA debita `1 Satoshi` da API Key do desenvolvedor. Se o saldo zerar, retorna o erro HTTP `402 Payment Required`. 🟢</li>
+<li><strong>SLA e Prova de Uptime</strong>: Provedores de recursos computacionais devem reportar provas criptográficas periódicas de uptime para receber os incentivos acordados em SLA. 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-01 | Servidor HTTP e CORS | Must | Subir API Express escutando na porta configurada e validando rotas. |</p>
+<p>| RF-02 | Cobrança por API Key | Must | Reter 1 Satoshi de saldo a cada chamada em <code>/api/pqc/*</code> e bloquear se saldo zerar. |</p>
+<p>| RF-03 | Simulação de Lightning | Must | Responder com hashes simulados se o LND estiver fora do ar e a simulação habilitada. |</p>
+<p>| RF-04 | Cron de tiers | Should | Sincronizar carteiras e debitar assinaturas mensais de tiers a cada hora. |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Performance | Tempo de resposta de Kyber/KyberKeys | <code>pqcService.js</code> | 🟢 |</p>
+<p>| Confiabilidade | Fallback dinâmico de LND | <code>server.js</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Critérios de Aceitação</h2>
+<br/>
+<div class="code-block"><pre><code class="language-gherkin">
+Dado que o desenvolvedor possui a chave "key-abc" com saldo de 5 Satoshis
+
+Quando executa uma chamada de criptografia Kyber no servidor
+
+Então o sistema processa a primitiva ML-KEM
+
+E debita 1 Satoshi do saldo da chave
+
+E o saldo passa a ser 4 Satoshis
+
+
+
+Dado que o saldo da chave "key-xyz" é de 0 Satoshis
+
+Quando executa uma chamada em /api/pqc/v1/kem
+
+Então o servidor retorna erro HTTP 402 Payment Required
+
+</code></pre></div>
+<br/>
+<h2 class="section-title">Prioridade (MoSCoW)</h2>
+<br/>
+<p>| Requisito | MoSCoW | Justificativa |</p>
+<p>|-----------|--------|---------------|</p>
+<p>| Fallback LND e API REST | Must | Necessário para transações Lightning e economia local |</p>
+<p>| PQC-as-a-Service | Must | Primitiva de segurança pós-quântica do sistema |</p>
+<p>| Renovação automática de tiers | Should | Sustentabilidade dos pools de recursos da malha |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/server/server.js</code> | Express app initialization | 🟢 |</p>
+<p>| <code>ET-COSMIC/server/pqcService.js</code> | <code>pqcService</code>, <code>requireApiKey</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/router.tsx</code> | Client routing map | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">ET-COSMIC-Server, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificação técnica de design do servidor central HTTP.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<h3 class="subsection-title">Endpoints HTTP expostos</h3>
+<br/>
+<p>| Método | Caminho | Entrada | Saída | Status codes |</p>
+<p>|--------|---------|---------|-------|--------------|</p>
+<p>| POST | <code>/api/pqc/v1/kem</code> | API Key e segredos | Par de chaves ou segredo Kyber | 200, 402, 500 |</p>
+<p>| POST | <code>/api/void</code> | RPC payload | RPC response | 200, 400, 500 |</p>
+<p>| GET | <code>/api/lightning/status/:id</code> | <code>id: string</code> | Status da invoice | 200, 404, 500 |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal</h2>
+<p>1. O servidor Express inicializa configurando middlewares (CORS, body parser, log).</p>
+<p>2. Tenta conexão à API LND REST. Em caso de falha, habilita o modo fallback simulated se configurado.</p>
+<p>3. Carrega o banco JSON de API keys (<code>db-apikeys.json</code>).</p>
+<p>4. Inicia listeners de rotas REST e RPC:</p>
+<ul>
+<li>Rotas de PQC sob o middleware `requireApiKey`.</li>
+<li>Roteador RPC central `/api/void`.</li>
+<li>Rotas de controle de pools de recursos e SLA.</li>
+</ul>
+<p>5. Inicializa os temporizadores Cron (renovação de tiers e auditorias de SLA).</p>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li>`pqcService`: resolvedores criptográficos e banco de chaves.</li>
+<li>LND Node (ou simulador local).</li>
+<li>Framework Express.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Fallback dinâmico para simulação em memória do Lightning | <code>server.js</code> | 🟢 |</p>
+<p>| Cobrança de 1 Satoshi por chamada PQC via Middleware | <code>pqcService.js</code> | 🟢 |</p>
+<p>| Unificação de serviços RPC via rota <code>/api/void</code> | <code>server.js</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<ul>
+<li>`simulatedInvoices`: Mapa de invoices em memória se o LND estiver off-line.</li>
+<li>`apiKeys`: Cache em memória das chaves dos desenvolvedores para evitar leitura excessiva em disco.</li>
+</ul>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

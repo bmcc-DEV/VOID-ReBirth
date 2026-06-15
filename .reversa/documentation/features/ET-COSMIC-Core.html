@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Core — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Core">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Core">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Core</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">Módulo ET-COSMIC-Core (void_core)</h1>
+<br/>
+<p class="blockquote-content">Módulo matemático central de segurança e privacidade avançada compilado para WebAssembly.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O <code>void_core</code> é o núcleo matemático de privacidade e criptografia do ecossistema ET-COSMIC. Desenvolvido em Rust e compilado para WebAssembly (<code>wasm32-unknown-unknown</code>), ele provê primitivas criptográficas pós-quânticas, compromissos homomórficos confidenciais (Pedersen commitments), provas de intervalo em conhecimento zero (Bulletproofs), dispersão de segredos e autenticação física (device binding).</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li><strong>Geração de Ghost ID</strong>: Prover chaves de rede efêmeras e pseudônimas Ed25519 a partir de pools caóticos de entropia.</li>
+<li><strong>Compromissos Pedersen & Bulletproofs</strong>: Ocultar saldos financeiros e validar conservação de valores homomórficos em checkpoints confidenciais.</li>
+<li><strong>Quantum-Enhanced Layer (QEL)</strong>: Implementar fragmentação Shamir Secret Sharing e criptografia simétrica ChaCha20-Poly1305.</li>
+<li><strong>Criptografia PQC</strong>: Oferecer algoritmos pós-quânticos ML-KEM-1024 e ML-DSA-87 para comunicação e assinaturas de alta segurança.</li>
+<li><strong>Auditoria de Licenciamento</strong>: Validar payloads de hardware `VOID-00` de forma offline no browser via verificação ML-DSA-87.</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Curva Ed25519 de Ghost ID</strong> 🟢: A chave de identidade deve ser gerada deterministicamente a partir de SHA3-512 sobre o prefixo `void-ghost-id-v8` com entropia de hardware e mapeada na curva base Ed25519.</li>
+<li><strong>Gerador H Pedersen Nada-na-Manga</strong> 🟢: Para garantir independência linear dos geradores da curva elíptica, o ponto $H$ deve ser gerado a partir do hash-to-curve da string constante `hydra-pedersen-H-generator-v8`.</li>
+<li><strong>Provas de Intervalo a 32 bits</strong> 🟢: O valor ocultado no Pedersen deve ser provado via Bulletproofs no intervalo $[0, 2^{32}-1]$ para proteger a CPU em dispositivos móveis.</li>
+<li><strong>Operação QEL no Corpo Finito</strong> 🟢: O polinômio de Shamir opera sobre o Corpo Galois $GF(2^8)$ com polinômio irredutível do AES ($x^8 + x^4 + x^3 + x + 1$).</li>
+<li><strong>Validação de Handshake offline</strong> 🟢: Payloads de ativação comercial devem validar o `device_id` local e janela temporal contra assinatura ML-DSA-87 do vendor.</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-COR-01 | Geração de Ghost ID determinística | Must | Produzir chave pública e handle de rede <code>"hydra_◆_..."</code> a partir da seed de entropia. |</p>
+<p>| RF-COR-02 | Compromisso Pedersen homomórfico | Must | Somar compromissos homomórficos para provar conservação de saldos de transação. |</p>
+<p>| RF-COR-03 | Range Proofs de 32 bits | Must | Gerar prova em conhecimento zero de que o valor é positivo no limite de 32 bits. |</p>
+<p>| RF-COR-04 | Shamir Secret Sharing QEL | Must | Dividir segredos em $N$ fragmentos de forma a necessitar de $K$ shards para reconstituição. |</p>
+<p>| RF-COR-05 | Assinatura e Encapsulamento PQC | Must | Expor primitivas de segurança NIST ML-KEM-1024 e ML-DSA-87 para uso híbrido. |</p>
+<p>| RF-COR-06 | Verificação de licença <code>VOID-00</code> | Must | Validar integridade e assinatura do payload e lançar pânico na máquina WASM se falhar. |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Portabilidade | Execução multiplataforma isolada em WebAssembly WASM32 | <code>ET-COSMIC/void_core/Cargo.toml</code> | 🟢 |</p>
+<p>| Desempenho | range proofs de 32 bits otimizados para menor latência | <code>ET-COSMIC/void_core/src/lib.rs</code> | 🟢 |</p>
+<p>| Robustez | Proteção total de pânico em erros de licenciamento de hardware | <code>ET-COSMIC/void_core/src/license.rs</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/void_core/src/lib.rs</code> | <code>derive_ghost_id</code> / <code>create_balance_proof</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/void_core/src/license.rs</code> | <code>license_verify_handshake</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/void_core/src/pqc.rs</code> | ML-KEM / ML-DSA bindings | 🟢 |</p>
+<p>| <code>ET-COSMIC/void_core/src/qel.rs</code> | Shamir $GF(2^8)$ algorithms | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">Módulo ET-COSMIC-Core (void_core), Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificação de design técnico do núcleo matemático WASM.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<p>O modulo exporta funções WebAssembly compatíveis com binding Javascript/wasm-bindgen.</p>
+<br/>
+<h3 class="subsection-title">Símbolos Rust WASM Exportados</h3>
+<br/>
+<p>| Símbolo | Assinatura (Rust) | Retorno | Observação |</p>
+<p>|---------|------------------|---------|------------|</p>
+<p>| <code>derive_ghost_id</code> | <code>(entropy: &[u8]) -> GhostId</code> | <code>struct</code> | Retorna chaves Ed25519 e handle. |</p>
+<p>| <code>create_pedersen_commitment</code> | <code>(value: u32, blinding: &[u8]) -> Pedersen</code> | <code>struct</code> | Gera o ponto de curva $C = r \cdot G + v \cdot H$. |</p>
+<p>| <code>create_balance_proof</code> | <code>(inputs: &[Pedersen], outputs: &[Pedersen]) -> bool</code> | <code>bool</code> | Valida a conservação de valores homomórficos. |</p>
+<p>| <code>create_range_proof</code> | <code>(value: u32, blinding: &[u8]) -> Vec<u8></code> | <code>Vec<u8></code> | Retorna bytes da prova Bulletproofs de 32 bits. |</p>
+<p>| <code>qel_split_secret</code> | <code>(secret: &[u8], k: u8, n: u8) -> Vec<Shard></code> | <code>Vec<Shard></code> | Fragmentação Shamir GF(2^8) de segredo. |</p>
+<p>| <code>qel_combine_shards</code> | <code>(shards: &[Shard]) -> Vec<u8></code> | <code>Vec<u8></code> | Reconstituição Lagrange de segredo. |</p>
+<p>| <code>license_verify_handshake</code> | <code>(payload: &[u8], signature: &[u8], vendor_key: &[u8]) -> bool</code> | <code>bool</code> | Valida payload <code>VOID-00</code>. Entra em pânico se falhar. |</p>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li>`curve25519-dalek`: Aritmética de grupo elíptico de alta performance para Ed25519 e Pedersen.</li>
+<li>`bulletproofs`: Crate de provas de intervalo em conhecimento zero rápidas.</li>
+<li>`sha3`: Hashing SHA3-512 e SHA3-256 para pools de entropia e Ghost IDs.</li>
+<li>`chacha20poly1305`: Algoritmo simétrico AEAD para proteção de shards QEL.</li>
+<li>`wasm-bindgen`: Geração de bindings automáticas para JavaScript do browser.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Geração determinística de gerador H independente de G via hash-to-curve | <code>lib.rs:82</code> | 🟢 |</p>
+<p>| Restrição de Bulletproofs para 32 bits de modo a acelerar CPU mobile | <code>lib.rs:114</code> | 🟢 |</p>
+<p>| Uso do polinômio de campo Galois do AES (0x11b) na fragmentação Shamir | <code>qel.rs:48</code> | 🟢 |</p>
+<p>| Pânico explícito do motor WASM na rejeição de ativação de hardware | <code>license.rs:94</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<p>O WebAssembly opera em memória linear isolada e controlada. Instâncias de structs como <code>GhostId</code> e <code>Pedersen</code> são expostas como ponteiros opacos gerenciados pelo garbage collector de binding JavaScript, minimizando vazamentos de dados na memória do browser.</p>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

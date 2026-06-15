@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métricas do Projeto — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="metricas">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/nav.js"></script>
+  
+  
+        <script src="assets/vendor/highcharts.js"></script>
+        <script src="assets/vendor/highcharts-accessibility.js"></script>
+        <script src="assets/vendor/highcharts-exporting.js"></script>
+        <script src="assets/vendor/highcharts-treemap.js"></script>
+        <script src="assets/vendor/highcharts-sankey.js"></script>
+        
+</head>
+<body data-page-id="metricas">
+  <main class="reversa-content">
+    
+<div class="page-header">
+  <h1>Métricas do <span>Projeto</span></h1>
+  <p>Dashboard de dados quantitativos de engenharia reversa de complexidade estrutural, distribuição de linguagens de programação e dependências do projeto.</p>
+</div>
+
+<div class="grid-2x2">
+  <div class="card">
+    <div class="card-title">Distribuição de Código por Pasta (LOC)</div>
+    <div id="chart-treemap" style="height: 350px;"></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-title">Distribuição de Linguagens do Sistema</div>
+    <div id="chart-languages" style="height: 350px;"></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-title">Top 20 Arquivos com Maior Complexidade</div>
+    <div id="chart-complexity" style="height: 350px;"></div>
+  </div>
+  
+  <div class="card">
+    <div class="card-title">Distribuição de Tamanho dos Módulos (LOC)</div>
+    <div id="chart-histogram" style="height: 350px;"></div>
+  </div>
+</div>
+
+<script>
+// Dashboard Highcharts
+const metrics = window.RV_DATA.metrics;
+
+// Tema de cores premium do Highcharts
+Highcharts.setOptions({
+  colors: ['#d4af37', '#800020', '#c0c0c0', '#2a3b5c', '#5a2d5a', '#3b7a57'],
+  chart: {
+    backgroundColor: '#131822',
+    style: {
+      fontFamily: 'Inter, sans-serif',
+      color: '#eaeaea'
+    }
+  },
+  title: { text: null },
+  legend: {
+    itemStyle: { color: '#eaeaea' },
+    itemHoverStyle: { color: '#ffd700' }
+  },
+  credits: { enabled: false }
+});
+
+// 1. Treemap (Código por pasta)
+Highcharts.chart('chart-treemap', {
+  series: [{
+    type: 'treemap',
+    layoutAlgorithm: 'squarified',
+    data: metrics.treemap_loc_by_folder.map(t => ({
+      name: t.name,
+      value: t.value,
+      colorValue: t.value
+    }))
+  }],
+  colorAxis: {
+    minColor: '#1e293b',
+    maxColor: '#d4af37'
+  },
+  tooltip: {
+    pointFormat: '<b>{point.name}</b>: {point.value} linhas'
+  }
+});
+
+// 2. Gráfico de Rosca de Linguagens
+Highcharts.chart('chart-languages', {
+  chart: { type: 'pie' },
+  series: [{
+    name: 'Linhas de Código',
+    innerSize: '60%',
+    data: metrics.language_distribution.map(l => ({
+      name: l.language,
+      y: l.loc
+    }))
+  }],
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.y} ({point.percentage:.1f}%)</b>'
+  }
+});
+
+// 3. Colunas (Top 20 complexidade)
+Highcharts.chart('chart-complexity', {
+  chart: { type: 'column' },
+  xAxis: {
+    categories: metrics.top_complexity.map(c => c.id.split('/').pop()),
+    labels: { style: { color: '#8b949e', fontSize: '10px' } }
+  },
+  yAxis: {
+    title: { text: 'Complexidade Ciclomática', style: { color: '#eaeaea' } },
+    gridLineColor: '#212836'
+  },
+  series: [{
+    name: 'Complexidade',
+    data: metrics.top_complexity.map(c => c.complexity),
+    color: '#800020'
+  }]
+});
+
+// 4. Histograma de LOC
+Highcharts.chart('chart-histogram', {
+  chart: { type: 'bar' },
+  xAxis: {
+    categories: ['0-50 LOC', '50-100 LOC', '100-200 LOC', '200-500 LOC', '500-1000 LOC', '1000-5000 LOC'],
+    labels: { style: { color: '#8b949e' } }
+  },
+  yAxis: {
+    title: { text: 'Quantidade de Módulos', style: { color: '#eaeaea' } },
+    gridLineColor: '#212836'
+  },
+  series: [{
+    name: 'Módulos',
+    data: metrics.loc_histogram.counts,
+    color: '#d4af37'
+  }]
+});
+</script>
+
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

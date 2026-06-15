@@ -1,0 +1,6545 @@
+[
+  {
+    "path": "vite.config.ts",
+    "name": "vite.config.ts",
+    "loc": 19,
+    "code_loc": 18,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "."
+  },
+  {
+    "path": "src/parity.integration.test.ts",
+    "name": "parity.integration.test.ts",
+    "loc": 297,
+    "code_loc": 253,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "src"
+  },
+  {
+    "path": "src/main.tsx",
+    "name": "main.tsx",
+    "loc": 10,
+    "code_loc": 9,
+    "complexity": 1,
+    "language": "typescript-react",
+    "folder": "src"
+  },
+  {
+    "path": "src/shared/lib/webgpu.ts",
+    "name": "webgpu.ts",
+    "loc": 227,
+    "code_loc": 196,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "src/shared/lib"
+  },
+  {
+    "path": "src/shared/lib/wasm.ts",
+    "name": "wasm.ts",
+    "loc": 47,
+    "code_loc": 40,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "src/shared/lib"
+  },
+  {
+    "path": "src/shared/lib/wasm.test.ts",
+    "name": "wasm.test.ts",
+    "loc": 51,
+    "code_loc": 44,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "src/shared/lib"
+  },
+  {
+    "path": "src/db/index.ts",
+    "name": "index.ts",
+    "loc": 186,
+    "code_loc": 160,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "src/db"
+  },
+  {
+    "path": "src/pages/GhostIDPage/index.tsx",
+    "name": "index.tsx",
+    "loc": 19,
+    "code_loc": 18,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "src/pages/GhostIDPage"
+  },
+  {
+    "path": "src/pages/GitPayPage/index.tsx",
+    "name": "index.tsx",
+    "loc": 19,
+    "code_loc": 18,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "src/pages/GitPayPage"
+  },
+  {
+    "path": "src/pages/PqcAuditPage/index.tsx",
+    "name": "index.tsx",
+    "loc": 19,
+    "code_loc": 18,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "src/pages/PqcAuditPage"
+  },
+  {
+    "path": "src/pages/HomePage/index.tsx",
+    "name": "index.tsx",
+    "loc": 146,
+    "code_loc": 139,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "src/pages/HomePage"
+  },
+  {
+    "path": "src/services/bitcoin.ts",
+    "name": "bitcoin.ts",
+    "loc": 130,
+    "code_loc": 113,
+    "complexity": 23,
+    "language": "typescript",
+    "folder": "src/services"
+  },
+  {
+    "path": "src/services/bitcoin.test.ts",
+    "name": "bitcoin.test.ts",
+    "loc": 73,
+    "code_loc": 63,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "src/services"
+  },
+  {
+    "path": "src/services/nostr.ts",
+    "name": "nostr.ts",
+    "loc": 129,
+    "code_loc": 112,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "src/services"
+  },
+  {
+    "path": "src/app/App.tsx",
+    "name": "App.tsx",
+    "loc": 90,
+    "code_loc": 82,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "src/app"
+  },
+  {
+    "path": "src/entities/domain.test.ts",
+    "name": "domain.test.ts",
+    "loc": 109,
+    "code_loc": 90,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "src/entities"
+  },
+  {
+    "path": "src/entities/ghostid/model.ts",
+    "name": "model.ts",
+    "loc": 64,
+    "code_loc": 57,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "src/entities/ghostid"
+  },
+  {
+    "path": "src/entities/invoice/model.ts",
+    "name": "model.ts",
+    "loc": 93,
+    "code_loc": 83,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "src/entities/invoice"
+  },
+  {
+    "path": "src/entities/mesh/model.ts",
+    "name": "model.ts",
+    "loc": 94,
+    "code_loc": 84,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "src/entities/mesh"
+  },
+  {
+    "path": "src/features/gitpay-merchant/Checkout.tsx",
+    "name": "Checkout.tsx",
+    "loc": 337,
+    "code_loc": 292,
+    "complexity": 32,
+    "language": "typescript-react",
+    "folder": "src/features/gitpay-merchant"
+  },
+  {
+    "path": "src/features/pqc-audit/PqcAudit.tsx",
+    "name": "PqcAudit.tsx",
+    "loc": 173,
+    "code_loc": 150,
+    "complexity": 23,
+    "language": "typescript-react",
+    "folder": "src/features/pqc-audit"
+  },
+  {
+    "path": "src/features/ghostid-deploy/identityMigration.ts",
+    "name": "identityMigration.ts",
+    "loc": 79,
+    "code_loc": 67,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "src/features/ghostid-deploy"
+  },
+  {
+    "path": "src/features/ghostid-deploy/GhostIdGenerator.tsx",
+    "name": "GhostIdGenerator.tsx",
+    "loc": 243,
+    "code_loc": 216,
+    "complexity": 15,
+    "language": "typescript-react",
+    "folder": "src/features/ghostid-deploy"
+  },
+  {
+    "path": "src/features/ghostid-deploy/identityMigration.test.ts",
+    "name": "identityMigration.test.ts",
+    "loc": 120,
+    "code_loc": 103,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "src/features/ghostid-deploy"
+  },
+  {
+    "path": "src/features/ghostid-deploy/SettingsImport.tsx",
+    "name": "SettingsImport.tsx",
+    "loc": 181,
+    "code_loc": 159,
+    "complexity": 18,
+    "language": "typescript-react",
+    "folder": "src/features/ghostid-deploy"
+  },
+  {
+    "path": "ET-COSMIC/vitest.config.ts",
+    "name": "vitest.config.ts",
+    "loc": 35,
+    "code_loc": 34,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC"
+  },
+  {
+    "path": "ET-COSMIC/paleo-cli.js",
+    "name": "paleo-cli.js",
+    "loc": 66,
+    "code_loc": 53,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC"
+  },
+  {
+    "path": "ET-COSMIC/stress_test.js",
+    "name": "stress_test.js",
+    "loc": 48,
+    "code_loc": 38,
+    "complexity": 5,
+    "language": "javascript",
+    "folder": "ET-COSMIC"
+  },
+  {
+    "path": "ET-COSMIC/vite.config.ts",
+    "name": "vite.config.ts",
+    "loc": 269,
+    "code_loc": 253,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC"
+  },
+  {
+    "path": "ET-COSMIC/capacitor.config.ts",
+    "name": "capacitor.config.ts",
+    "loc": 15,
+    "code_loc": 13,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC"
+  },
+  {
+    "path": "ET-COSMIC/src/routes.test.ts",
+    "name": "routes.test.ts",
+    "loc": 121,
+    "code_loc": 105,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/router.tsx",
+    "name": "router.tsx",
+    "loc": 93,
+    "code_loc": 76,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/panelTiers.ts",
+    "name": "panelTiers.ts",
+    "loc": 89,
+    "code_loc": 80,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/App.tsx",
+    "name": "App.tsx",
+    "loc": 172,
+    "code_loc": 155,
+    "complexity": 35,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/vite-env.d.ts",
+    "name": "vite-env.d.ts",
+    "loc": 44,
+    "code_loc": 40,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/AppLanding.tsx",
+    "name": "AppLanding.tsx",
+    "loc": 151,
+    "code_loc": 145,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/main.tsx",
+    "name": "main.tsx",
+    "loc": 17,
+    "code_loc": 15,
+    "complexity": 1,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src"
+  },
+  {
+    "path": "ET-COSMIC/src/economy/sovEconomy.test.ts",
+    "name": "sovEconomy.test.ts",
+    "loc": 50,
+    "code_loc": 44,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/economy"
+  },
+  {
+    "path": "ET-COSMIC/src/economy/sovEconomyClient.ts",
+    "name": "sovEconomyClient.ts",
+    "loc": 177,
+    "code_loc": 156,
+    "complexity": 25,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/economy"
+  },
+  {
+    "path": "ET-COSMIC/src/collapse/collapseAlgebra.ts",
+    "name": "collapseAlgebra.ts",
+    "loc": 585,
+    "code_loc": 501,
+    "complexity": 53,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/collapse"
+  },
+  {
+    "path": "ET-COSMIC/src/collapse/collapseAlgebra.test.ts",
+    "name": "collapseAlgebra.test.ts",
+    "loc": 463,
+    "code_loc": 406,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/collapse"
+  },
+  {
+    "path": "ET-COSMIC/src/plugins/voidAnimus.ts",
+    "name": "voidAnimus.ts",
+    "loc": 26,
+    "code_loc": 22,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/plugins"
+  },
+  {
+    "path": "ET-COSMIC/src/plugins/voidAnimusWeb.ts",
+    "name": "voidAnimusWeb.ts",
+    "loc": 25,
+    "code_loc": 24,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/plugins"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/ghostDockerBridge.ts",
+    "name": "ghostDockerBridge.ts",
+    "loc": 93,
+    "code_loc": 84,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/higgsGit.ts",
+    "name": "higgsGit.ts",
+    "loc": 69,
+    "code_loc": 60,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/phantomPipeline.ts",
+    "name": "phantomPipeline.ts",
+    "loc": 73,
+    "code_loc": 65,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/ecoNet.ts",
+    "name": "ecoNet.ts",
+    "loc": 57,
+    "code_loc": 50,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/voidRunnerBridge.ts",
+    "name": "voidRunnerBridge.ts",
+    "loc": 67,
+    "code_loc": 59,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/vps/voidRunnerClient.ts",
+    "name": "voidRunnerClient.ts",
+    "loc": 176,
+    "code_loc": 159,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/acousticRoom.ts",
+    "name": "acousticRoom.ts",
+    "loc": 36,
+    "code_loc": 33,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/sensorEntropy.ts",
+    "name": "sensorEntropy.ts",
+    "loc": 63,
+    "code_loc": 58,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/nostrMesh.ts",
+    "name": "nostrMesh.ts",
+    "loc": 58,
+    "code_loc": 51,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/imcClient.ts",
+    "name": "imcClient.ts",
+    "loc": 50,
+    "code_loc": 44,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/thomasFermiWebgl.ts",
+    "name": "thomasFermiWebgl.ts",
+    "loc": 46,
+    "code_loc": 45,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/imc/imcEntropy.ts",
+    "name": "imcEntropy.ts",
+    "loc": 79,
+    "code_loc": 73,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/imc"
+  },
+  {
+    "path": "ET-COSMIC/src/omega/wasmDeepResearch.ts",
+    "name": "wasmDeepResearch.ts",
+    "loc": 183,
+    "code_loc": 167,
+    "complexity": 23,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/omega"
+  },
+  {
+    "path": "ET-COSMIC/src/omega/steganography.ts",
+    "name": "steganography.ts",
+    "loc": 137,
+    "code_loc": 117,
+    "complexity": 25,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/omega"
+  },
+  {
+    "path": "ET-COSMIC/src/omega/AnimusBootstrap.ts",
+    "name": "AnimusBootstrap.ts",
+    "loc": 91,
+    "code_loc": 76,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/omega"
+  },
+  {
+    "path": "ET-COSMIC/src/omega/animusSubstrates.ts",
+    "name": "animusSubstrates.ts",
+    "loc": 554,
+    "code_loc": 474,
+    "complexity": 40,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/omega"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.test.ts",
+    "name": "etrnetSovereignty.test.ts",
+    "loc": 17,
+    "code_loc": 15,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/sovereignty"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/sovereignty/etrnetSovereignty.ts",
+    "name": "etrnetSovereignty.ts",
+    "loc": 127,
+    "code_loc": 109,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/sovereignty"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/sovereignty/index.ts",
+    "name": "index.ts",
+    "loc": 2,
+    "code_loc": 2,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/sovereignty"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.ts",
+    "name": "protocolRoyalty.ts",
+    "loc": 88,
+    "code_loc": 78,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/sovereignty"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/sovereignty/protocolRoyalty.test.ts",
+    "name": "protocolRoyalty.test.ts",
+    "loc": 51,
+    "code_loc": 43,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/sovereignty"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/slaContract.ts",
+    "name": "slaContract.ts",
+    "loc": 75,
+    "code_loc": 69,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/datEngine.ts",
+    "name": "datEngine.ts",
+    "loc": 46,
+    "code_loc": 43,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/reputationPricing.test.ts",
+    "name": "reputationPricing.test.ts",
+    "loc": 34,
+    "code_loc": 31,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/datSettlement.ts",
+    "name": "datSettlement.ts",
+    "loc": 52,
+    "code_loc": 48,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/datTypes.ts",
+    "name": "datTypes.ts",
+    "loc": 86,
+    "code_loc": 77,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/reputationPricing.ts",
+    "name": "reputationPricing.ts",
+    "loc": 40,
+    "code_loc": 36,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/meshIntegration.test.ts",
+    "name": "meshIntegration.test.ts",
+    "loc": 233,
+    "code_loc": 217,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/pools.ts",
+    "name": "pools.ts",
+    "loc": 79,
+    "code_loc": 74,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/index.ts",
+    "name": "index.ts",
+    "loc": 7,
+    "code_loc": 7,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/liquidity/liquidityMining.ts",
+    "name": "liquidityMining.ts",
+    "loc": 51,
+    "code_loc": 46,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/liquidity"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/ldkWasmBridge.ts",
+    "name": "ldkWasmBridge.ts",
+    "loc": 36,
+    "code_loc": 30,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/ampPipeline.ts",
+    "name": "ampPipeline.ts",
+    "loc": 55,
+    "code_loc": 50,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/vhgpuClient.ts",
+    "name": "vhgpuClient.ts",
+    "loc": 74,
+    "code_loc": 65,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/consentReceiptStore.ts",
+    "name": "consentReceiptStore.ts",
+    "loc": 132,
+    "code_loc": 116,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/knownLimitations.ts",
+    "name": "knownLimitations.ts",
+    "loc": 49,
+    "code_loc": 46,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/consentLattice.ts",
+    "name": "consentLattice.ts",
+    "loc": 126,
+    "code_loc": 112,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/eil.ts",
+    "name": "eil.ts",
+    "loc": 44,
+    "code_loc": 39,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/amp.test.ts",
+    "name": "amp.test.ts",
+    "loc": 54,
+    "code_loc": 48,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/pmuOmegaPipeline.ts",
+    "name": "pmuOmegaPipeline.ts",
+    "loc": 68,
+    "code_loc": 63,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/slcc.ts",
+    "name": "slcc.ts",
+    "loc": 55,
+    "code_loc": 44,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/recursiveStark.ts",
+    "name": "recursiveStark.ts",
+    "loc": 50,
+    "code_loc": 45,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/protocol/amp/pmuComputeOrchestrator.ts",
+    "name": "pmuComputeOrchestrator.ts",
+    "loc": 42,
+    "code_loc": 38,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/protocol/amp"
+  },
+  {
+    "path": "ET-COSMIC/src/test/setup.ts",
+    "name": "setup.ts",
+    "loc": 90,
+    "code_loc": 84,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/test"
+  },
+  {
+    "path": "ET-COSMIC/src/server/finance.payment.test.ts",
+    "name": "finance.payment.test.ts",
+    "loc": 48,
+    "code_loc": 44,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/server"
+  },
+  {
+    "path": "ET-COSMIC/src/server/ecosystem.stress.test.ts",
+    "name": "ecosystem.stress.test.ts",
+    "loc": 71,
+    "code_loc": 66,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/server"
+  },
+  {
+    "path": "ET-COSMIC/src/core/VoidProtocol.ts",
+    "name": "VoidProtocol.ts",
+    "loc": 363,
+    "code_loc": 306,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/ghostC3QelHcn.integration.test.ts",
+    "name": "ghostC3QelHcn.integration.test.ts",
+    "loc": 154,
+    "code_loc": 133,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/VoidProtocol.test.ts",
+    "name": "VoidProtocol.test.ts",
+    "loc": 301,
+    "code_loc": 249,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/useVoid.ts",
+    "name": "useVoid.ts",
+    "loc": 31,
+    "code_loc": 27,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/PowerGovernor.ts",
+    "name": "PowerGovernor.ts",
+    "loc": 169,
+    "code_loc": 145,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/cosmicVoidOrchestrator.ts",
+    "name": "cosmicVoidOrchestrator.ts",
+    "loc": 359,
+    "code_loc": 330,
+    "complexity": 34,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/ghostDock.test.ts",
+    "name": "ghostDock.test.ts",
+    "loc": 286,
+    "code_loc": 238,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/cosmicVoidOrchestrator.test.ts",
+    "name": "cosmicVoidOrchestrator.test.ts",
+    "loc": 108,
+    "code_loc": 93,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/useVhgpuFarm.ts",
+    "name": "useVhgpuFarm.ts",
+    "loc": 394,
+    "code_loc": 354,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/useLua.ts",
+    "name": "useLua.ts",
+    "loc": 178,
+    "code_loc": 160,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/ghostDock.ts",
+    "name": "ghostDock.ts",
+    "loc": 115,
+    "code_loc": 101,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/VoidOrchestrator.ts",
+    "name": "VoidOrchestrator.ts",
+    "loc": 323,
+    "code_loc": 269,
+    "complexity": 26,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/core/VoidOrchestrator.c3.test.ts",
+    "name": "VoidOrchestrator.c3.test.ts",
+    "loc": 60,
+    "code_loc": 52,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/core"
+  },
+  {
+    "path": "ET-COSMIC/src/void/voidStackClient.ts",
+    "name": "voidStackClient.ts",
+    "loc": 64,
+    "code_loc": 55,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/void"
+  },
+  {
+    "path": "ET-COSMIC/src/void/sovereignStack.test.ts",
+    "name": "sovereignStack.test.ts",
+    "loc": 26,
+    "code_loc": 23,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/void"
+  },
+  {
+    "path": "ET-COSMIC/src/void/etCore.ts",
+    "name": "etCore.ts",
+    "loc": 433,
+    "code_loc": 370,
+    "complexity": 53,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/void"
+  },
+  {
+    "path": "ET-COSMIC/src/void/sovereignStack.ts",
+    "name": "sovereignStack.ts",
+    "loc": 94,
+    "code_loc": 85,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/void"
+  },
+  {
+    "path": "ET-COSMIC/src/void/index.ts",
+    "name": "index.ts",
+    "loc": 27,
+    "code_loc": 26,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/void"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/lscMcmCoupled.ts",
+    "name": "lscMcmCoupled.ts",
+    "loc": 63,
+    "code_loc": 55,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/geomWebgpuPass.ts",
+    "name": "geomWebgpuPass.ts",
+    "loc": 70,
+    "code_loc": 62,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/pmuVhgpuScheduler.ts",
+    "name": "pmuVhgpuScheduler.ts",
+    "loc": 158,
+    "code_loc": 143,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/pmuDomains.ts",
+    "name": "pmuDomains.ts",
+    "loc": 66,
+    "code_loc": 61,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/pmuVhgpuScheduler.test.ts",
+    "name": "pmuVhgpuScheduler.test.ts",
+    "loc": 99,
+    "code_loc": 86,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/compute/lscMcmCoupled.test.ts",
+    "name": "lscMcmCoupled.test.ts",
+    "loc": 14,
+    "code_loc": 13,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/compute"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrDEX.test.ts",
+    "name": "nostrDEX.test.ts",
+    "loc": 56,
+    "code_loc": 46,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/collapseFinance.test.ts",
+    "name": "collapseFinance.test.ts",
+    "loc": 183,
+    "code_loc": 158,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrDEX.ts",
+    "name": "nostrDEX.ts",
+    "loc": 334,
+    "code_loc": 294,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/qel.test.ts",
+    "name": "qel.test.ts",
+    "loc": 51,
+    "code_loc": 42,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/quantumDAO.ts",
+    "name": "quantumDAO.ts",
+    "loc": 567,
+    "code_loc": 486,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/topologyTracker.ts",
+    "name": "topologyTracker.ts",
+    "loc": 370,
+    "code_loc": 325,
+    "complexity": 39,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/gpuMiner.ts",
+    "name": "gpuMiner.ts",
+    "loc": 357,
+    "code_loc": 310,
+    "complexity": 34,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/supplyChain.ts",
+    "name": "supplyChain.ts",
+    "loc": 277,
+    "code_loc": 240,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/powFaucet.ts",
+    "name": "powFaucet.ts",
+    "loc": 301,
+    "code_loc": 257,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/qel.ts",
+    "name": "qel.ts",
+    "loc": 266,
+    "code_loc": 227,
+    "complexity": 39,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostid.test.ts",
+    "name": "ghostid.test.ts",
+    "loc": 27,
+    "code_loc": 25,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostvpn.ts",
+    "name": "ghostvpn.ts",
+    "loc": 448,
+    "code_loc": 396,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/sovTokenomics.ts",
+    "name": "sovTokenomics.ts",
+    "loc": 111,
+    "code_loc": 96,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/doubleRatchet.test.ts",
+    "name": "doubleRatchet.test.ts",
+    "loc": 275,
+    "code_loc": 229,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/utxo.test.ts",
+    "name": "utxo.test.ts",
+    "loc": 216,
+    "code_loc": 190,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/paymentPanel.flow.test.ts",
+    "name": "paymentPanel.flow.test.ts",
+    "loc": 80,
+    "code_loc": 70,
+    "complexity": 9,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/homotopyMining.test.ts",
+    "name": "homotopyMining.test.ts",
+    "loc": 88,
+    "code_loc": 74,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/chimeraExchange.ts",
+    "name": "chimeraExchange.ts",
+    "loc": 363,
+    "code_loc": 307,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/sphinx.ts",
+    "name": "sphinx.ts",
+    "loc": 79,
+    "code_loc": 66,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/antiHiggs.test.ts",
+    "name": "antiHiggs.test.ts",
+    "loc": 285,
+    "code_loc": 227,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostid.ts",
+    "name": "ghostid.ts",
+    "loc": 272,
+    "code_loc": 234,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/cryptoTestament.ts",
+    "name": "cryptoTestament.ts",
+    "loc": 395,
+    "code_loc": 345,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nwcInteropHarness.ts",
+    "name": "nwcInteropHarness.ts",
+    "loc": 198,
+    "code_loc": 181,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrTransaction.ts",
+    "name": "nostrTransaction.ts",
+    "loc": 397,
+    "code_loc": 352,
+    "complexity": 38,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nwcProtocol.ts",
+    "name": "nwcProtocol.ts",
+    "loc": 477,
+    "code_loc": 408,
+    "complexity": 37,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ldkBridge.test.ts",
+    "name": "ldkBridge.test.ts",
+    "loc": 228,
+    "code_loc": 193,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nwcProtocol.test.ts",
+    "name": "nwcProtocol.test.ts",
+    "loc": 161,
+    "code_loc": 135,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/temporalOracle.ts",
+    "name": "temporalOracle.ts",
+    "loc": 415,
+    "code_loc": 363,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/octreeSdf.ts",
+    "name": "octreeSdf.ts",
+    "loc": 451,
+    "code_loc": 400,
+    "complexity": 55,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/cqrPqc.ts",
+    "name": "cqrPqc.ts",
+    "loc": 203,
+    "code_loc": 180,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/hgpuCompute.ts",
+    "name": "hgpuCompute.ts",
+    "loc": 442,
+    "code_loc": 374,
+    "complexity": 33,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/differentialCore.ts",
+    "name": "differentialCore.ts",
+    "loc": 377,
+    "code_loc": 336,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/sovereignPools.ts",
+    "name": "sovereignPools.ts",
+    "loc": 368,
+    "code_loc": 307,
+    "complexity": 28,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/utuTokens.ts",
+    "name": "utuTokens.ts",
+    "loc": 259,
+    "code_loc": 224,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/zkCompressor.test.ts",
+    "name": "zkCompressor.test.ts",
+    "loc": 65,
+    "code_loc": 54,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostIdEntropyAudit.test.ts",
+    "name": "ghostIdEntropyAudit.test.ts",
+    "loc": 28,
+    "code_loc": 26,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/acousticHandshake.ts",
+    "name": "acousticHandshake.ts",
+    "loc": 162,
+    "code_loc": 129,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/mirageCompute.ts",
+    "name": "mirageCompute.ts",
+    "loc": 369,
+    "code_loc": 309,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/antiHiggs.ts",
+    "name": "antiHiggs.ts",
+    "loc": 344,
+    "code_loc": 293,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/homotopyMining.ts",
+    "name": "homotopyMining.ts",
+    "loc": 319,
+    "code_loc": 271,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/entropyOrchestrator.ts",
+    "name": "entropyOrchestrator.ts",
+    "loc": 187,
+    "code_loc": 165,
+    "complexity": 43,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/paleoYield.ts",
+    "name": "paleoYield.ts",
+    "loc": 280,
+    "code_loc": 233,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/stablecoin.ts",
+    "name": "stablecoin.ts",
+    "loc": 124,
+    "code_loc": 106,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrSync.ts",
+    "name": "nostrSync.ts",
+    "loc": 286,
+    "code_loc": 251,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+    "name": "cryptoMiner.ts",
+    "loc": 532,
+    "code_loc": 451,
+    "complexity": 62,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/pqc.ts",
+    "name": "pqc.ts",
+    "loc": 218,
+    "code_loc": 191,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostIdEntropyAudit.ts",
+    "name": "ghostIdEntropyAudit.ts",
+    "loc": 67,
+    "code_loc": 59,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/utuTokens.test.ts",
+    "name": "utuTokens.test.ts",
+    "loc": 57,
+    "code_loc": 48,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostLocker.ts",
+    "name": "ghostLocker.ts",
+    "loc": 345,
+    "code_loc": 299,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/aegisVault.ts",
+    "name": "aegisVault.ts",
+    "loc": 341,
+    "code_loc": 282,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nwcInteropHarness.test.ts",
+    "name": "nwcInteropHarness.test.ts",
+    "loc": 61,
+    "code_loc": 54,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nwcInterop.live.test.ts",
+    "name": "nwcInterop.live.test.ts",
+    "loc": 68,
+    "code_loc": 55,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/rwaTokenization.ts",
+    "name": "rwaTokenization.ts",
+    "loc": 154,
+    "code_loc": 130,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrTransaction.test.ts",
+    "name": "nostrTransaction.test.ts",
+    "loc": 193,
+    "code_loc": 172,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/gf256.ts",
+    "name": "gf256.ts",
+    "loc": 40,
+    "code_loc": 34,
+    "complexity": 9,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/collapseFinance.ts",
+    "name": "collapseFinance.ts",
+    "loc": 490,
+    "code_loc": 428,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/fuzzyExtractor.ts",
+    "name": "fuzzyExtractor.ts",
+    "loc": 313,
+    "code_loc": 270,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ldkBridge.ts",
+    "name": "ldkBridge.ts",
+    "loc": 516,
+    "code_loc": 458,
+    "complexity": 26,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/chimeraExchange.test.ts",
+    "name": "chimeraExchange.test.ts",
+    "loc": 48,
+    "code_loc": 40,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/doubleRatchet.ts",
+    "name": "doubleRatchet.ts",
+    "loc": 499,
+    "code_loc": 433,
+    "complexity": 50,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/singularityHarvester.ts",
+    "name": "singularityHarvester.ts",
+    "loc": 286,
+    "code_loc": 251,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/matchmaker.ts",
+    "name": "matchmaker.ts",
+    "loc": 341,
+    "code_loc": 299,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/singularityHarvester.test.ts",
+    "name": "singularityHarvester.test.ts",
+    "loc": 116,
+    "code_loc": 96,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/socialRecovery.ts",
+    "name": "socialRecovery.ts",
+    "loc": 224,
+    "code_loc": 194,
+    "complexity": 23,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/heptaryQuantum.test.ts",
+    "name": "heptaryQuantum.test.ts",
+    "loc": 22,
+    "code_loc": 19,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/qrng.ts",
+    "name": "qrng.ts",
+    "loc": 210,
+    "code_loc": 180,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/doubleSpendDefense.ts",
+    "name": "doubleSpendDefense.ts",
+    "loc": 528,
+    "code_loc": 459,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/voidLicense.ts",
+    "name": "voidLicense.ts",
+    "loc": 149,
+    "code_loc": 133,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/paymentGateway.ts",
+    "name": "paymentGateway.ts",
+    "loc": 515,
+    "code_loc": 461,
+    "complexity": 41,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/econet.ts",
+    "name": "econet.ts",
+    "loc": 289,
+    "code_loc": 246,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/communityTreasury.ts",
+    "name": "communityTreasury.ts",
+    "loc": 643,
+    "code_loc": 558,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/entropyOrchestrator.test.ts",
+    "name": "entropyOrchestrator.test.ts",
+    "loc": 73,
+    "code_loc": 64,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/sovereignPools.test.ts",
+    "name": "sovereignPools.test.ts",
+    "loc": 95,
+    "code_loc": 83,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/watchtower.test.ts",
+    "name": "watchtower.test.ts",
+    "loc": 268,
+    "code_loc": 227,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/utxo.ts",
+    "name": "utxo.ts",
+    "loc": 538,
+    "code_loc": 465,
+    "complexity": 56,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/zkp.ts",
+    "name": "zkp.ts",
+    "loc": 180,
+    "code_loc": 158,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ghostMailbox.ts",
+    "name": "ghostMailbox.ts",
+    "loc": 320,
+    "code_loc": 277,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/zkCompressor.ts",
+    "name": "zkCompressor.ts",
+    "loc": 207,
+    "code_loc": 180,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/signingKeys.ts",
+    "name": "signingKeys.ts",
+    "loc": 71,
+    "code_loc": 63,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/antiSybil.ts",
+    "name": "antiSybil.ts",
+    "loc": 483,
+    "code_loc": 425,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/retf.ts",
+    "name": "retf.ts",
+    "loc": 293,
+    "code_loc": 254,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/janusFinance.ts",
+    "name": "janusFinance.ts",
+    "loc": 322,
+    "code_loc": 271,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/karmaSystem.ts",
+    "name": "karmaSystem.ts",
+    "loc": 675,
+    "code_loc": 587,
+    "complexity": 54,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/qrStocks.test.ts",
+    "name": "qrStocks.test.ts",
+    "loc": 88,
+    "code_loc": 73,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/paymentGateway.test.ts",
+    "name": "paymentGateway.test.ts",
+    "loc": 77,
+    "code_loc": 66,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/quantumBridge.ts",
+    "name": "quantumBridge.ts",
+    "loc": 803,
+    "code_loc": 730,
+    "complexity": 92,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/c3Engine.test.ts",
+    "name": "c3Engine.test.ts",
+    "loc": 112,
+    "code_loc": 92,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/qrStocks.ts",
+    "name": "qrStocks.ts",
+    "loc": 360,
+    "code_loc": 315,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/c3Engine.ts",
+    "name": "c3Engine.ts",
+    "loc": 276,
+    "code_loc": 241,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/swiftChain.ts",
+    "name": "swiftChain.ts",
+    "loc": 95,
+    "code_loc": 81,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/watchtower.ts",
+    "name": "watchtower.ts",
+    "loc": 422,
+    "code_loc": 372,
+    "complexity": 38,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/phantomShopper.ts",
+    "name": "phantomShopper.ts",
+    "loc": 377,
+    "code_loc": 324,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/nostrOracle.ts",
+    "name": "nostrOracle.ts",
+    "loc": 211,
+    "code_loc": 175,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/merkleTree.ts",
+    "name": "merkleTree.ts",
+    "loc": 183,
+    "code_loc": 149,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/fuzzyExtractor.test.ts",
+    "name": "fuzzyExtractor.test.ts",
+    "loc": 74,
+    "code_loc": 64,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/ldkChannelFacade.ts",
+    "name": "ldkChannelFacade.ts",
+    "loc": 134,
+    "code_loc": 117,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/crypto/cqrPqc.test.ts",
+    "name": "cqrPqc.test.ts",
+    "loc": 81,
+    "code_loc": 72,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/rcp.ts",
+    "name": "rcp.ts",
+    "loc": 207,
+    "code_loc": 189,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/furc.ts",
+    "name": "furc.ts",
+    "loc": 145,
+    "code_loc": 132,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/pdc.ts",
+    "name": "pdc.ts",
+    "loc": 237,
+    "code_loc": 212,
+    "complexity": 43,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/brunoTheoryTypes.ts",
+    "name": "brunoTheoryTypes.ts",
+    "loc": 29,
+    "code_loc": 27,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/dtu.ts",
+    "name": "dtu.ts",
+    "loc": 101,
+    "code_loc": 91,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/brunoTheory.test.ts",
+    "name": "brunoTheory.test.ts",
+    "loc": 116,
+    "code_loc": 106,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/hmcoAmua.ts",
+    "name": "hmcoAmua.ts",
+    "loc": 191,
+    "code_loc": 171,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/brunoTheoryFrame.ts",
+    "name": "brunoTheoryFrame.ts",
+    "loc": 59,
+    "code_loc": 55,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/brunoTheoryEngine.ts",
+    "name": "brunoTheoryEngine.ts",
+    "loc": 133,
+    "code_loc": 118,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/theory/collapseEngineering.ts",
+    "name": "collapseEngineering.ts",
+    "loc": 164,
+    "code_loc": 152,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/theory"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/mobileWebViewGuard.ts",
+    "name": "mobileWebViewGuard.ts",
+    "loc": 70,
+    "code_loc": 60,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/httpJson.ts",
+    "name": "httpJson.ts",
+    "loc": 10,
+    "code_loc": 10,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/cosmicSovereignMode.ts",
+    "name": "cosmicSovereignMode.ts",
+    "loc": 74,
+    "code_loc": 65,
+    "complexity": 28,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/lususClient.ts",
+    "name": "lususClient.ts",
+    "loc": 37,
+    "code_loc": 30,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/aqreClient.ts",
+    "name": "aqreClient.ts",
+    "loc": 59,
+    "code_loc": 51,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/remoteCqrConfig.ts",
+    "name": "remoteCqrConfig.ts",
+    "loc": 72,
+    "code_loc": 66,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/moduleRealityBackend.ts",
+    "name": "moduleRealityBackend.ts",
+    "loc": 342,
+    "code_loc": 319,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/localCqrEngine.ts",
+    "name": "localCqrEngine.ts",
+    "loc": 109,
+    "code_loc": 101,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/lib/anacrocasticLimits.ts",
+    "name": "anacrocasticLimits.ts",
+    "loc": 63,
+    "code_loc": 57,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lib"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/GovernanceSovereigntyPage.tsx",
+    "name": "GovernanceSovereigntyPage.tsx",
+    "loc": 17,
+    "code_loc": 16,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/MeshLiquidityPage.tsx",
+    "name": "MeshLiquidityPage.tsx",
+    "loc": 87,
+    "code_loc": 79,
+    "complexity": 5,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/ProductsPage.tsx",
+    "name": "ProductsPage.tsx",
+    "loc": 177,
+    "code_loc": 171,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/ProductionApp.tsx",
+    "name": "ProductionApp.tsx",
+    "loc": 67,
+    "code_loc": 59,
+    "complexity": 7,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/Void308Checkout.tsx",
+    "name": "Void308Checkout.tsx",
+    "loc": 156,
+    "code_loc": 145,
+    "complexity": 17,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/PageShell.tsx",
+    "name": "PageShell.tsx",
+    "loc": 40,
+    "code_loc": 38,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/PairedDepositPanel.tsx",
+    "name": "PairedDepositPanel.tsx",
+    "loc": 226,
+    "code_loc": 212,
+    "complexity": 27,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/BuilderSubscribeCheckout.tsx",
+    "name": "BuilderSubscribeCheckout.tsx",
+    "loc": 153,
+    "code_loc": 143,
+    "complexity": 21,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/BusinessModelPage.tsx",
+    "name": "BusinessModelPage.tsx",
+    "loc": 409,
+    "code_loc": 382,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/HomePage.tsx",
+    "name": "HomePage.tsx",
+    "loc": 107,
+    "code_loc": 98,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/main.tsx",
+    "name": "main.tsx",
+    "loc": 10,
+    "code_loc": 9,
+    "complexity": 1,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/pages/SaborQuanticoPage.tsx",
+    "name": "SaborQuanticoPage.tsx",
+    "loc": 243,
+    "code_loc": 227,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/pages"
+  },
+  {
+    "path": "ET-COSMIC/src/layouts/AppLayout.tsx",
+    "name": "AppLayout.tsx",
+    "loc": 104,
+    "code_loc": 94,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/layouts"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuAuditClient.ts",
+    "name": "pmuAuditClient.ts",
+    "loc": 57,
+    "code_loc": 49,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuAuditTypes.ts",
+    "name": "pmuAuditTypes.ts",
+    "loc": 46,
+    "code_loc": 44,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/etrnetAnchorAbi.ts",
+    "name": "etrnetAnchorAbi.ts",
+    "loc": 42,
+    "code_loc": 37,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuMeshSubscriber.ts",
+    "name": "pmuMeshSubscriber.ts",
+    "loc": 51,
+    "code_loc": 46,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuRoadmap.ts",
+    "name": "pmuRoadmap.ts",
+    "loc": 64,
+    "code_loc": 61,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuMeshIdentity.ts",
+    "name": "pmuMeshIdentity.ts",
+    "loc": 52,
+    "code_loc": 45,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuAnchorClient.ts",
+    "name": "pmuAnchorClient.ts",
+    "loc": 123,
+    "code_loc": 110,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuTruthLevels.ts",
+    "name": "pmuTruthLevels.ts",
+    "loc": 62,
+    "code_loc": 56,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/pmu/pmuGovernanceMesh.ts",
+    "name": "pmuGovernanceMesh.ts",
+    "loc": 115,
+    "code_loc": 104,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/secureRandom.test.ts",
+    "name": "secureRandom.test.ts",
+    "loc": 65,
+    "code_loc": 57,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/secureRandom.ts",
+    "name": "secureRandom.ts",
+    "loc": 25,
+    "code_loc": 23,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/devLog.ts",
+    "name": "devLog.ts",
+    "loc": 14,
+    "code_loc": 13,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/qr.tsx",
+    "name": "qr.tsx",
+    "loc": 179,
+    "code_loc": 157,
+    "complexity": 66,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/omitUndefined.ts",
+    "name": "omitUndefined.ts",
+    "loc": 11,
+    "code_loc": 11,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/utils/cn.ts",
+    "name": "cn.ts",
+    "loc": 6,
+    "code_loc": 5,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/src/network/relayProbe.test.ts",
+    "name": "relayProbe.test.ts",
+    "loc": 41,
+    "code_loc": 36,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/bleChatTransport.ts",
+    "name": "bleChatTransport.ts",
+    "loc": 232,
+    "code_loc": 203,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/etrnetKinds.ts",
+    "name": "etrnetKinds.ts",
+    "loc": 45,
+    "code_loc": 32,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/loraDriver.ts",
+    "name": "loraDriver.ts",
+    "loc": 210,
+    "code_loc": 187,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/nostrMesh.ts",
+    "name": "nostrMesh.ts",
+    "loc": 487,
+    "code_loc": 425,
+    "complexity": 62,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/distanceBridge.ts",
+    "name": "distanceBridge.ts",
+    "loc": 212,
+    "code_loc": 185,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/relayProbe.ts",
+    "name": "relayProbe.ts",
+    "loc": 82,
+    "code_loc": 73,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/acousticDriver.ts",
+    "name": "acousticDriver.ts",
+    "loc": 270,
+    "code_loc": 222,
+    "complexity": 42,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/lightningNostrTransport.ts",
+    "name": "lightningNostrTransport.ts",
+    "loc": 280,
+    "code_loc": 239,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/distanceBridge.test.ts",
+    "name": "distanceBridge.test.ts",
+    "loc": 146,
+    "code_loc": 129,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/localDrivers.ts",
+    "name": "localDrivers.ts",
+    "loc": 334,
+    "code_loc": 299,
+    "complexity": 49,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/nostrMesh.test.ts",
+    "name": "nostrMesh.test.ts",
+    "loc": 54,
+    "code_loc": 47,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/network/NativeBridge.ts",
+    "name": "NativeBridge.ts",
+    "loc": 118,
+    "code_loc": 102,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/network"
+  },
+  {
+    "path": "ET-COSMIC/src/ethics/consentContract.test.ts",
+    "name": "consentContract.test.ts",
+    "loc": 52,
+    "code_loc": 46,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/ethics"
+  },
+  {
+    "path": "ET-COSMIC/src/ethics/consentContract.ts",
+    "name": "consentContract.ts",
+    "loc": 313,
+    "code_loc": 290,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/ethics"
+  },
+  {
+    "path": "ET-COSMIC/src/hooks/useOmegaMaterial.ts",
+    "name": "useOmegaMaterial.ts",
+    "loc": 29,
+    "code_loc": 26,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/hooks"
+  },
+  {
+    "path": "ET-COSMIC/src/hooks/useAmpConsent.ts",
+    "name": "useAmpConsent.ts",
+    "loc": 59,
+    "code_loc": 52,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/hooks"
+  },
+  {
+    "path": "ET-COSMIC/src/hooks/useCoreConsent.ts",
+    "name": "useCoreConsent.ts",
+    "loc": 12,
+    "code_loc": 11,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/hooks"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PaleoPanel.tsx",
+    "name": "PaleoPanel.tsx",
+    "loc": 151,
+    "code_loc": 139,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Omega.tsx",
+    "name": "Omega.tsx",
+    "loc": 142,
+    "code_loc": 135,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/QuantumDaoPanel.tsx",
+    "name": "QuantumDaoPanel.tsx",
+    "loc": 980,
+    "code_loc": 915,
+    "complexity": 48,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/IsossupraCorePanel.tsx",
+    "name": "IsossupraCorePanel.tsx",
+    "loc": 122,
+    "code_loc": 115,
+    "complexity": 16,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PmuRoadmapPanel.tsx",
+    "name": "PmuRoadmapPanel.tsx",
+    "loc": 179,
+    "code_loc": 169,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/EcoNetPanel.tsx",
+    "name": "EcoNetPanel.tsx",
+    "loc": 154,
+    "code_loc": 144,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SovereigntyPanel.tsx",
+    "name": "SovereigntyPanel.tsx",
+    "loc": 126,
+    "code_loc": 117,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/DistanceBridge.tsx",
+    "name": "DistanceBridge.tsx",
+    "loc": 473,
+    "code_loc": 443,
+    "complexity": 18,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CategoryHubPanel.tsx",
+    "name": "CategoryHubPanel.tsx",
+    "loc": 92,
+    "code_loc": 85,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PaleoYieldPanel.tsx",
+    "name": "PaleoYieldPanel.tsx",
+    "loc": 261,
+    "code_loc": 244,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AnacroclastiaPanel.tsx",
+    "name": "AnacroclastiaPanel.tsx",
+    "loc": 354,
+    "code_loc": 334,
+    "complexity": 5,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SovereignPoolsPanel.tsx",
+    "name": "SovereignPoolsPanel.tsx",
+    "loc": 216,
+    "code_loc": 200,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/StablecoinPanel.tsx",
+    "name": "StablecoinPanel.tsx",
+    "loc": 173,
+    "code_loc": 157,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/KarmaWallet.tsx",
+    "name": "KarmaWallet.tsx",
+    "loc": 239,
+    "code_loc": 220,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SilentMeshHostingPanel.tsx",
+    "name": "SilentMeshHostingPanel.tsx",
+    "loc": 144,
+    "code_loc": 131,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Overview.tsx",
+    "name": "Overview.tsx",
+    "loc": 98,
+    "code_loc": 95,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Nav.tsx",
+    "name": "Nav.tsx",
+    "loc": 82,
+    "code_loc": 78,
+    "complexity": 5,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CQRPqcPanel.tsx",
+    "name": "CQRPqcPanel.tsx",
+    "loc": 234,
+    "code_loc": 219,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Marquee.tsx",
+    "name": "Marquee.tsx",
+    "loc": 30,
+    "code_loc": 30,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/MirageComputePanel.tsx",
+    "name": "MirageComputePanel.tsx",
+    "loc": 149,
+    "code_loc": 136,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ConsentContractPanel.tsx",
+    "name": "ConsentContractPanel.tsx",
+    "loc": 174,
+    "code_loc": 161,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/GPUMiningPanel.tsx",
+    "name": "GPUMiningPanel.tsx",
+    "loc": 225,
+    "code_loc": 210,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AcousticHandshakePanel.tsx",
+    "name": "AcousticHandshakePanel.tsx",
+    "loc": 236,
+    "code_loc": 220,
+    "complexity": 14,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/HomotopyMiningPanel.tsx",
+    "name": "HomotopyMiningPanel.tsx",
+    "loc": 378,
+    "code_loc": 355,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/HGPUVisualizer.tsx",
+    "name": "HGPUVisualizer.tsx",
+    "loc": 216,
+    "code_loc": 182,
+    "complexity": 17,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AntiSybilLab.tsx",
+    "name": "AntiSybilLab.tsx",
+    "loc": 408,
+    "code_loc": 376,
+    "complexity": 17,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Manifesto.tsx",
+    "name": "Manifesto.tsx",
+    "loc": 76,
+    "code_loc": 70,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ContactList.tsx",
+    "name": "ContactList.tsx",
+    "loc": 116,
+    "code_loc": 107,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ProtocolRoyaltyDisclosure.tsx",
+    "name": "ProtocolRoyaltyDisclosure.tsx",
+    "loc": 84,
+    "code_loc": 76,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+    "name": "ActiveTerminal.tsx",
+    "loc": 1022,
+    "code_loc": 950,
+    "complexity": 56,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PhantomShopperPanel.tsx",
+    "name": "PhantomShopperPanel.tsx",
+    "loc": 215,
+    "code_loc": 201,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ZKPLab.tsx",
+    "name": "ZKPLab.tsx",
+    "loc": 144,
+    "code_loc": 126,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/NostrSyncPanel.tsx",
+    "name": "NostrSyncPanel.tsx",
+    "loc": 221,
+    "code_loc": 205,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SocialFabricPanel.tsx",
+    "name": "SocialFabricPanel.tsx",
+    "loc": 148,
+    "code_loc": 134,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/VhgpuFarmPanel.tsx",
+    "name": "VhgpuFarmPanel.tsx",
+    "loc": 295,
+    "code_loc": 276,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/MiningPanel.tsx",
+    "name": "MiningPanel.tsx",
+    "loc": 274,
+    "code_loc": 250,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CollapseFinancePanel.tsx",
+    "name": "CollapseFinancePanel.tsx",
+    "loc": 345,
+    "code_loc": 328,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/GhostMailboxPanel.tsx",
+    "name": "GhostMailboxPanel.tsx",
+    "loc": 227,
+    "code_loc": 209,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/DifferentialCorePanel.tsx",
+    "name": "DifferentialCorePanel.tsx",
+    "loc": 226,
+    "code_loc": 210,
+    "complexity": 14,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SkuEcosystemPanel.tsx",
+    "name": "SkuEcosystemPanel.tsx",
+    "loc": 262,
+    "code_loc": 247,
+    "complexity": 24,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Sidebar.tsx",
+    "name": "Sidebar.tsx",
+    "loc": 223,
+    "code_loc": 207,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AppErrorBoundary.tsx",
+    "name": "AppErrorBoundary.tsx",
+    "loc": 59,
+    "code_loc": 53,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Onboarding.tsx",
+    "name": "Onboarding.tsx",
+    "loc": 78,
+    "code_loc": 69,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CollapseAlgebraPanel.tsx",
+    "name": "CollapseAlgebraPanel.tsx",
+    "loc": 391,
+    "code_loc": 360,
+    "complexity": 14,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SymbiontInoculator.tsx",
+    "name": "SymbiontInoculator.tsx",
+    "loc": 186,
+    "code_loc": 170,
+    "complexity": 20,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PoWFaucetPanel.tsx",
+    "name": "PoWFaucetPanel.tsx",
+    "loc": 293,
+    "code_loc": 266,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/TemporalOracleLab.tsx",
+    "name": "TemporalOracleLab.tsx",
+    "loc": 345,
+    "code_loc": 317,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/LuaPluginPanel.tsx",
+    "name": "LuaPluginPanel.tsx",
+    "loc": 331,
+    "code_loc": 296,
+    "complexity": 22,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PmuTruthOmegaPanel.tsx",
+    "name": "PmuTruthOmegaPanel.tsx",
+    "loc": 176,
+    "code_loc": 166,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/LSCPanel.tsx",
+    "name": "LSCPanel.tsx",
+    "loc": 365,
+    "code_loc": 341,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/DevSetupBanner.tsx",
+    "name": "DevSetupBanner.tsx",
+    "loc": 202,
+    "code_loc": 187,
+    "complexity": 25,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/VoidSovereignStackPanel.tsx",
+    "name": "VoidSovereignStackPanel.tsx",
+    "loc": 250,
+    "code_loc": 234,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Glossary.tsx",
+    "name": "Glossary.tsx",
+    "loc": 102,
+    "code_loc": 91,
+    "complexity": 4,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ParasiticArchitecture.tsx",
+    "name": "ParasiticArchitecture.tsx",
+    "loc": 376,
+    "code_loc": 349,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PanelTierBadge.tsx",
+    "name": "PanelTierBadge.tsx",
+    "loc": 43,
+    "code_loc": 39,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/DEXPanel.tsx",
+    "name": "DEXPanel.tsx",
+    "loc": 277,
+    "code_loc": 255,
+    "complexity": 16,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Hero.tsx",
+    "name": "Hero.tsx",
+    "loc": 112,
+    "code_loc": 103,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/QRStocksPanel.tsx",
+    "name": "QRStocksPanel.tsx",
+    "loc": 476,
+    "code_loc": 446,
+    "complexity": 14,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/JanusFinancePanel.tsx",
+    "name": "JanusFinancePanel.tsx",
+    "loc": 213,
+    "code_loc": 197,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/LiquidityMeshPanel.tsx",
+    "name": "LiquidityMeshPanel.tsx",
+    "loc": 290,
+    "code_loc": 273,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CoreInnovations.tsx",
+    "name": "CoreInnovations.tsx",
+    "loc": 169,
+    "code_loc": 161,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/WatchtowerPanel.tsx",
+    "name": "WatchtowerPanel.tsx",
+    "loc": 210,
+    "code_loc": 193,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/HeptaryQuantumPanel.tsx",
+    "name": "HeptaryQuantumPanel.tsx",
+    "loc": 276,
+    "code_loc": 255,
+    "complexity": 13,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ChatBubble.tsx",
+    "name": "ChatBubble.tsx",
+    "loc": 40,
+    "code_loc": 35,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/MeshCdnPanel.tsx",
+    "name": "MeshCdnPanel.tsx",
+    "loc": 80,
+    "code_loc": 72,
+    "complexity": 5,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Messenger.tsx",
+    "name": "Messenger.tsx",
+    "loc": 335,
+    "code_loc": 307,
+    "complexity": 20,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/GhostIDSetup.tsx",
+    "name": "GhostIDSetup.tsx",
+    "loc": 241,
+    "code_loc": 226,
+    "complexity": 22,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/LUSUSTerminalPanel.tsx",
+    "name": "LUSUSTerminalPanel.tsx",
+    "loc": 109,
+    "code_loc": 102,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Footer.tsx",
+    "name": "Footer.tsx",
+    "loc": 70,
+    "code_loc": 66,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CryptoTestamentLab.tsx",
+    "name": "CryptoTestamentLab.tsx",
+    "loc": 389,
+    "code_loc": 352,
+    "complexity": 28,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AQREPanel.tsx",
+    "name": "AQREPanel.tsx",
+    "loc": 167,
+    "code_loc": 157,
+    "complexity": 7,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PhantomHarvesterPanel.tsx",
+    "name": "PhantomHarvesterPanel.tsx",
+    "loc": 778,
+    "code_loc": 740,
+    "complexity": 54,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/OmegaResearchLab.tsx",
+    "name": "OmegaResearchLab.tsx",
+    "loc": 266,
+    "code_loc": 249,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/CosmicHarmonyPanel.tsx",
+    "name": "CosmicHarmonyPanel.tsx",
+    "loc": 305,
+    "code_loc": 293,
+    "complexity": 20,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/EternetDashboard.tsx",
+    "name": "EternetDashboard.tsx",
+    "loc": 648,
+    "code_loc": 600,
+    "complexity": 54,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/BrunoTheoryPanel.tsx",
+    "name": "BrunoTheoryPanel.tsx",
+    "loc": 162,
+    "code_loc": 150,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/GhostVPNPanel.tsx",
+    "name": "GhostVPNPanel.tsx",
+    "loc": 171,
+    "code_loc": 159,
+    "complexity": 7,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ChimeraExchangePanel.tsx",
+    "name": "ChimeraExchangePanel.tsx",
+    "loc": 198,
+    "code_loc": 185,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/ConsentBanner.tsx",
+    "name": "ConsentBanner.tsx",
+    "loc": 52,
+    "code_loc": 48,
+    "complexity": 6,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/OctreeSDFPanel.tsx",
+    "name": "OctreeSDFPanel.tsx",
+    "loc": 251,
+    "code_loc": 234,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SphinxMixnetPanel.tsx",
+    "name": "SphinxMixnetPanel.tsx",
+    "loc": 202,
+    "code_loc": 187,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/QRCTopologyPanel.tsx",
+    "name": "QRCTopologyPanel.tsx",
+    "loc": 1050,
+    "code_loc": 970,
+    "complexity": 41,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/DoubleSpendDefenseLab.tsx",
+    "name": "DoubleSpendDefenseLab.tsx",
+    "loc": 445,
+    "code_loc": 398,
+    "complexity": 17,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SovereignEconomyPanel.tsx",
+    "name": "SovereignEconomyPanel.tsx",
+    "loc": 257,
+    "code_loc": 242,
+    "complexity": 15,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/NostrDEXPanel.tsx",
+    "name": "NostrDEXPanel.tsx",
+    "loc": 269,
+    "code_loc": 250,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/NostrOraclePanel.tsx",
+    "name": "NostrOraclePanel.tsx",
+    "loc": 241,
+    "code_loc": 227,
+    "complexity": 7,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/NetworkSimCore.tsx",
+    "name": "NetworkSimCore.tsx",
+    "loc": 178,
+    "code_loc": 157,
+    "complexity": 25,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/GhostLockerPanel.tsx",
+    "name": "GhostLockerPanel.tsx",
+    "loc": 256,
+    "code_loc": 239,
+    "complexity": 12,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/NotFoundPage.tsx",
+    "name": "NotFoundPage.tsx",
+    "loc": 16,
+    "code_loc": 15,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PmuVhgpuCoresPanel.tsx",
+    "name": "PmuVhgpuCoresPanel.tsx",
+    "loc": 192,
+    "code_loc": 182,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PanelWrapper.tsx",
+    "name": "PanelWrapper.tsx",
+    "loc": 70,
+    "code_loc": 65,
+    "complexity": 10,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PaymentGatewayPanel.tsx",
+    "name": "PaymentGatewayPanel.tsx",
+    "loc": 570,
+    "code_loc": 536,
+    "complexity": 42,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Hydra.tsx",
+    "name": "Hydra.tsx",
+    "loc": 123,
+    "code_loc": 117,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Roadmap.tsx",
+    "name": "Roadmap.tsx",
+    "loc": 111,
+    "code_loc": 106,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AnimusSubstratesPanel.tsx",
+    "name": "AnimusSubstratesPanel.tsx",
+    "loc": 865,
+    "code_loc": 783,
+    "complexity": 60,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/BottomBar.tsx",
+    "name": "BottomBar.tsx",
+    "loc": 273,
+    "code_loc": 256,
+    "complexity": 20,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/PqcDeveloperDashboard.tsx",
+    "name": "PqcDeveloperDashboard.tsx",
+    "loc": 1001,
+    "code_loc": 930,
+    "complexity": 65,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/IMCCorePanel.tsx",
+    "name": "IMCCorePanel.tsx",
+    "loc": 2,
+    "code_loc": 2,
+    "complexity": 1,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SectionHeader.tsx",
+    "name": "SectionHeader.tsx",
+    "loc": 41,
+    "code_loc": 40,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/HGPUComputePanel.tsx",
+    "name": "HGPUComputePanel.tsx",
+    "loc": 268,
+    "code_loc": 251,
+    "complexity": 9,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/AegisVaultPanel.tsx",
+    "name": "AegisVaultPanel.tsx",
+    "loc": 182,
+    "code_loc": 167,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/QRNGPanel.tsx",
+    "name": "QRNGPanel.tsx",
+    "loc": 201,
+    "code_loc": 185,
+    "complexity": 7,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SupplyChainSecurity.tsx",
+    "name": "SupplyChainSecurity.tsx",
+    "loc": 293,
+    "code_loc": 275,
+    "complexity": 3,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/RwaTokenizationPanel.tsx",
+    "name": "RwaTokenizationPanel.tsx",
+    "loc": 177,
+    "code_loc": 163,
+    "complexity": 11,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/SocialRecoveryPanel.tsx",
+    "name": "SocialRecoveryPanel.tsx",
+    "loc": 198,
+    "code_loc": 184,
+    "complexity": 8,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/components/Guarantees.tsx",
+    "name": "Guarantees.tsx",
+    "loc": 57,
+    "code_loc": 54,
+    "complexity": 2,
+    "language": "typescript-react",
+    "folder": "ET-COSMIC/src/components"
+  },
+  {
+    "path": "ET-COSMIC/src/crdt/gCounterCrdt.ts",
+    "name": "gCounterCrdt.ts",
+    "loc": 57,
+    "code_loc": 51,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/crdt"
+  },
+  {
+    "path": "ET-COSMIC/src/eternet/entropy.ts",
+    "name": "entropy.ts",
+    "loc": 152,
+    "code_loc": 137,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/eternet"
+  },
+  {
+    "path": "ET-COSMIC/src/eternet/eternet.entropy.test.ts",
+    "name": "eternet.entropy.test.ts",
+    "loc": 44,
+    "code_loc": 40,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/eternet"
+  },
+  {
+    "path": "ET-COSMIC/src/eternet/config.ts",
+    "name": "config.ts",
+    "loc": 21,
+    "code_loc": 16,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/eternet"
+  },
+  {
+    "path": "ET-COSMIC/src/eternet/types.ts",
+    "name": "types.ts",
+    "loc": 31,
+    "code_loc": 28,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/eternet"
+  },
+  {
+    "path": "ET-COSMIC/src/eternet/index.ts",
+    "name": "index.ts",
+    "loc": 15,
+    "code_loc": 14,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/eternet"
+  },
+  {
+    "path": "ET-COSMIC/src/social/SocialFabric.ts",
+    "name": "SocialFabric.ts",
+    "loc": 322,
+    "code_loc": 277,
+    "complexity": 24,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/social"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/qrcMotor.ts",
+    "name": "qrcMotor.ts",
+    "loc": 60,
+    "code_loc": 55,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/tensorNetwork.stress.test.ts",
+    "name": "tensorNetwork.stress.test.ts",
+    "loc": 123,
+    "code_loc": 114,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/tensorNetwork.test.ts",
+    "name": "tensorNetwork.test.ts",
+    "loc": 93,
+    "code_loc": 80,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/qrcMotor.test.ts",
+    "name": "qrcMotor.test.ts",
+    "loc": 35,
+    "code_loc": 31,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/trajectoryLut.generated.ts",
+    "name": "trajectoryLut.generated.ts",
+    "loc": 54,
+    "code_loc": 49,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/qrcRoutePqc.test.ts",
+    "name": "qrcRoutePqc.test.ts",
+    "loc": 35,
+    "code_loc": 32,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/quantumSwitch.test.ts",
+    "name": "quantumSwitch.test.ts",
+    "loc": 198,
+    "code_loc": 166,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/qrcRoutePqc.ts",
+    "name": "qrcRoutePqc.ts",
+    "loc": 142,
+    "code_loc": 133,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/webgpuTensorEngine.ts",
+    "name": "webgpuTensorEngine.ts",
+    "loc": 309,
+    "code_loc": 262,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/staGeodesic.ts",
+    "name": "staGeodesic.ts",
+    "loc": 58,
+    "code_loc": 50,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/quantumSwitch.ts",
+    "name": "quantumSwitch.ts",
+    "loc": 355,
+    "code_loc": 315,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/qrc/tensorNetwork.ts",
+    "name": "tensorNetwork.ts",
+    "loc": 421,
+    "code_loc": 368,
+    "complexity": 57,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/src/silentMesh/lscResourceGuard.ts",
+    "name": "lscResourceGuard.ts",
+    "loc": 69,
+    "code_loc": 62,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/src/silentMesh/voidMeshClient.ts",
+    "name": "voidMeshClient.ts",
+    "loc": 114,
+    "code_loc": 104,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/src/lsc/lscEngine.test.ts",
+    "name": "lscEngine.test.ts",
+    "loc": 379,
+    "code_loc": 330,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lsc"
+  },
+  {
+    "path": "ET-COSMIC/src/lsc/lscEngine.ts",
+    "name": "lscEngine.ts",
+    "loc": 339,
+    "code_loc": 307,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/lsc"
+  },
+  {
+    "path": "ET-COSMIC/src/routes/finance.payment.route.test.ts",
+    "name": "finance.payment.route.test.ts",
+    "loc": 14,
+    "code_loc": 13,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/routes"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/skuTypes.ts",
+    "name": "skuTypes.ts",
+    "loc": 9,
+    "code_loc": 8,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcSkuLineage.ts",
+    "name": "imcSkuLineage.ts",
+    "loc": 139,
+    "code_loc": 135,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcInfrastructure.ts",
+    "name": "imcInfrastructure.ts",
+    "loc": 114,
+    "code_loc": 106,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcSkuAdaptation.ts",
+    "name": "imcSkuAdaptation.ts",
+    "loc": 171,
+    "code_loc": 158,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcAdaptedComponentMap.ts",
+    "name": "imcAdaptedComponentMap.ts",
+    "loc": 111,
+    "code_loc": 110,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/routeCatalog.ts",
+    "name": "routeCatalog.ts",
+    "loc": 3,
+    "code_loc": 3,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/productDefinitions.ts",
+    "name": "productDefinitions.ts",
+    "loc": 211,
+    "code_loc": 192,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/skuCatalog.generated.ts",
+    "name": "skuCatalog.generated.ts",
+    "loc": 1704,
+    "code_loc": 1700,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/componentMap.ts",
+    "name": "componentMap.ts",
+    "loc": 3,
+    "code_loc": 3,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/skuManifest.ts",
+    "name": "skuManifest.ts",
+    "loc": 427,
+    "code_loc": 398,
+    "complexity": 56,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/skuArtifacts.generated.ts",
+    "name": "skuArtifacts.generated.ts",
+    "loc": 861,
+    "code_loc": 856,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcAdaptedRouteCatalog.ts",
+    "name": "imcAdaptedRouteCatalog.ts",
+    "loc": 94,
+    "code_loc": 92,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/buildRoutes.ts",
+    "name": "buildRoutes.ts",
+    "loc": 23,
+    "code_loc": 20,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/buildFlags.ts",
+    "name": "buildFlags.ts",
+    "loc": 14,
+    "code_loc": 11,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/filterRoutes.ts",
+    "name": "filterRoutes.ts",
+    "loc": 32,
+    "code_loc": 29,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/skuManifest.test.ts",
+    "name": "skuManifest.test.ts",
+    "loc": 126,
+    "code_loc": 110,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/imcRouteCatalog.ts",
+    "name": "imcRouteCatalog.ts",
+    "loc": 33,
+    "code_loc": 32,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/index.ts",
+    "name": "index.ts",
+    "loc": 43,
+    "code_loc": 41,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/b2b/commercialPricing.ts",
+    "name": "commercialPricing.ts",
+    "loc": 125,
+    "code_loc": 112,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/b2b"
+  },
+  {
+    "path": "ET-COSMIC/src/injectors/et-tampermonkey-injector.user.js",
+    "name": "et-tampermonkey-injector.user.js",
+    "loc": 499,
+    "code_loc": 437,
+    "complexity": 45,
+    "language": "javascript",
+    "folder": "ET-COSMIC/src/injectors"
+  },
+  {
+    "path": "ET-COSMIC/src/storage/contactDirectory.ts",
+    "name": "contactDirectory.ts",
+    "loc": 232,
+    "code_loc": 197,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/src/storage/chatStore.ts",
+    "name": "chatStore.ts",
+    "loc": 77,
+    "code_loc": 64,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/src/storage/hcnStore.ts",
+    "name": "hcnStore.ts",
+    "loc": 235,
+    "code_loc": 212,
+    "complexity": 25,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/src/storage/utxoStore.ts",
+    "name": "utxoStore.ts",
+    "loc": 37,
+    "code_loc": 30,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/src/storage/channelStore.ts",
+    "name": "channelStore.ts",
+    "loc": 100,
+    "code_loc": 79,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/src/research/researchModules.test.ts",
+    "name": "researchModules.test.ts",
+    "loc": 25,
+    "code_loc": 22,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/research"
+  },
+  {
+    "path": "ET-COSMIC/src/research/quantumResearch.ts",
+    "name": "quantumResearch.ts",
+    "loc": 51,
+    "code_loc": 45,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/research"
+  },
+  {
+    "path": "ET-COSMIC/src/research/zkStarkResearch.ts",
+    "name": "zkStarkResearch.ts",
+    "loc": 47,
+    "code_loc": 41,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/research"
+  },
+  {
+    "path": "ET-COSMIC/src/research/hgpuResearch.ts",
+    "name": "hgpuResearch.ts",
+    "loc": 46,
+    "code_loc": 39,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/research"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/buildContact.ts",
+    "name": "buildContact.ts",
+    "loc": 14,
+    "code_loc": 11,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchangeScraper.ts",
+    "name": "exchangeScraper.ts",
+    "loc": 101,
+    "code_loc": 90,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/scrapScanner.test.ts",
+    "name": "scrapScanner.test.ts",
+    "loc": 17,
+    "code_loc": 16,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/phantomHarvester.ts",
+    "name": "phantomHarvester.ts",
+    "loc": 403,
+    "code_loc": 357,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/phantomHarvestHarmony.ts",
+    "name": "phantomHarvestHarmony.ts",
+    "loc": 86,
+    "code_loc": 74,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/scrapScannerCli.ts",
+    "name": "scrapScannerCli.ts",
+    "loc": 61,
+    "code_loc": 57,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/identityMapper.ts",
+    "name": "identityMapper.ts",
+    "loc": 207,
+    "code_loc": 177,
+    "complexity": 52,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/scrapScanner.ts",
+    "name": "scrapScanner.ts",
+    "loc": 272,
+    "code_loc": 245,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/socialScraper.ts",
+    "name": "socialScraper.ts",
+    "loc": 96,
+    "code_loc": 81,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchanges/krakenScraper.ts",
+    "name": "krakenScraper.ts",
+    "loc": 116,
+    "code_loc": 102,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/exchanges"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchanges/bybitScraper.ts",
+    "name": "bybitScraper.ts",
+    "loc": 120,
+    "code_loc": 108,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/exchanges"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchanges/mercadoBitcoinScraper.ts",
+    "name": "mercadoBitcoinScraper.ts",
+    "loc": 105,
+    "code_loc": 95,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/exchanges"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchanges/coinbaseScraper.ts",
+    "name": "coinbaseScraper.ts",
+    "loc": 98,
+    "code_loc": 88,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/exchanges"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/exchanges/binanceScraper.ts",
+    "name": "binanceScraper.ts",
+    "loc": 87,
+    "code_loc": 77,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/exchanges"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/twitterScraper.ts",
+    "name": "twitterScraper.ts",
+    "loc": 131,
+    "code_loc": 112,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/tumblrScraper.ts",
+    "name": "tumblrScraper.ts",
+    "loc": 130,
+    "code_loc": 108,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/whatsappScraper.ts",
+    "name": "whatsappScraper.ts",
+    "loc": 101,
+    "code_loc": 86,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/facebookScraper.ts",
+    "name": "facebookScraper.ts",
+    "loc": 135,
+    "code_loc": 112,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/instagramScraper.ts",
+    "name": "instagramScraper.ts",
+    "loc": 125,
+    "code_loc": 105,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/harvesters/social/telegramScraper.ts",
+    "name": "telegramScraper.ts",
+    "loc": 100,
+    "code_loc": 82,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/harvesters/social"
+  },
+  {
+    "path": "ET-COSMIC/src/mesh/liquidityMeshClient.ts",
+    "name": "liquidityMeshClient.ts",
+    "loc": 184,
+    "code_loc": 167,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/mesh"
+  },
+  {
+    "path": "ET-COSMIC/src/paleo/anacroclastia.ts",
+    "name": "anacroclastia.ts",
+    "loc": 630,
+    "code_loc": 547,
+    "complexity": 56,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/paleo"
+  },
+  {
+    "path": "ET-COSMIC/src/paleo/PaleoEngine.ts",
+    "name": "PaleoEngine.ts",
+    "loc": 107,
+    "code_loc": 87,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/paleo"
+  },
+  {
+    "path": "ET-COSMIC/src/paleo/anacroclastia.test.ts",
+    "name": "anacroclastia.test.ts",
+    "loc": 615,
+    "code_loc": 548,
+    "complexity": 24,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/paleo"
+  },
+  {
+    "path": "ET-COSMIC/src/paleo/paleoEntropyFossil.ts",
+    "name": "paleoEntropyFossil.ts",
+    "loc": 126,
+    "code_loc": 118,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/paleo"
+  },
+  {
+    "path": "ET-COSMIC/src/isossupra/isossupraClient.ts",
+    "name": "isossupraClient.ts",
+    "loc": 44,
+    "code_loc": 38,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/src/config/sovereign.ts",
+    "name": "sovereign.ts",
+    "loc": 54,
+    "code_loc": 48,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/src/config"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/vitest.config.ts",
+    "name": "vitest.config.ts",
+    "loc": 8,
+    "code_loc": 7,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/index.ts",
+    "name": "index.ts",
+    "loc": 74,
+    "code_loc": 67,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/voidAnimusWorker.ts",
+    "name": "voidAnimusWorker.ts",
+    "loc": 152,
+    "code_loc": 136,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/higgsGit.ts",
+    "name": "higgsGit.ts",
+    "loc": 54,
+    "code_loc": 46,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/phantomPipeline.ts",
+    "name": "phantomPipeline.ts",
+    "loc": 50,
+    "code_loc": 41,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/ecoNet.ts",
+    "name": "ecoNet.ts",
+    "loc": 66,
+    "code_loc": 58,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/voidRunnerExec.ts",
+    "name": "voidRunnerExec.ts",
+    "loc": 64,
+    "code_loc": 59,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/powerGovernor.ts",
+    "name": "powerGovernor.ts",
+    "loc": 64,
+    "code_loc": 52,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/voidOrchestrator.ts",
+    "name": "voidOrchestrator.ts",
+    "loc": 99,
+    "code_loc": 84,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/VoidVPS.ts",
+    "name": "VoidVPS.ts",
+    "loc": 180,
+    "code_loc": 160,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/vps/voidRunnerBridge.ts",
+    "name": "voidRunnerBridge.ts",
+    "loc": 67,
+    "code_loc": 59,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/vps"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.ts",
+    "name": "VoidProtocol.ts",
+    "loc": 360,
+    "code_loc": 303,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/ghostC3QelHcn.integration.test.ts",
+    "name": "ghostC3QelHcn.integration.test.ts",
+    "loc": 152,
+    "code_loc": 131,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/VoidProtocol.test.ts",
+    "name": "VoidProtocol.test.ts",
+    "loc": 301,
+    "code_loc": 249,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/useVoid.ts",
+    "name": "useVoid.ts",
+    "loc": 30,
+    "code_loc": 26,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/PowerGovernor.ts",
+    "name": "PowerGovernor.ts",
+    "loc": 167,
+    "code_loc": 143,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/ghostDock.test.ts",
+    "name": "ghostDock.test.ts",
+    "loc": 286,
+    "code_loc": 238,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/useVhgpuFarm.ts",
+    "name": "useVhgpuFarm.ts",
+    "loc": 393,
+    "code_loc": 353,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/useLua.ts",
+    "name": "useLua.ts",
+    "loc": 178,
+    "code_loc": 160,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/ghostDock.ts",
+    "name": "ghostDock.ts",
+    "loc": 115,
+    "code_loc": 101,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/core/VoidOrchestrator.ts",
+    "name": "VoidOrchestrator.ts",
+    "loc": 350,
+    "code_loc": 292,
+    "complexity": 29,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/core"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/collapseFinance.test.ts",
+    "name": "collapseFinance.test.ts",
+    "loc": 183,
+    "code_loc": 158,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nostrDEX.ts",
+    "name": "nostrDEX.ts",
+    "loc": 317,
+    "code_loc": 278,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/qel.test.ts",
+    "name": "qel.test.ts",
+    "loc": 51,
+    "code_loc": 42,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/quantumDAO.ts",
+    "name": "quantumDAO.ts",
+    "loc": 567,
+    "code_loc": 486,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/topologyTracker.ts",
+    "name": "topologyTracker.ts",
+    "loc": 370,
+    "code_loc": 325,
+    "complexity": 39,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/gpuMiner.ts",
+    "name": "gpuMiner.ts",
+    "loc": 342,
+    "code_loc": 296,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/supplyChain.ts",
+    "name": "supplyChain.ts",
+    "loc": 277,
+    "code_loc": 240,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/powFaucet.ts",
+    "name": "powFaucet.ts",
+    "loc": 301,
+    "code_loc": 257,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/qel.ts",
+    "name": "qel.ts",
+    "loc": 266,
+    "code_loc": 227,
+    "complexity": 39,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ghostid.test.ts",
+    "name": "ghostid.test.ts",
+    "loc": 27,
+    "code_loc": 25,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ghostvpn.ts",
+    "name": "ghostvpn.ts",
+    "loc": 448,
+    "code_loc": 396,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/sovTokenomics.ts",
+    "name": "sovTokenomics.ts",
+    "loc": 111,
+    "code_loc": 96,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.test.ts",
+    "name": "doubleRatchet.test.ts",
+    "loc": 275,
+    "code_loc": 229,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/utxo.test.ts",
+    "name": "utxo.test.ts",
+    "loc": 216,
+    "code_loc": 190,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/homotopyMining.test.ts",
+    "name": "homotopyMining.test.ts",
+    "loc": 88,
+    "code_loc": 74,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/chimeraExchange.ts",
+    "name": "chimeraExchange.ts",
+    "loc": 363,
+    "code_loc": 307,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/sphinx.ts",
+    "name": "sphinx.ts",
+    "loc": 79,
+    "code_loc": 66,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.test.ts",
+    "name": "antiHiggs.test.ts",
+    "loc": 285,
+    "code_loc": 227,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ghostid.ts",
+    "name": "ghostid.ts",
+    "loc": 205,
+    "code_loc": 172,
+    "complexity": 26,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/cryptoTestament.ts",
+    "name": "cryptoTestament.ts",
+    "loc": 395,
+    "code_loc": 345,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.ts",
+    "name": "nwcInteropHarness.ts",
+    "loc": 198,
+    "code_loc": 181,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.ts",
+    "name": "nostrTransaction.ts",
+    "loc": 395,
+    "code_loc": 351,
+    "complexity": 38,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.ts",
+    "name": "nwcProtocol.ts",
+    "loc": 477,
+    "code_loc": 408,
+    "complexity": 37,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.void-vps.ts",
+    "name": "doubleRatchet.void-vps.ts",
+    "loc": 417,
+    "code_loc": 351,
+    "complexity": 26,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.test.ts",
+    "name": "ldkBridge.test.ts",
+    "loc": 228,
+    "code_loc": 193,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nwcProtocol.test.ts",
+    "name": "nwcProtocol.test.ts",
+    "loc": 161,
+    "code_loc": 135,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/temporalOracle.ts",
+    "name": "temporalOracle.ts",
+    "loc": 415,
+    "code_loc": 363,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/octreeSdf.ts",
+    "name": "octreeSdf.ts",
+    "loc": 451,
+    "code_loc": 400,
+    "complexity": 55,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/hgpuCompute.ts",
+    "name": "hgpuCompute.ts",
+    "loc": 442,
+    "code_loc": 374,
+    "complexity": 33,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/differentialCore.ts",
+    "name": "differentialCore.ts",
+    "loc": 377,
+    "code_loc": 336,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/sovereignPools.ts",
+    "name": "sovereignPools.ts",
+    "loc": 368,
+    "code_loc": 307,
+    "complexity": 28,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/utuTokens.ts",
+    "name": "utuTokens.ts",
+    "loc": 259,
+    "code_loc": 224,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.test.ts",
+    "name": "zkCompressor.test.ts",
+    "loc": 65,
+    "code_loc": 54,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/acousticHandshake.ts",
+    "name": "acousticHandshake.ts",
+    "loc": 162,
+    "code_loc": 129,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/mirageCompute.ts",
+    "name": "mirageCompute.ts",
+    "loc": 369,
+    "code_loc": 309,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/antiHiggs.ts",
+    "name": "antiHiggs.ts",
+    "loc": 344,
+    "code_loc": 293,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/homotopyMining.ts",
+    "name": "homotopyMining.ts",
+    "loc": 319,
+    "code_loc": 271,
+    "complexity": 22,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/paleoYield.ts",
+    "name": "paleoYield.ts",
+    "loc": 280,
+    "code_loc": 233,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/stablecoin.ts",
+    "name": "stablecoin.ts",
+    "loc": 124,
+    "code_loc": 106,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nostrSync.ts",
+    "name": "nostrSync.ts",
+    "loc": 289,
+    "code_loc": 254,
+    "complexity": 13,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts",
+    "name": "cryptoMiner.ts",
+    "loc": 532,
+    "code_loc": 451,
+    "complexity": 62,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/pqc.ts",
+    "name": "pqc.ts",
+    "loc": 218,
+    "code_loc": 191,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/utuTokens.test.ts",
+    "name": "utuTokens.test.ts",
+    "loc": 57,
+    "code_loc": 48,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ghostLocker.ts",
+    "name": "ghostLocker.ts",
+    "loc": 345,
+    "code_loc": 299,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/aegisVault.ts",
+    "name": "aegisVault.ts",
+    "loc": 341,
+    "code_loc": 282,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nwcInteropHarness.test.ts",
+    "name": "nwcInteropHarness.test.ts",
+    "loc": 61,
+    "code_loc": 54,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/rwaTokenization.ts",
+    "name": "rwaTokenization.ts",
+    "loc": 154,
+    "code_loc": 130,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nostrTransaction.test.ts",
+    "name": "nostrTransaction.test.ts",
+    "loc": 193,
+    "code_loc": 172,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/gf256.ts",
+    "name": "gf256.ts",
+    "loc": 40,
+    "code_loc": 34,
+    "complexity": 9,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/collapseFinance.ts",
+    "name": "collapseFinance.ts",
+    "loc": 490,
+    "code_loc": 428,
+    "complexity": 12,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/fuzzyExtractor.ts",
+    "name": "fuzzyExtractor.ts",
+    "loc": 313,
+    "code_loc": 270,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ldkBridge.ts",
+    "name": "ldkBridge.ts",
+    "loc": 516,
+    "code_loc": 458,
+    "complexity": 26,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/doubleRatchet.ts",
+    "name": "doubleRatchet.ts",
+    "loc": 499,
+    "code_loc": 433,
+    "complexity": 50,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.ts",
+    "name": "singularityHarvester.ts",
+    "loc": 275,
+    "code_loc": 241,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/matchmaker.ts",
+    "name": "matchmaker.ts",
+    "loc": 341,
+    "code_loc": 299,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/singularityHarvester.test.ts",
+    "name": "singularityHarvester.test.ts",
+    "loc": 116,
+    "code_loc": 96,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/socialRecovery.ts",
+    "name": "socialRecovery.ts",
+    "loc": 224,
+    "code_loc": 194,
+    "complexity": 23,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/qrng.ts",
+    "name": "qrng.ts",
+    "loc": 210,
+    "code_loc": 180,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/doubleSpendDefense.ts",
+    "name": "doubleSpendDefense.ts",
+    "loc": 528,
+    "code_loc": 459,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.ts",
+    "name": "paymentGateway.ts",
+    "loc": 467,
+    "code_loc": 417,
+    "complexity": 36,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/econet.ts",
+    "name": "econet.ts",
+    "loc": 289,
+    "code_loc": 246,
+    "complexity": 20,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/communityTreasury.ts",
+    "name": "communityTreasury.ts",
+    "loc": 643,
+    "code_loc": 558,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/watchtower.test.ts",
+    "name": "watchtower.test.ts",
+    "loc": 259,
+    "code_loc": 220,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/utxo.ts",
+    "name": "utxo.ts",
+    "loc": 538,
+    "code_loc": 465,
+    "complexity": 56,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/zkp.ts",
+    "name": "zkp.ts",
+    "loc": 180,
+    "code_loc": 158,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/ghostMailbox.ts",
+    "name": "ghostMailbox.ts",
+    "loc": 320,
+    "code_loc": 277,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/zkCompressor.ts",
+    "name": "zkCompressor.ts",
+    "loc": 211,
+    "code_loc": 184,
+    "complexity": 27,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/signingKeys.ts",
+    "name": "signingKeys.ts",
+    "loc": 71,
+    "code_loc": 63,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/antiSybil.ts",
+    "name": "antiSybil.ts",
+    "loc": 483,
+    "code_loc": 425,
+    "complexity": 31,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/retf.ts",
+    "name": "retf.ts",
+    "loc": 291,
+    "code_loc": 252,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/janusFinance.ts",
+    "name": "janusFinance.ts",
+    "loc": 321,
+    "code_loc": 270,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/karmaSystem.ts",
+    "name": "karmaSystem.ts",
+    "loc": 675,
+    "code_loc": 587,
+    "complexity": 54,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/qrStocks.test.ts",
+    "name": "qrStocks.test.ts",
+    "loc": 88,
+    "code_loc": 73,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/paymentGateway.test.ts",
+    "name": "paymentGateway.test.ts",
+    "loc": 77,
+    "code_loc": 66,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/quantumBridge.ts",
+    "name": "quantumBridge.ts",
+    "loc": 187,
+    "code_loc": 166,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.test.ts",
+    "name": "c3Engine.test.ts",
+    "loc": 112,
+    "code_loc": 92,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/qrStocks.ts",
+    "name": "qrStocks.ts",
+    "loc": 355,
+    "code_loc": 310,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/c3Engine.ts",
+    "name": "c3Engine.ts",
+    "loc": 248,
+    "code_loc": 215,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/watchtower.ts",
+    "name": "watchtower.ts",
+    "loc": 422,
+    "code_loc": 372,
+    "complexity": 38,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/phantomShopper.ts",
+    "name": "phantomShopper.ts",
+    "loc": 377,
+    "code_loc": 324,
+    "complexity": 21,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/nostrOracle.ts",
+    "name": "nostrOracle.ts",
+    "loc": 211,
+    "code_loc": 175,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/merkleTree.ts",
+    "name": "merkleTree.ts",
+    "loc": 183,
+    "code_loc": 149,
+    "complexity": 18,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/crypto/fuzzyExtractor.test.ts",
+    "name": "fuzzyExtractor.test.ts",
+    "loc": 74,
+    "code_loc": 64,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/crypto"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/pmu/pmuAuditClient.ts",
+    "name": "pmuAuditClient.ts",
+    "loc": 21,
+    "code_loc": 18,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/pmu"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/utils/secureRandom.ts",
+    "name": "secureRandom.ts",
+    "loc": 25,
+    "code_loc": 23,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/utils/cn.ts",
+    "name": "cn.ts",
+    "loc": 6,
+    "code_loc": 5,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/utils"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/loraDriver.ts",
+    "name": "loraDriver.ts",
+    "loc": 203,
+    "code_loc": 180,
+    "complexity": 28,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/nostrMesh.ts",
+    "name": "nostrMesh.ts",
+    "loc": 402,
+    "code_loc": 346,
+    "complexity": 46,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/distanceBridge.ts",
+    "name": "distanceBridge.ts",
+    "loc": 207,
+    "code_loc": 180,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/acousticDriver.ts",
+    "name": "acousticDriver.ts",
+    "loc": 269,
+    "code_loc": 221,
+    "complexity": 42,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/lightningNostrTransport.ts",
+    "name": "lightningNostrTransport.ts",
+    "loc": 280,
+    "code_loc": 239,
+    "complexity": 19,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/distanceBridge.test.ts",
+    "name": "distanceBridge.test.ts",
+    "loc": 146,
+    "code_loc": 129,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/localDrivers.ts",
+    "name": "localDrivers.ts",
+    "loc": 327,
+    "code_loc": 292,
+    "complexity": 45,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/network/NativeBridge.ts",
+    "name": "NativeBridge.ts",
+    "loc": 126,
+    "code_loc": 109,
+    "complexity": 11,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/network"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/transport/nostrBus.ts",
+    "name": "nostrBus.ts",
+    "loc": 335,
+    "code_loc": 290,
+    "complexity": 15,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/transport"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/transport/voidRelays.ts",
+    "name": "voidRelays.ts",
+    "loc": 6,
+    "code_loc": 6,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/transport"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/transport/distanceBridge.void-vps.ts",
+    "name": "distanceBridge.void-vps.ts",
+    "loc": 539,
+    "code_loc": 457,
+    "complexity": 44,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/transport"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/qrcMotor.ts",
+    "name": "qrcMotor.ts",
+    "loc": 60,
+    "code_loc": 55,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.test.ts",
+    "name": "tensorNetwork.test.ts",
+    "loc": 93,
+    "code_loc": 80,
+    "complexity": 3,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/trajectoryLut.generated.ts",
+    "name": "trajectoryLut.generated.ts",
+    "loc": 54,
+    "code_loc": 49,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.test.ts",
+    "name": "quantumSwitch.test.ts",
+    "loc": 198,
+    "code_loc": 166,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/qrcRoutePqc.ts",
+    "name": "qrcRoutePqc.ts",
+    "loc": 142,
+    "code_loc": 133,
+    "complexity": 10,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/webgpuTensorEngine.ts",
+    "name": "webgpuTensorEngine.ts",
+    "loc": 309,
+    "code_loc": 262,
+    "complexity": 14,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/staGeodesic.ts",
+    "name": "staGeodesic.ts",
+    "loc": 58,
+    "code_loc": 50,
+    "complexity": 8,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/quantumSwitch.ts",
+    "name": "quantumSwitch.ts",
+    "loc": 355,
+    "code_loc": 315,
+    "complexity": 32,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts",
+    "name": "tensorNetwork.ts",
+    "loc": 421,
+    "code_loc": 368,
+    "complexity": 57,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/qrc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/lsc/lscEngine.test.ts",
+    "name": "lscEngine.test.ts",
+    "loc": 376,
+    "code_loc": 327,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/lsc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/lsc/lscEngine.ts",
+    "name": "lscEngine.ts",
+    "loc": 321,
+    "code_loc": 290,
+    "complexity": 17,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/lsc"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/storage/hcnStore.ts",
+    "name": "hcnStore.ts",
+    "loc": 231,
+    "code_loc": 208,
+    "complexity": 24,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/storage/utxoStore.ts",
+    "name": "utxoStore.ts",
+    "loc": 37,
+    "code_loc": 30,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/eternet_ts/src/storage/channelStore.ts",
+    "name": "channelStore.ts",
+    "loc": 100,
+    "code_loc": 79,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/eternet_ts/src/storage"
+  },
+  {
+    "path": "ET-COSMIC/server/loadEnv.js",
+    "name": "loadEnv.js",
+    "loc": 43,
+    "code_loc": 38,
+    "complexity": 15,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server"
+  },
+  {
+    "path": "ET-COSMIC/server/server.js",
+    "name": "server.js",
+    "loc": 802,
+    "code_loc": 712,
+    "complexity": 115,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server"
+  },
+  {
+    "path": "ET-COSMIC/server/pqcService.js",
+    "name": "pqcService.js",
+    "loc": 134,
+    "code_loc": 117,
+    "complexity": 22,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/proofOfData.js",
+    "name": "proofOfData.js",
+    "loc": 147,
+    "code_loc": 130,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/dmcToken.js",
+    "name": "dmcToken.js",
+    "loc": 111,
+    "code_loc": 92,
+    "complexity": 14,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/hostingRevenue.d.ts",
+    "name": "hostingRevenue.d.ts",
+    "loc": 9,
+    "code_loc": 7,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/index.js",
+    "name": "index.js",
+    "loc": 299,
+    "code_loc": 244,
+    "complexity": 12,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/binaryMarket.js",
+    "name": "binaryMarket.js",
+    "loc": 111,
+    "code_loc": 98,
+    "complexity": 16,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/proofOfConnectivity.js",
+    "name": "proofOfConnectivity.js",
+    "loc": 155,
+    "code_loc": 129,
+    "complexity": 19,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/pairedDeposit.js",
+    "name": "pairedDeposit.js",
+    "loc": 186,
+    "code_loc": 165,
+    "complexity": 34,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/clienteLane.test.js",
+    "name": "clienteLane.test.js",
+    "loc": 71,
+    "code_loc": 63,
+    "complexity": 1,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/ethicalMining.d.ts",
+    "name": "ethicalMining.d.ts",
+    "loc": 12,
+    "code_loc": 10,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/hostingRevenue.js",
+    "name": "hostingRevenue.js",
+    "loc": 79,
+    "code_loc": 70,
+    "complexity": 9,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/sovLedger.js",
+    "name": "sovLedger.js",
+    "loc": 129,
+    "code_loc": 114,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/binaryMarket.d.ts",
+    "name": "binaryMarket.d.ts",
+    "loc": 13,
+    "code_loc": 11,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/sovLedger.d.ts",
+    "name": "sovLedger.d.ts",
+    "loc": 29,
+    "code_loc": 24,
+    "complexity": 7,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/economyPersistence.js",
+    "name": "economyPersistence.js",
+    "loc": 101,
+    "code_loc": 86,
+    "complexity": 28,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/ethicalMining.js",
+    "name": "ethicalMining.js",
+    "loc": 99,
+    "code_loc": 87,
+    "complexity": 11,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/swiftChain.js",
+    "name": "swiftChain.js",
+    "loc": 284,
+    "code_loc": 245,
+    "complexity": 31,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/economy/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/economy"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/core.js",
+    "name": "core.js",
+    "loc": 79,
+    "code_loc": 73,
+    "complexity": 5,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/sensor_entropy_mesh.js",
+    "name": "sensor_entropy_mesh.js",
+    "loc": 62,
+    "code_loc": 58,
+    "complexity": 14,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/index.js",
+    "name": "index.js",
+    "loc": 44,
+    "code_loc": 33,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/chaos_mesh.js",
+    "name": "chaos_mesh.js",
+    "loc": 23,
+    "code_loc": 20,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/zk_aggregate.js",
+    "name": "zk_aggregate.js",
+    "loc": 25,
+    "code_loc": 22,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/marketplace.js",
+    "name": "marketplace.js",
+    "loc": 39,
+    "code_loc": 34,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/ising_mesh.js",
+    "name": "ising_mesh.js",
+    "loc": 38,
+    "code_loc": 34,
+    "complexity": 4,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/entropy_service.js",
+    "name": "entropy_service.js",
+    "loc": 20,
+    "code_loc": 18,
+    "complexity": 4,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/thomas_distributed.js",
+    "name": "thomas_distributed.js",
+    "loc": 25,
+    "code_loc": 23,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/imc/acoustic_room.js",
+    "name": "acoustic_room.js",
+    "loc": 30,
+    "code_loc": 27,
+    "complexity": 3,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/imc"
+  },
+  {
+    "path": "ET-COSMIC/server/pqcService/standalone.js",
+    "name": "standalone.js",
+    "loc": 53,
+    "code_loc": 40,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/pqcService"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/spin_network.js",
+    "name": "spin_network.js",
+    "loc": 56,
+    "code_loc": 52,
+    "complexity": 10,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/memory_collapse.js",
+    "name": "memory_collapse.js",
+    "loc": 49,
+    "code_loc": 43,
+    "complexity": 8,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/index.js",
+    "name": "index.js",
+    "loc": 87,
+    "code_loc": 74,
+    "complexity": 1,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/chi_field.js",
+    "name": "chi_field.js",
+    "loc": 30,
+    "code_loc": 29,
+    "complexity": 5,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/sta_geodesic.js",
+    "name": "sta_geodesic.js",
+    "loc": 61,
+    "code_loc": 55,
+    "complexity": 9,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/orchestrator.js",
+    "name": "orchestrator.js",
+    "loc": 91,
+    "code_loc": 83,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/lscCore.js",
+    "name": "lscCore.js",
+    "loc": 61,
+    "code_loc": 56,
+    "complexity": 10,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/lieb_robinson.js",
+    "name": "lieb_robinson.js",
+    "loc": 26,
+    "code_loc": 23,
+    "complexity": 4,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/causal_tracker.js",
+    "name": "causal_tracker.js",
+    "loc": 77,
+    "code_loc": 73,
+    "complexity": 9,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/lsc_monitor.js",
+    "name": "lsc_monitor.js",
+    "loc": 55,
+    "code_loc": 50,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/aqre/sdf_engine.js",
+    "name": "sdf_engine.js",
+    "loc": 238,
+    "code_loc": 207,
+    "complexity": 29,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/aqre"
+  },
+  {
+    "path": "ET-COSMIC/server/void/index.js",
+    "name": "index.js",
+    "loc": 67,
+    "code_loc": 61,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/void"
+  },
+  {
+    "path": "ET-COSMIC/server/void/mesh.js",
+    "name": "mesh.js",
+    "loc": 80,
+    "code_loc": 74,
+    "complexity": 11,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/void"
+  },
+  {
+    "path": "ET-COSMIC/server/void/bridge.js",
+    "name": "bridge.js",
+    "loc": 69,
+    "code_loc": 65,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/void"
+  },
+  {
+    "path": "ET-COSMIC/server/void/pci.js",
+    "name": "pci.js",
+    "loc": 73,
+    "code_loc": 66,
+    "complexity": 9,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/void"
+  },
+  {
+    "path": "ET-COSMIC/server/void/compute.js",
+    "name": "compute.js",
+    "loc": 6,
+    "code_loc": 6,
+    "complexity": 1,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/void"
+  },
+  {
+    "path": "ET-COSMIC/server/pmu/standalone.js",
+    "name": "standalone.js",
+    "loc": 84,
+    "code_loc": 68,
+    "complexity": 8,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/pmu"
+  },
+  {
+    "path": "ET-COSMIC/server/eternet/index.js",
+    "name": "index.js",
+    "loc": 70,
+    "code_loc": 63,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/eternet"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/vortex_memory.js",
+    "name": "vortex_memory.js",
+    "loc": 110,
+    "code_loc": 95,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/index.js",
+    "name": "index.js",
+    "loc": 115,
+    "code_loc": 96,
+    "complexity": 5,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/grav_mimetic_cooler.js",
+    "name": "grav_mimetic_cooler.js",
+    "loc": 120,
+    "code_loc": 105,
+    "complexity": 14,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/cavity_planck.js",
+    "name": "cavity_planck.js",
+    "loc": 45,
+    "code_loc": 41,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/adiabatic_shifter.js",
+    "name": "adiabatic_shifter.js",
+    "loc": 91,
+    "code_loc": 80,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/ising_machine.js",
+    "name": "ising_machine.js",
+    "loc": 78,
+    "code_loc": 66,
+    "complexity": 17,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/chaos_bell.js",
+    "name": "chaos_bell.js",
+    "loc": 134,
+    "code_loc": 120,
+    "complexity": 15,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/thomas_fermi_solver.js",
+    "name": "thomas_fermi_solver.js",
+    "loc": 158,
+    "code_loc": 142,
+    "complexity": 20,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/tensor_contract.js",
+    "name": "tensor_contract.js",
+    "loc": 124,
+    "code_loc": 111,
+    "complexity": 23,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/lusus/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lusus"
+  },
+  {
+    "path": "ET-COSMIC/server/silentMesh/symbioticHost.js",
+    "name": "symbioticHost.js",
+    "loc": 144,
+    "code_loc": 128,
+    "complexity": 16,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/server/silentMesh/index.js",
+    "name": "index.js",
+    "loc": 93,
+    "code_loc": 73,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/server/silentMesh/cdnStore.js",
+    "name": "cdnStore.js",
+    "loc": 57,
+    "code_loc": 49,
+    "complexity": 13,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/server/silentMesh/void700.js",
+    "name": "void700.js",
+    "loc": 132,
+    "code_loc": 121,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/silentMesh"
+  },
+  {
+    "path": "ET-COSMIC/server/lightning/standalone.js",
+    "name": "standalone.js",
+    "loc": 98,
+    "code_loc": 84,
+    "complexity": 13,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/lightning"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/slaContract.d.ts",
+    "name": "slaContract.d.ts",
+    "loc": 5,
+    "code_loc": 5,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/datRegistry.d.ts",
+    "name": "datRegistry.d.ts",
+    "loc": 4,
+    "code_loc": 4,
+    "complexity": 5,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/liquidityMining.js",
+    "name": "liquidityMining.js",
+    "loc": 111,
+    "code_loc": 96,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/vasCheckout.js",
+    "name": "vasCheckout.js",
+    "loc": 137,
+    "code_loc": 124,
+    "complexity": 11,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/datSettlement.js",
+    "name": "datSettlement.js",
+    "loc": 108,
+    "code_loc": 91,
+    "complexity": 13,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/liquidity.js",
+    "name": "liquidity.js",
+    "loc": 238,
+    "code_loc": 209,
+    "complexity": 18,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/datRegistry.js",
+    "name": "datRegistry.js",
+    "loc": 42,
+    "code_loc": 37,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/slaContract.js",
+    "name": "slaContract.js",
+    "loc": 149,
+    "code_loc": 133,
+    "complexity": 19,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/tierSubscriptions.js",
+    "name": "tierSubscriptions.js",
+    "loc": 234,
+    "code_loc": 208,
+    "complexity": 32,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/datSettlement.d.ts",
+    "name": "datSettlement.d.ts",
+    "loc": 10,
+    "code_loc": 7,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/liquidityMining.d.ts",
+    "name": "liquidityMining.d.ts",
+    "loc": 5,
+    "code_loc": 5,
+    "complexity": 6,
+    "language": "typescript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/mesh/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/mesh"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/core.js",
+    "name": "core.js",
+    "loc": 81,
+    "code_loc": 75,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/ising_solver.js",
+    "name": "ising_solver.js",
+    "loc": 68,
+    "code_loc": 61,
+    "complexity": 8,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/acoustic_handshake.js",
+    "name": "acoustic_handshake.js",
+    "loc": 55,
+    "code_loc": 49,
+    "complexity": 6,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/qrng_thermal.js",
+    "name": "qrng_thermal.js",
+    "loc": 78,
+    "code_loc": 73,
+    "complexity": 14,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/index.js",
+    "name": "index.js",
+    "loc": 48,
+    "code_loc": 40,
+    "complexity": 3,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/thomas_fermi_sdf.js",
+    "name": "thomas_fermi_sdf.js",
+    "loc": 29,
+    "code_loc": 26,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/vortex_store.js",
+    "name": "vortex_store.js",
+    "loc": 57,
+    "code_loc": 52,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/homotopy_compiler.js",
+    "name": "homotopy_compiler.js",
+    "loc": 38,
+    "code_loc": 35,
+    "complexity": 7,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/standalone.js",
+    "name": "standalone.js",
+    "loc": 22,
+    "code_loc": 17,
+    "complexity": 2,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/server/isossupra/chaos_bell_auth.js",
+    "name": "chaos_bell_auth.js",
+    "loc": 35,
+    "code_loc": 32,
+    "complexity": 3,
+    "language": "javascript",
+    "folder": "ET-COSMIC/server/isossupra"
+  },
+  {
+    "path": "ET-COSMIC/core/__init__.py",
+    "name": "__init__.py",
+    "loc": 3,
+    "code_loc": 2,
+    "complexity": 1,
+    "language": "python",
+    "folder": "ET-COSMIC/core"
+  },
+  {
+    "path": "ET-COSMIC/core/tensor_networks/mera_compiler.py",
+    "name": "mera_compiler.py",
+    "loc": 331,
+    "code_loc": 267,
+    "complexity": 56,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tensor_networks"
+  },
+  {
+    "path": "ET-COSMIC/core/tensor_networks/__init__.py",
+    "name": "__init__.py",
+    "loc": 48,
+    "code_loc": 46,
+    "complexity": 1,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tensor_networks"
+  },
+  {
+    "path": "ET-COSMIC/core/tensor_networks/spin_networks.py",
+    "name": "spin_networks.py",
+    "loc": 429,
+    "code_loc": 343,
+    "complexity": 91,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tensor_networks"
+  },
+  {
+    "path": "ET-COSMIC/core/tensor_networks/hermiticity.py",
+    "name": "hermiticity.py",
+    "loc": 61,
+    "code_loc": 43,
+    "complexity": 13,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tensor_networks"
+  },
+  {
+    "path": "ET-COSMIC/core/motor_qrc/sta_geodesic.py",
+    "name": "sta_geodesic.py",
+    "loc": 105,
+    "code_loc": 86,
+    "complexity": 24,
+    "language": "python",
+    "folder": "ET-COSMIC/core/motor_qrc"
+  },
+  {
+    "path": "ET-COSMIC/core/motor_qrc/__init__.py",
+    "name": "__init__.py",
+    "loc": 17,
+    "code_loc": 15,
+    "complexity": 2,
+    "language": "python",
+    "folder": "ET-COSMIC/core/motor_qrc"
+  },
+  {
+    "path": "ET-COSMIC/core/motor_qrc/trajectory_compiler.py",
+    "name": "trajectory_compiler.py",
+    "loc": 25,
+    "code_loc": 16,
+    "complexity": 5,
+    "language": "python",
+    "folder": "ET-COSMIC/core/motor_qrc"
+  },
+  {
+    "path": "ET-COSMIC/core/tests/test_sta_geodesic.py",
+    "name": "test_sta_geodesic.py",
+    "loc": 39,
+    "code_loc": 28,
+    "complexity": 6,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tests"
+  },
+  {
+    "path": "ET-COSMIC/core/tests/test_anderson.py",
+    "name": "test_anderson.py",
+    "loc": 24,
+    "code_loc": 17,
+    "complexity": 4,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tests"
+  },
+  {
+    "path": "ET-COSMIC/core/tests/test_hermiticity.py",
+    "name": "test_hermiticity.py",
+    "loc": 76,
+    "code_loc": 60,
+    "complexity": 18,
+    "language": "python",
+    "folder": "ET-COSMIC/core/tests"
+  },
+  {
+    "path": "ET-COSMIC/core/hamiltonians/anderson.py",
+    "name": "anderson.py",
+    "loc": 92,
+    "code_loc": 76,
+    "complexity": 14,
+    "language": "python",
+    "folder": "ET-COSMIC/core/hamiltonians"
+  },
+  {
+    "path": "ET-COSMIC/core/hamiltonians/__init__.py",
+    "name": "__init__.py",
+    "loc": 19,
+    "code_loc": 17,
+    "complexity": 1,
+    "language": "python",
+    "folder": "ET-COSMIC/core/hamiltonians"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/python/_paths.py",
+    "name": "_paths.py",
+    "loc": 32,
+    "code_loc": 20,
+    "complexity": 8,
+    "language": "python",
+    "folder": "ET-COSMIC/pmu-base/python"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/python/entropy_audit.py",
+    "name": "entropy_audit.py",
+    "loc": 134,
+    "code_loc": 118,
+    "complexity": 32,
+    "language": "python",
+    "folder": "ET-COSMIC/pmu-base/python"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/python/sts_light.py",
+    "name": "sts_light.py",
+    "loc": 62,
+    "code_loc": 52,
+    "complexity": 22,
+    "language": "python",
+    "folder": "ET-COSMIC/pmu-base/python"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/python/void_pool.py",
+    "name": "void_pool.py",
+    "loc": 75,
+    "code_loc": 60,
+    "complexity": 11,
+    "language": "python",
+    "folder": "ET-COSMIC/pmu-base/python"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/ts/pmuAuditTypes.ts",
+    "name": "pmuAuditTypes.ts",
+    "loc": 46,
+    "code_loc": 44,
+    "complexity": 1,
+    "language": "typescript",
+    "folder": "ET-COSMIC/pmu-base/ts"
+  },
+  {
+    "path": "ET-COSMIC/pmu-base/ts/pmuTruthLevels.ts",
+    "name": "pmuTruthLevels.ts",
+    "loc": 61,
+    "code_loc": 56,
+    "complexity": 2,
+    "language": "typescript",
+    "folder": "ET-COSMIC/pmu-base/ts"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/mapreduce.rs",
+    "name": "mapreduce.rs",
+    "loc": 163,
+    "code_loc": 146,
+    "complexity": 8,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/wasm_worker.rs",
+    "name": "wasm_worker.rs",
+    "loc": 101,
+    "code_loc": 80,
+    "complexity": 6,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/ghost_docker.rs",
+    "name": "ghost_docker.rs",
+    "loc": 76,
+    "code_loc": 65,
+    "complexity": 5,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/void_vps.rs",
+    "name": "void_vps.rs",
+    "loc": 121,
+    "code_loc": 107,
+    "complexity": 6,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/main.rs",
+    "name": "main.rs",
+    "loc": 132,
+    "code_loc": 126,
+    "complexity": 4,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/eco_net.rs",
+    "name": "eco_net.rs",
+    "loc": 105,
+    "code_loc": 90,
+    "complexity": 6,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/lusus_tensor.rs",
+    "name": "lusus_tensor.rs",
+    "loc": 144,
+    "code_loc": 126,
+    "complexity": 12,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/poh.rs",
+    "name": "poh.rs",
+    "loc": 78,
+    "code_loc": 69,
+    "complexity": 4,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/void_runner/src/lib.rs",
+    "name": "lib.rs",
+    "loc": 17,
+    "code_loc": 16,
+    "complexity": 1,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_runner/src"
+  },
+  {
+    "path": "ET-COSMIC/public/void-mesh.js",
+    "name": "void-mesh.js",
+    "loc": 264,
+    "code_loc": 243,
+    "complexity": 94,
+    "language": "javascript",
+    "folder": "ET-COSMIC/public"
+  },
+  {
+    "path": "ET-COSMIC/public/sw.js",
+    "name": "sw.js",
+    "loc": 403,
+    "code_loc": 366,
+    "complexity": 74,
+    "language": "javascript",
+    "folder": "ET-COSMIC/public"
+  },
+  {
+    "path": "ET-COSMIC/public/ghostid-quantum-injector.user.js",
+    "name": "ghostid-quantum-injector.user.js",
+    "loc": 968,
+    "code_loc": 819,
+    "complexity": 60,
+    "language": "javascript",
+    "folder": "ET-COSMIC/public"
+  },
+  {
+    "path": "ET-COSMIC/workers/pi_worker/src/lib.rs",
+    "name": "lib.rs",
+    "loc": 37,
+    "code_loc": 33,
+    "complexity": 3,
+    "language": "rust",
+    "folder": "ET-COSMIC/workers/pi_worker/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/license.rs",
+    "name": "license.rs",
+    "loc": 190,
+    "code_loc": 169,
+    "complexity": 12,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/pqc.rs",
+    "name": "pqc.rs",
+    "loc": 229,
+    "code_loc": 191,
+    "complexity": 7,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/antisybil.rs",
+    "name": "antisybil.rs",
+    "loc": 271,
+    "code_loc": 234,
+    "complexity": 24,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/ldk.rs",
+    "name": "ldk.rs",
+    "loc": 97,
+    "code_loc": 87,
+    "complexity": 4,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/qel.rs",
+    "name": "qel.rs",
+    "loc": 371,
+    "code_loc": 316,
+    "complexity": 28,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/void_core/src/lib.rs",
+    "name": "lib.rs",
+    "loc": 332,
+    "code_loc": 271,
+    "complexity": 13,
+    "language": "rust",
+    "folder": "ET-COSMIC/void_core/src"
+  },
+  {
+    "path": "ET-COSMIC/scripts/revenue-calculator.ts",
+    "name": "revenue-calculator.ts",
+    "loc": 93,
+    "code_loc": 87,
+    "complexity": 16,
+    "language": "typescript",
+    "folder": "ET-COSMIC/scripts"
+  },
+  {
+    "path": "ET-COSMIC/scripts/vite-b2b-loaders.ts",
+    "name": "vite-b2b-loaders.ts",
+    "loc": 34,
+    "code_loc": 29,
+    "complexity": 4,
+    "language": "typescript",
+    "folder": "ET-COSMIC/scripts"
+  },
+  {
+    "path": "ET-COSMIC/scripts/lnd-create-wallet.py",
+    "name": "lnd-create-wallet.py",
+    "loc": 174,
+    "code_loc": 146,
+    "complexity": 36,
+    "language": "python",
+    "folder": "ET-COSMIC/scripts"
+  },
+  {
+    "path": "GitPay/sw.js",
+    "name": "sw.js",
+    "loc": 261,
+    "code_loc": 232,
+    "complexity": 40,
+    "language": "javascript",
+    "folder": "GitPay"
+  },
+  {
+    "path": "GitPay/app.js",
+    "name": "app.js",
+    "loc": 1454,
+    "code_loc": 1231,
+    "complexity": 217,
+    "language": "javascript",
+    "folder": "GitPay"
+  },
+  {
+    "path": "GitPay/lib-entry.js",
+    "name": "lib-entry.js",
+    "loc": 182,
+    "code_loc": 155,
+    "complexity": 34,
+    "language": "javascript",
+    "folder": "GitPay"
+  },
+  {
+    "path": "GitPay/js/bitcoin.min.js",
+    "name": "bitcoin.min.js",
+    "loc": 1,
+    "code_loc": 1,
+    "complexity": 3632,
+    "language": "javascript",
+    "folder": "GitPay/js"
+  },
+  {
+    "path": "GitPay/js/nostr.js",
+    "name": "nostr.js",
+    "loc": 136,
+    "code_loc": 119,
+    "complexity": 17,
+    "language": "javascript",
+    "folder": "GitPay/js"
+  }
+]

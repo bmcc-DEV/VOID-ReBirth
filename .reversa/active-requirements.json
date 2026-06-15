@@ -1,0 +1,10 @@
+{
+  "schema-version": 1,
+  "feature-dir": "_reversa_forward/001-void-rebirth-pwa",
+  "feature-id": "001",
+  "short-name": "void-rebirth-pwa",
+  "started-at": "2026-06-14T20:59:32-03:00",
+  "current-stage": "requirements",
+  "stages-completed": [],
+  "paused-features": []
+}

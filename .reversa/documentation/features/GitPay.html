@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação GitPay — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-GitPay">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-GitPay">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>GitPay</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">Módulo GitPay</h1>
+<br/>
+<p class="blockquote-content">Módulo de checkout e processamento de pagamentos Bitcoin descentralizado e serverless.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O GitPay é um processador de pagamentos Bitcoin serverless e descentralizado executado inteiramente no navegador do cliente (browser-side). O sistema elimina intermediários custodiantes permitindo que merchants recebam fundos diretamente em seus endereços Bitcoin gerados de forma determinística a partir de suas próprias chaves BIP32 estendidas (xpub/ypub/zpub), publicando metadados cifrados das faturas na rede descentralizada Nostr.</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li><strong>Derivação de Endereços</strong>: Gerar endereços Bitcoin de forma determinística (BIP32/SLIP-0132) em caminhos de recebimento baseados em índices sequenciais.</li>
+<li><strong>Cifragem de Faturas</strong>: Garantir a privacidade financeira do merchant criptografando localmente os dados sensíveis das faturas.</li>
+<li><strong>Integração com Nostr</strong>: Utilizar a rede Nostr como um ledger de publicação/sincronização de faturas (Kind 30023) e recibos de pagamento (Kind 23001).</li>
+<li><strong>Verificação de Rede</strong>: Monitorar e confirmar pagamentos diretamente na blockchain e mempool do Bitcoin através da API do mempool.space.</li>
+<li><strong>Doação Probabilística</strong>: Direcionar uma taxa de comissão de suporte de 1% das faturas geradas de forma aleatória para a chave do desenvolvedor.</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Derivação Baseada em Prefixo</strong> 🟢: O tipo de endereço gerado é determinado automaticamente pelo prefixo da chave pública estendida (zpub/vpub -> Bech32 Native SegWit, ypub/upub -> P2SH-P2WPKH Nested SegWit, xpub/tpub -> P2PKH Legacy).</li>
+<li><strong>Cifragem Local</strong> 🟢: As faturas devem ser criptografadas localmente via AES-GCM (WebCrypto) utilizando uma chave simétrica de 256 bits derivada deterministicamente do hash SHA-256 da chave mestre do merchant e o índice da fatura.</li>
+<li><strong>Fallback de Cifragem</strong> 🟢: Em conexões inseguras HTTP ou locais onde a API WebCrypto Subtle está indisponível, o sistema utiliza um algoritmo de cifragem simétrica XOR (`xorEncryptDecrypt`) como barreira de fallback.</li>
+<li><strong>Tolerância de Pagamento (Threshold)</strong> 🟢: A fatura é considerada liquidada (`paid`) se o total recebido em blockchain (confirmado + mempool) for maior ou igual ao limite de tolerância configurado (padrão de 99.5% do valor solicitado).</li>
+<li><strong>Doação ao Desenvolvedor (Taxa de 1%)</strong> 🟢: O sistema substitui o XPUB de recebimento do merchant pelo do desenvolvedor em 1% das faturas geradas, sorteado via `Math.random()`.</li>
+<li><strong>Modo Offline e PWA</strong> 🟢: O sistema deve registrar um Service Worker para cache local IndexedDB e permitir o funcionamento offline básico.</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-01 | Derivação BIP32 / SLIP-0132 | Must | Gerar endereços compatíveis (P2WPKH, P2SH-P2WPKH ou P2PKH) mapeados pelo prefixo da chave. |</p>
+<p>| RF-02 | Cifragem AES-GCM local de metadados | Must | Criptografar descrição, valor e timestamps antes de enviar ao relay Nostr. |</p>
+<p>| RF-03 | Fallback XOR para cifragem | Should | Mudar automaticamente para XOR se <code>window.crypto.subtle</code> for nulo. |</p>
+<p>| RF-04 | Publicação de fatura no Nostr (Kind 30023) | Must | Publicar evento assinado com a tag <code>d</code> contendo o hash do endereço Bitcoin. |</p>
+<p>| RF-05 | Escuta de recibos no Nostr (Kind 23001) | Must | Monitorar relays por eventos Kind 23001 contendo a tag do ID da fatura para iniciar checagem rápida. |</p>
+<p>| RF-06 | Verificação via API mempool.space | Must | Obter soma das transações no endereço de rede e aplicar limite de tolerância (Threshold). |</p>
+<p>| RF-07 | Direcionamento probabilístico de doação | Should | Em 1% das faturas (sorteio 0 a 100 < 1.0), aplicar a chave do desenvolvedor. |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Portabilidade | Operação total no browser sem backend centralizado | <code>GitPay/app.js:1-1200</code> | 🟢 |</p>
+<p>| Resiliência | Reconexão automática e fallbacks para múltiplos relays Nostr | <code>GitPay/app.js:283</code> | 🟢 |</p>
+<p>| Disponibilidade | Registro de Service Worker para suporte PWA offline | <code>GitPay/sw.js:1-150</code> | 🟢 |</p>
+<p>| Segurança | Cifragem client-side ponta a ponta dos dados financeiros | <code>GitPay/lib-entry.js:140-190</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Critérios de Aceitação</h2>
+<br/>
+<div class="code-block"><pre><code class="language-gherkin">
+Dado que o merchant possui uma chave zpub configurada
+
+Quando uma nova fatura com índice 10 é gerada
+
+Então o sistema gera um endereço Bech32 P2WPKH derivado do caminho m/0/10
+
+
+
+Dado que o valor solicitado é 100.000 satoshis com tolerância de 0.5% (Threshold = 99.500 sats)
+
+Quando a blockchain acusa o recebimento de 99.600 satoshis para o endereço correspondente
+
+Então a fatura é marcada como paga (paid) e o recibo é emitido
+
+
+
+Dado que o valor solicitado é 100.000 satoshis com tolerância de 0.5% (Threshold = 99.500 sats)
+
+Quando o recebimento acusa 95.000 satoshis
+
+Então a fatura permanece pendente e exibe uma mensagem com o valor restante exigido de 5.000 satoshis
+
+</code></pre></div>
+<br/>
+<h2 class="section-title">Prioridade (MoSCoW)</h2>
+<br/>
+<p>| Requisito | MoSCoW | Justificativa |</p>
+<p>|-----------|--------|---------------|</p>
+<p>| Derivação BIP32/SLIP-0132 | Must | Caminho crítico absoluto; impossível receber sem derivar endereço do merchant. |</p>
+<p>| Verificação em Mempool | Must | Validação e conciliação de pagamentos em blockchain pública. |</p>
+<p>| Cifragem de Faturas | Must | Garante que dados confidenciais do merchant não sejam expostos publicamente na rede Nostr. |</p>
+<p>| Doação Probabilística (1%) | Should | Integrada no fluxo de faturamento, com lógica opcional / customizável pelo merchant. |</p>
+<p>| Fallback XOR | Should | Mantém funcionamento do sistema em navegadores legados ou contextos offline locais sem SSL. |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>GitPay/lib-entry.js</code> | <code>deriveAddressFromExtendedKey</code> | 🟢 |</p>
+<p>| <code>GitPay/lib-entry.js</code> | <code>xorEncryptDecrypt</code> | 🟢 |</p>
+<p>| <code>GitPay/app.js</code> | <code>generateInvoice</code> | 🟢 |</p>
+<p>| <code>GitPay/app.js</code> | <code>verifyPayment</code> | 🟢 |</p>
+<p>| <code>GitPay/app.js</code> | <code>publishNostrEvent</code> | 🟢 |</p>
+<p>| <code>GitPay/sw.js</code> | <code>fetch</code> handler | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">Módulo GitPay, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Módulo central de checkout e processamento de pagamentos Bitcoin descentralizado.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<p>Como uma aplicação serverless client-side baseada em frontend web estático e bibliotecas criptográficas compiladas/embarcadas, o GitPay não expõe endpoints HTTP de servidor próprios. Em vez disso, expõe funções utilitárias em JavaScript nativo e interações com APIs externas.</p>
+<br/>
+<h3 class="subsection-title">Funções e Utilitários Globais (expostos no escopo global ou via bundles de biblioteca)</h3>
+<br/>
+<p>| Símbolo | Assinatura | Retorno | Observação |</p>
+<p>|---------|-----------|---------|------------|</p>
+<p>| <code>deriveAddressFromExtendedKey</code> | <code>(xpub: string, index: number, network: object)</code> | <code>string</code> | Derivação BIP32/SLIP-0132 nativa baseada no prefixo. Definido em [lib-entry.js](file:///run/media/bruno/Bruno/ET-COSMIC-GitPay/GitPay/lib-entry.js#L18). |</p>
+<p>| <code>xorEncryptDecrypt</code> | <code>(data: string, key: string)</code> | <code>string</code> | Cifragem simétrica fallback baseada em XOR. Definido em [lib-entry.js](file:///run/media/bruno/Bruno/ET-COSMIC-GitPay/GitPay/lib-entry.js#L134). |</p>
+<p>| <code>generateInvoice</code> | <code>(amountSats: number, description: string, index: number)</code> | <code>Promise<object></code> | Gera a fatura, calcula a chave de cifragem, encripta os dados e assina o evento Nostr. |</p>
+<p>| <code>verifyPayment</code> | <code>(address: string, expectedSats: number)</code> | <code>Promise<boolean></code> | Consulta a API externa da blockchain para conferir saldos recebidos contra o threshold. |</p>
+<p>| <code>loadSettings</code> | <code>()</code> | <code>object</code> | Carrega chaves Nostr, relays e XPUB/configurações do <code>localStorage</code>. |</p>
+<br/>
+<h3 class="subsection-title">Integrações e Endpoints Externos Consumidos</h3>
+<br/>
+<p>| Serviço / API | Método | Caminho / Tipo de Evento | Finalidade |</p>
+<p>|----------------|--------|--------------------------|------------|</p>
+<p>| mempool.space API | GET | <code>/api/address/:address</code> | Consulta de transações confirmadas e pendentes na mempool. |</p>
+<p>| Nostr Relays | Pub/Sub | Kind <code>30023</code> (Long-form Content) | Publicação descentralizada de faturas criptografadas. |</p>
+<p>| Nostr Relays | Pub/Sub | Kind <code>23001</code> (Instant Receipt) | Escuta de sinais de pagamento gerados pelo navegador do cliente. |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal</h2>
+<br/>
+<p>O fluxo de processamento de checkout ocorre da seguinte forma:</p>
+<p>1. <strong>Inicialização (<code>DOMContentLoaded</code>)</strong>: O script em [app.js](file:///run/media/bruno/Bruno/ET-COSMIC-GitPay/GitPay/app.js) detecta se o parâmetro <code>invoice</code> está presente na URL.</p>
+<ul>
+<li>Se presente, o navegador carrega a visualização de pagamento do cliente e busca os metadados da fatura correspondente via relays Nostr.</li>
+<li>Se ausente, inicializa o painel do merchant, carrega as taxas de câmbio BTC e conecta aos relays Nostr.</li>
+</ul>
+<p>2. <strong>Geração de Fatura</strong>: O merchant digita o valor e descrição. O sistema:</p>
+<ul>
+<li>Deriva o endereço correspondente ao próximo índice livre BIP32 usando `deriveAddressFromExtendedKey` em [lib-entry.js](file:///run/media/bruno/Bruno/ET-COSMIC-GitPay/GitPay/lib-entry.js#L18).</li>
+<li>Deriva a chave simétrica de cifragem: `SHA-256(masterKey || "-" || index)`.</li>
+<li>Criptografa o payload e publica o evento Nostr Kind 30023.</li>
+</ul>
+<p>3. <strong>Escuta de Pagamento</strong>: O painel do merchant e a tela do cliente abrem uma conexão WebSocket com os relays Nostr escutando eventos Kind 23001 vinculados ao ID da fatura, e consultam ativamente a API do <code>mempool.space</code> a cada 10 segundos.</p>
+<p>4. <strong>Liquidação</strong>: Assim que os fundos recebidos no endereço atingem ou superam o Threshold calculado de tolerância, a fatura muda para o estado <code>paid</code> e exibe a tela de sucesso.</p>
+<br/>
+<h2 class="section-title">Fluxos Alternativos</h2>
+<ul>
+<li><strong>Fallback de Cifragem local (Sem WebCrypto/HTTPS)</strong>:</li>
+<li>O sistema detecta a ausência de `window.crypto.subtle`.</li>
+<li>Desvia automaticamente para o algoritmo `xorEncryptDecrypt` definido em [lib-entry.js:134](file:///run/media/bruno/Bruno/ET-COSMIC-GitPay/GitPay/lib-entry.js#L134) para cifrar/decifrar os metadados locais na rede Nostr.</li>
+<li><strong>Detecção de Underpayment (Pagamento Parcial)</strong>:</li>
+<li>Caso o valor recebido no endereço Bitcoin seja inferior ao Threshold de tolerância, o sistema transiciona a interface para exibir uma mensagem de erro com a diferença a pagar, mantendo a fatura ativa no estado `pending`.</li>
+<li><strong>Doação Probabilística (Taxa do Desenvolvedor)</strong>:</li>
+<li>No momento da geração da fatura, se o sorteio probabilístico sortear o desenvolvedor (1% de chances), o XPUB de recebimento do merchant é ignorado e os fundos são direcionados para o XPUB estático do desenvolvedor do software.</li>
+</ul>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li><strong>Nostr Relay Network</strong>: Usada para armazenamento descentralizado de faturas (Kind 30023) e comunicação pub/sub em tempo real.</li>
+<li><strong>mempool.space REST API</strong>: Provedor público de dados de blockchain e transações pendentes em mempool.</li>
+<li><strong>Service Worker (`sw.js`)</strong>: Habilita caching local de arquivos estáticos para suporte offline do PWA.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Persistência e sincronização de faturas via rede Nostr (Kind 30023) | <code>GitPay/app.js:312</code> | 🟢 |</p>
+<p>| Fallback XOR de criptografia restrito a ambiente de desenvolvimento (DEV_ALLOW_XOR) | <code>GitPay/lib-entry.js:134-142</code> | 🟢 |</p>
+<p>| Cálculo de tolerância de subpagamento (underpayment threshold) | <code>GitPay/app.js:725</code> | 🟢 |</p>
+<p>| Redirecionamento probabilístico de fundos (1%) para o desenvolvedor | <code>GitPay/app.js:1069</code> | 🟢 |</p>
+<p>| Registro de sw.js para suporte a PWA e cache local de assets | <code>GitPay/app.js:45</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<ul>
+<li><strong>IndexedDB</strong>: Usado pelo Service Worker (`sw.js`) e pela aplicação para armazenar dados de sessão do comerciante, incluindo chaves públicas, relays preferidos, XPUB mestre e as configurações locais do dashboard.</li>
+<li><strong>localStorage</strong>: Armazena as chaves temporárias de visualização da sessão de checkout atual e o histórico de faturas localmente no browser para rápido carregamento inicial.</li>
+</ul>
+<br/>
+<h2 class="section-title">Observabilidade</h2>
+<ul>
+<li><strong>Console Logs</strong>: O script emite logs detalhados de console no browser em eventos de transição de estado da conexão Nostr, erros na consulta HTTP da blockchain (`mempool.space` API rate limiting) e falhas de derivação de chaves.</li>
+</ul>
+<br/>
+<h2 class="section-title">Riscos e Lacunas Resolvidos</h2>
+<ul>
+<li>🟡 <strong>Inexistência de HTTPS nos Relays</strong>: Caso o merchant conecte a relays Nostr não criptografados (`ws://` em vez de `wss://`), metadados e assinaturas podem ser farejados por agentes intermediários.</li>
+<li>🟢 <strong>Vazamento do Algoritmo de Obscurecimento XOR</strong>: Resolvido ao proibir a cifragem XOR em produção. O checkout exige o suporte a WebCrypto e bloqueia conexões locais desprotegidas sem HTTPS, restringindo o XOR ao desenvolvimento sob a flag `DEV_ALLOW_XOR=true`.</li>
+</ul>
+<br/>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

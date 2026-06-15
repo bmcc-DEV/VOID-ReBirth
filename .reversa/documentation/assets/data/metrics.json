@@ -1,0 +1,1682 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-14T19:15:10-03:00",
+  "treemap_loc_by_folder": [
+    {
+      "name": ".",
+      "value": 19
+    },
+    {
+      "name": "src",
+      "value": 307
+    },
+    {
+      "name": "src/shared/lib",
+      "value": 325
+    },
+    {
+      "name": "src/db",
+      "value": 186
+    },
+    {
+      "name": "src/pages/GhostIDPage",
+      "value": 19
+    },
+    {
+      "name": "src/pages/GitPayPage",
+      "value": 19
+    },
+    {
+      "name": "src/pages/PqcAuditPage",
+      "value": 19
+    },
+    {
+      "name": "src/pages/HomePage",
+      "value": 146
+    },
+    {
+      "name": "src/services",
+      "value": 332
+    },
+    {
+      "name": "src/app",
+      "value": 90
+    },
+    {
+      "name": "src/entities",
+      "value": 109
+    },
+    {
+      "name": "src/entities/ghostid",
+      "value": 64
+    },
+    {
+      "name": "src/entities/invoice",
+      "value": 93
+    },
+    {
+      "name": "src/entities/mesh",
+      "value": 94
+    },
+    {
+      "name": "src/features/gitpay-merchant",
+      "value": 337
+    },
+    {
+      "name": "src/features/pqc-audit",
+      "value": 173
+    },
+    {
+      "name": "src/features/ghostid-deploy",
+      "value": 623
+    },
+    {
+      "name": "ET-COSMIC",
+      "value": 433
+    },
+    {
+      "name": "ET-COSMIC/src",
+      "value": 687
+    },
+    {
+      "name": "ET-COSMIC/src/economy",
+      "value": 227
+    },
+    {
+      "name": "ET-COSMIC/src/collapse",
+      "value": 1048
+    },
+    {
+      "name": "ET-COSMIC/src/plugins",
+      "value": 51
+    },
+    {
+      "name": "ET-COSMIC/src/vps",
+      "value": 535
+    },
+    {
+      "name": "ET-COSMIC/src/imc",
+      "value": 332
+    },
+    {
+      "name": "ET-COSMIC/src/omega",
+      "value": 965
+    },
+    {
+      "name": "ET-COSMIC/src/protocol/sovereignty",
+      "value": 285
+    },
+    {
+      "name": "ET-COSMIC/src/protocol/liquidity",
+      "value": 703
+    },
+    {
+      "name": "ET-COSMIC/src/protocol/amp",
+      "value": 785
+    },
+    {
+      "name": "ET-COSMIC/src/test",
+      "value": 90
+    },
+    {
+      "name": "ET-COSMIC/src/server",
+      "value": 119
+    },
+    {
+      "name": "ET-COSMIC/src/core",
+      "value": 2841
+    },
+    {
+      "name": "ET-COSMIC/src/void",
+      "value": 644
+    },
+    {
+      "name": "ET-COSMIC/src/compute",
+      "value": 470
+    },
+    {
+      "name": "ET-COSMIC/src/crypto",
+      "value": 25624
+    },
+    {
+      "name": "ET-COSMIC/src/theory",
+      "value": 1382
+    },
+    {
+      "name": "ET-COSMIC/src/lib",
+      "value": 836
+    },
+    {
+      "name": "ET-COSMIC/src/pages",
+      "value": 1692
+    },
+    {
+      "name": "ET-COSMIC/src/layouts",
+      "value": 104
+    },
+    {
+      "name": "ET-COSMIC/src/pmu",
+      "value": 612
+    },
+    {
+      "name": "ET-COSMIC/src/utils",
+      "value": 300
+    },
+    {
+      "name": "ET-COSMIC/src/network",
+      "value": 2511
+    },
+    {
+      "name": "ET-COSMIC/src/ethics",
+      "value": 365
+    },
+    {
+      "name": "ET-COSMIC/src/hooks",
+      "value": 100
+    },
+    {
+      "name": "ET-COSMIC/src/components",
+      "value": 26934
+    },
+    {
+      "name": "ET-COSMIC/src/crdt",
+      "value": 57
+    },
+    {
+      "name": "ET-COSMIC/src/eternet",
+      "value": 263
+    },
+    {
+      "name": "ET-COSMIC/src/social",
+      "value": 322
+    },
+    {
+      "name": "ET-COSMIC/src/qrc",
+      "value": 1883
+    },
+    {
+      "name": "ET-COSMIC/src/silentMesh",
+      "value": 183
+    },
+    {
+      "name": "ET-COSMIC/src/lsc",
+      "value": 718
+    },
+    {
+      "name": "ET-COSMIC/src/routes",
+      "value": 14
+    },
+    {
+      "name": "ET-COSMIC/src/b2b",
+      "value": 4243
+    },
+    {
+      "name": "ET-COSMIC/src/injectors",
+      "value": 499
+    },
+    {
+      "name": "ET-COSMIC/src/storage",
+      "value": 681
+    },
+    {
+      "name": "ET-COSMIC/src/research",
+      "value": 169
+    },
+    {
+      "name": "ET-COSMIC/src/harvesters",
+      "value": 1257
+    },
+    {
+      "name": "ET-COSMIC/src/harvesters/exchanges",
+      "value": 526
+    },
+    {
+      "name": "ET-COSMIC/src/harvesters/social",
+      "value": 722
+    },
+    {
+      "name": "ET-COSMIC/src/mesh",
+      "value": 184
+    },
+    {
+      "name": "ET-COSMIC/src/paleo",
+      "value": 1478
+    },
+    {
+      "name": "ET-COSMIC/src/isossupra",
+      "value": 44
+    },
+    {
+      "name": "ET-COSMIC/src/config",
+      "value": 54
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts",
+      "value": 8
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src",
+      "value": 74
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/vps",
+      "value": 796
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/core",
+      "value": 2332
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/crypto",
+      "value": 23841
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/pmu",
+      "value": 21
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/utils",
+      "value": 31
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/network",
+      "value": 1960
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/transport",
+      "value": 880
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/qrc",
+      "value": 1690
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/lsc",
+      "value": 697
+    },
+    {
+      "name": "ET-COSMIC/eternet_ts/src/storage",
+      "value": 368
+    },
+    {
+      "name": "ET-COSMIC/server",
+      "value": 979
+    },
+    {
+      "name": "ET-COSMIC/server/economy",
+      "value": 1857
+    },
+    {
+      "name": "ET-COSMIC/server/imc",
+      "value": 407
+    },
+    {
+      "name": "ET-COSMIC/server/pqcService",
+      "value": 53
+    },
+    {
+      "name": "ET-COSMIC/server/aqre",
+      "value": 853
+    },
+    {
+      "name": "ET-COSMIC/server/void",
+      "value": 295
+    },
+    {
+      "name": "ET-COSMIC/server/pmu",
+      "value": 84
+    },
+    {
+      "name": "ET-COSMIC/server/eternet",
+      "value": 70
+    },
+    {
+      "name": "ET-COSMIC/server/lusus",
+      "value": 997
+    },
+    {
+      "name": "ET-COSMIC/server/silentMesh",
+      "value": 426
+    },
+    {
+      "name": "ET-COSMIC/server/lightning",
+      "value": 98
+    },
+    {
+      "name": "ET-COSMIC/server/mesh",
+      "value": 1065
+    },
+    {
+      "name": "ET-COSMIC/server/isossupra",
+      "value": 511
+    },
+    {
+      "name": "ET-COSMIC/core",
+      "value": 3
+    },
+    {
+      "name": "ET-COSMIC/core/tensor_networks",
+      "value": 869
+    },
+    {
+      "name": "ET-COSMIC/core/motor_qrc",
+      "value": 147
+    },
+    {
+      "name": "ET-COSMIC/core/tests",
+      "value": 139
+    },
+    {
+      "name": "ET-COSMIC/core/hamiltonians",
+      "value": 111
+    },
+    {
+      "name": "ET-COSMIC/pmu-base/python",
+      "value": 303
+    },
+    {
+      "name": "ET-COSMIC/pmu-base/ts",
+      "value": 107
+    },
+    {
+      "name": "ET-COSMIC/void_runner/src",
+      "value": 937
+    },
+    {
+      "name": "ET-COSMIC/public",
+      "value": 1635
+    },
+    {
+      "name": "ET-COSMIC/workers/pi_worker/src",
+      "value": 37
+    },
+    {
+      "name": "ET-COSMIC/void_core/src",
+      "value": 1490
+    },
+    {
+      "name": "ET-COSMIC/scripts",
+      "value": 301
+    },
+    {
+      "name": "GitPay",
+      "value": 1897
+    },
+    {
+      "name": "GitPay/js",
+      "value": 137
+    }
+  ],
+  "top_complexity": [
+    {
+      "id": "GitPay/js/bitcoin.min.js",
+      "complexity": 3632,
+      "loc": 1
+    },
+    {
+      "id": "GitPay/app.js",
+      "complexity": 217,
+      "loc": 1454
+    },
+    {
+      "id": "ET-COSMIC/server/server.js",
+      "complexity": 115,
+      "loc": 802
+    },
+    {
+      "id": "ET-COSMIC/public/void-mesh.js",
+      "complexity": 94,
+      "loc": 264
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/quantumBridge.ts",
+      "complexity": 92,
+      "loc": 803
+    },
+    {
+      "id": "ET-COSMIC/core/tensor_networks/spin_networks.py",
+      "complexity": 91,
+      "loc": 429
+    },
+    {
+      "id": "ET-COSMIC/public/sw.js",
+      "complexity": 74,
+      "loc": 403
+    },
+    {
+      "id": "ET-COSMIC/src/utils/qr.tsx",
+      "complexity": 66,
+      "loc": 179
+    },
+    {
+      "id": "ET-COSMIC/src/components/PqcDeveloperDashboard.tsx",
+      "complexity": 65,
+      "loc": 1001
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/cryptoMiner.ts",
+      "complexity": 62,
+      "loc": 532
+    },
+    {
+      "id": "ET-COSMIC/src/network/nostrMesh.ts",
+      "complexity": 62,
+      "loc": 487
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/crypto/cryptoMiner.ts",
+      "complexity": 62,
+      "loc": 532
+    },
+    {
+      "id": "ET-COSMIC/src/components/AnimusSubstratesPanel.tsx",
+      "complexity": 60,
+      "loc": 865
+    },
+    {
+      "id": "ET-COSMIC/public/ghostid-quantum-injector.user.js",
+      "complexity": 60,
+      "loc": 968
+    },
+    {
+      "id": "ET-COSMIC/src/qrc/tensorNetwork.ts",
+      "complexity": 57,
+      "loc": 421
+    },
+    {
+      "id": "ET-COSMIC/eternet_ts/src/qrc/tensorNetwork.ts",
+      "complexity": 57,
+      "loc": 421
+    },
+    {
+      "id": "ET-COSMIC/src/crypto/utxo.ts",
+      "complexity": 56,
+      "loc": 538
+    },
+    {
+      "id": "ET-COSMIC/src/components/ActiveTerminal.tsx",
+      "complexity": 56,
+      "loc": 1022
+    },
+    {
+      "id": "ET-COSMIC/src/b2b/skuManifest.ts",
+      "complexity": 56,
+      "loc": 427
+    },
+    {
+      "id": "ET-COSMIC/src/paleo/anacroclastia.ts",
+      "complexity": 56,
+      "loc": 630
+    }
+  ],
+  "loc_histogram": {
+    "bins": [
+      0,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      5000
+    ],
+    "counts": [
+      134,
+      167,
+      167,
+      225,
+      29,
+      5
+    ]
+  },
+  "dependency_sankey": {
+    "nodes": [
+      {
+        "id": "ET-COSMIC/src/harvesters"
+      },
+      {
+        "id": "GitPay/js"
+      },
+      {
+        "id": "ET-COSMIC/src/protocol/amp"
+      },
+      {
+        "id": "ET-COSMIC/pmu-base/python"
+      },
+      {
+        "id": "ET-COSMIC/server/lusus"
+      },
+      {
+        "id": "src/entities/ghostid"
+      },
+      {
+        "id": "ET-COSMIC/src/injectors"
+      },
+      {
+        "id": "ET-COSMIC/src/protocol/sovereignty"
+      },
+      {
+        "id": "ET-COSMIC/src/layouts"
+      },
+      {
+        "id": "src/features/ghostid-deploy"
+      },
+      {
+        "id": "ET-COSMIC/src/mesh"
+      },
+      {
+        "id": "ET-COSMIC/src/utils"
+      },
+      {
+        "id": "ET-COSMIC/core/tensor_networks"
+      },
+      {
+        "id": "src/shared/lib"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/vps"
+      },
+      {
+        "id": "ET-COSMIC/src"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/utils"
+      },
+      {
+        "id": "ET-COSMIC/server"
+      },
+      {
+        "id": "ET-COSMIC/src/lib"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/transport"
+      },
+      {
+        "id": "src/features/gitpay-merchant"
+      },
+      {
+        "id": "src/entities/invoice"
+      },
+      {
+        "id": "src/entities/mesh"
+      },
+      {
+        "id": "ET-COSMIC/src/imc"
+      },
+      {
+        "id": "ET-COSMIC/core/tests"
+      },
+      {
+        "id": "ET-COSMIC/server/aqre"
+      },
+      {
+        "id": "ET-COSMIC/src/omega"
+      },
+      {
+        "id": "ET-COSMIC/void_runner/src"
+      },
+      {
+        "id": "src/pages/PqcAuditPage"
+      },
+      {
+        "id": "ET-COSMIC/server/silentMesh"
+      },
+      {
+        "id": "ET-COSMIC/server/mesh"
+      },
+      {
+        "id": "ET-COSMIC/src/eternet"
+      },
+      {
+        "id": "ET-COSMIC/src/protocol/liquidity"
+      },
+      {
+        "id": "ET-COSMIC/src/void"
+      },
+      {
+        "id": "ET-COSMIC/public"
+      },
+      {
+        "id": "ET-COSMIC/src/economy"
+      },
+      {
+        "id": "ET-COSMIC/src/ethics"
+      },
+      {
+        "id": "ET-COSMIC/src/b2b"
+      },
+      {
+        "id": "src"
+      },
+      {
+        "id": "src/features/pqc-audit"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/qrc"
+      },
+      {
+        "id": "ET-COSMIC/core/motor_qrc"
+      },
+      {
+        "id": "ET-COSMIC/void_core/src"
+      },
+      {
+        "id": "ET-COSMIC/scripts"
+      },
+      {
+        "id": "ET-COSMIC"
+      },
+      {
+        "id": "ET-COSMIC/src/hooks"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/core"
+      },
+      {
+        "id": "ET-COSMIC/src/social"
+      },
+      {
+        "id": "ET-COSMIC/src/silentMesh"
+      },
+      {
+        "id": "ET-COSMIC/pmu-base/ts"
+      },
+      {
+        "id": "src/entities"
+      },
+      {
+        "id": "ET-COSMIC/src/lsc"
+      },
+      {
+        "id": "ET-COSMIC/core/hamiltonians"
+      },
+      {
+        "id": "."
+      },
+      {
+        "id": "ET-COSMIC/core"
+      },
+      {
+        "id": "ET-COSMIC/src/components"
+      },
+      {
+        "id": "ET-COSMIC/src/research"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/crypto"
+      },
+      {
+        "id": "GitPay"
+      },
+      {
+        "id": "ET-COSMIC/src/harvesters/exchanges"
+      },
+      {
+        "id": "src/pages/HomePage"
+      },
+      {
+        "id": "ET-COSMIC/src/compute"
+      },
+      {
+        "id": "src/services"
+      },
+      {
+        "id": "ET-COSMIC/server/imc"
+      },
+      {
+        "id": "ET-COSMIC/src/crypto"
+      },
+      {
+        "id": "ET-COSMIC/server/void"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/lsc"
+      },
+      {
+        "id": "ET-COSMIC/src/plugins"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/pmu"
+      },
+      {
+        "id": "src/app"
+      },
+      {
+        "id": "ET-COSMIC/src/network"
+      },
+      {
+        "id": "ET-COSMIC/src/collapse"
+      },
+      {
+        "id": "ET-COSMIC/src/server"
+      },
+      {
+        "id": "ET-COSMIC/src/storage"
+      },
+      {
+        "id": "ET-COSMIC/src/config"
+      },
+      {
+        "id": "ET-COSMIC/src/core"
+      },
+      {
+        "id": "ET-COSMIC/server/pqcService"
+      },
+      {
+        "id": "ET-COSMIC/src/test"
+      },
+      {
+        "id": "ET-COSMIC/server/economy"
+      },
+      {
+        "id": "src/pages/GitPayPage"
+      },
+      {
+        "id": "ET-COSMIC/workers/pi_worker/src"
+      },
+      {
+        "id": "ET-COSMIC/src/pmu"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src"
+      },
+      {
+        "id": "ET-COSMIC/src/qrc"
+      },
+      {
+        "id": "ET-COSMIC/server/lightning"
+      },
+      {
+        "id": "ET-COSMIC/src/theory"
+      },
+      {
+        "id": "ET-COSMIC/src/harvesters/social"
+      },
+      {
+        "id": "ET-COSMIC/src/crdt"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/storage"
+      },
+      {
+        "id": "ET-COSMIC/server/isossupra"
+      },
+      {
+        "id": "ET-COSMIC/src/vps"
+      },
+      {
+        "id": "ET-COSMIC/src/paleo"
+      },
+      {
+        "id": "src/pages/GhostIDPage"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts/src/network"
+      },
+      {
+        "id": "ET-COSMIC/src/isossupra"
+      },
+      {
+        "id": "ET-COSMIC/server/pmu"
+      },
+      {
+        "id": "src/db"
+      },
+      {
+        "id": "ET-COSMIC/src/pages"
+      },
+      {
+        "id": "ET-COSMIC/eternet_ts"
+      },
+      {
+        "id": "ET-COSMIC/server/eternet"
+      },
+      {
+        "id": "ET-COSMIC/src/routes"
+      }
+    ],
+    "links": [
+      {
+        "source": "src/entities",
+        "target": "src/entities/invoice",
+        "value": 1
+      },
+      {
+        "source": "src/entities",
+        "target": "src/entities/ghostid",
+        "value": 1
+      },
+      {
+        "source": "src/entities",
+        "target": "src/entities/mesh",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC",
+        "target": "ET-COSMIC/scripts",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 7
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/network",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/core",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/components",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/lib",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src",
+        "target": "ET-COSMIC/src/layouts",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/collapse",
+        "target": "ET-COSMIC/src/theory",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/collapse",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/vps",
+        "target": "ET-COSMIC/src/core",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/vps",
+        "target": "ET-COSMIC/src/lib",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/vps",
+        "target": "ET-COSMIC/src/paleo",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/vps",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/imc",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/imc",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/imc",
+        "target": "ET-COSMIC/src/eternet",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/imc",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/omega",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/config",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/compute",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/research",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/protocol/amp",
+        "target": "ET-COSMIC/src/pmu",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 19
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/lib",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/storage",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/lsc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/theory",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/vps",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/pmu",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/utils",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/network",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/core",
+        "target": "ET-COSMIC/src/qrc",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/void",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/void",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/lsc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/theory",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/collapse",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/paleo",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/compute",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/network",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/utils",
+        "value": 29
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/imc",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/eternet",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/config",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/core",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/storage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/lib",
+        "value": 9
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/qrc",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/plugins",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/crypto",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/theory",
+        "target": "ET-COSMIC/src/lsc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/theory",
+        "target": "ET-COSMIC/src/lib",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/theory",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/lsc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/paleo",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/vps",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/lib",
+        "target": "ET-COSMIC/src/plugins",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/pages",
+        "target": "ET-COSMIC/src/protocol/liquidity",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/pages",
+        "target": "ET-COSMIC/src/components",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/pages",
+        "target": "ET-COSMIC/src/economy",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/layouts",
+        "target": "ET-COSMIC/src/components",
+        "value": 7
+      },
+      {
+        "source": "ET-COSMIC/src/layouts",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/layouts",
+        "target": "ET-COSMIC/src",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/pmu",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/pmu",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/pmu",
+        "target": "ET-COSMIC/src/network",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/pmu",
+        "target": "ET-COSMIC/src/config",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/core",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/config",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/plugins",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/network",
+        "target": "ET-COSMIC/src/storage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/ethics",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/hooks",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/hooks",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/paleo",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/lib",
+        "value": 23
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/core",
+        "value": 21
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/isossupra",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/pmu",
+        "value": 6
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 42
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/protocol/sovereignty",
+        "value": 6
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/network",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/hooks",
+        "value": 19
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/silentMesh",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/utils",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/storage",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/social",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/config",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/omega",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/economy",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/harvesters",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/theory",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/compute",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/components",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/src/eternet",
+        "target": "ET-COSMIC/src/theory",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/eternet",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/eternet",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/social",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/social",
+        "target": "ET-COSMIC/src/core",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/social",
+        "target": "ET-COSMIC/src/storage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/social",
+        "target": "ET-COSMIC/src/utils",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/qrc",
+        "target": "ET-COSMIC/src/network",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/qrc",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/routes",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/b2b",
+        "target": "ET-COSMIC/src",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/storage",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/research",
+        "target": "ET-COSMIC/src/ethics",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/research",
+        "target": "ET-COSMIC/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/research",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters",
+        "target": "ET-COSMIC/src/utils",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters",
+        "target": "ET-COSMIC/src/storage",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters",
+        "target": "ET-COSMIC/src/harvesters/exchanges",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters",
+        "target": "ET-COSMIC/src/protocol/amp",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters",
+        "target": "ET-COSMIC/src/harvesters/social",
+        "value": 8
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters/exchanges",
+        "target": "ET-COSMIC/src/storage",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/harvesters/social",
+        "target": "ET-COSMIC/src/harvesters",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/src/paleo",
+        "target": "ET-COSMIC/src/utils",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/src/isossupra",
+        "target": "ET-COSMIC/src/lib",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/crypto",
+        "value": 15
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/utils",
+        "value": 4
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/storage",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/lsc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/network",
+        "value": 5
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/core",
+        "target": "ET-COSMIC/eternet_ts/src/qrc",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/crypto",
+        "target": "ET-COSMIC/eternet_ts/src/utils",
+        "value": 27
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/crypto",
+        "target": "ET-COSMIC/eternet_ts/src/core",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/crypto",
+        "target": "ET-COSMIC/eternet_ts/src/storage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/crypto",
+        "target": "ET-COSMIC/eternet_ts/src/qrc",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/network",
+        "target": "ET-COSMIC/eternet_ts/src/core",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/network",
+        "target": "ET-COSMIC/eternet_ts/src/crypto",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/network",
+        "target": "ET-COSMIC/eternet_ts/src/storage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/qrc",
+        "target": "ET-COSMIC/eternet_ts/src/network",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/qrc",
+        "target": "ET-COSMIC/eternet_ts/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/eternet_ts/src/storage",
+        "target": "ET-COSMIC/eternet_ts/src/crypto",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/core/motor_qrc",
+        "target": "ET-COSMIC/server/aqre",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/core/tests",
+        "target": "ET-COSMIC/core/motor_qrc",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/core/tests",
+        "target": "ET-COSMIC/core/hamiltonians",
+        "value": 2
+      },
+      {
+        "source": "ET-COSMIC/core/tests",
+        "target": "ET-COSMIC/core/tensor_networks",
+        "value": 3
+      },
+      {
+        "source": "ET-COSMIC/pmu-base/python",
+        "target": "src/pages/GhostIDPage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/scripts",
+        "target": "ET-COSMIC/src/b2b",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/scripts",
+        "target": "src/pages/GhostIDPage",
+        "value": 1
+      },
+      {
+        "source": "ET-COSMIC/scripts",
+        "target": "ET-COSMIC/src/server",
+        "value": 1
+      }
+    ]
+  },
+  "language_distribution": [
+    {
+      "language": "typescript",
+      "loc": 88754,
+      "modules": 468
+    },
+    {
+      "language": "typescript-react",
+      "loc": 30579,
+      "modules": 134
+    },
+    {
+      "language": "javascript",
+      "loc": 11890,
+      "modules": 91
+    },
+    {
+      "language": "python",
+      "loc": 1746,
+      "modules": 18
+    },
+    {
+      "language": "rust",
+      "loc": 2464,
+      "modules": 16
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitetura 3D — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="arquitetura">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/nav.js"></script>
+  
+  <script src="assets/vendor/three.min.js"></script><script src="assets/vendor/OrbitControls.js"></script>
+</head>
+<body data-page-id="arquitetura">
+  <main class="reversa-content">
+    
+<div class="page-header">
+  <h1>Arquitetura <span>3D</span></h1>
+  <p>Visualização Code City tridimensional do ecossistema de código legado. Prédios representam arquivos, onde a largura/profundidade reflete o LOC e a altura reflete a complexidade ciclomática.</p>
+</div>
+
+<div class="page-layout-with-sidebar">
+  <div class="viewport-container" id="canvas-container">
+    <!-- Três.js renderiza o canvas aqui -->
+  </div>
+  
+  <div class="control-sidebar">
+    <div class="sidebar-section">
+      <h3>Controles</h3>
+      <div class="control-group">
+        <label for="height-scale">Escala de Altura (Complexidade)</label>
+        <input type="range" id="height-scale" min="0.1" max="3" step="0.1" value="1.0">
+      </div>
+      <div class="control-group">
+        <label for="width-scale">Escala de Largura (LOC)</label>
+        <input type="range" id="width-scale" min="0.1" max="2" step="0.1" value="1.0">
+      </div>
+      <div class="control-group">
+        <label for="layout-group">Agrupamento</label>
+        <select id="layout-group">
+          <option value="folder">Por Pasta</option>
+          <option value="language">Por Linguagem</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h3>Detalhes do Módulo</h3>
+      <div id="details-empty" class="text-muted" style="font-size: 0.85rem;">
+        Clique em um prédio 3D para inspecionar seus dados estatísticos e localização física.
+      </div>
+      <div id="details-content" class="detail-panel" style="display: none;">
+        <h4 id="detail-name">módulo.py</h4>
+        <p><strong>Caminho:</strong> <span id="detail-path">src/módulo.py</span></p>
+        <p><strong>Linhas de Código (LOC):</strong> <span id="detail-loc">0</span></p>
+        <p><strong>Complexidade:</strong> <span id="detail-complexity">0</span></p>
+        <p><strong>Linguagem:</strong> <span id="detail-lang">python</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Inicializar Three.js e Code City
+const container = document.getElementById("canvas-container");
+const width = container.clientWidth;
+const height = container.clientHeight;
+
+// Cena
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0c10);
+
+// Câmera
+const camera = new THREE.PerspectiveCamera(45, width / height, 1, 2000);
+camera.position.set(150, 150, 250);
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(width, height);
+renderer.shadowMap.enabled = true;
+container.appendChild(renderer.domElement);
+
+// Controles de câmera
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.maxPolarAngle = Math.PI / 2.1; // não passar do chão
+
+// Iluminação
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+dirLight.position.set(200, 400, 200);
+dirLight.castShadow = true;
+scene.add(dirLight);
+
+// Chão da Cidade
+const floorGeo = new THREE.PlaneGeometry(500, 500);
+const floorMat = new THREE.MeshStandardMaterial({ color: 0x131822, roughness: 0.8, metalness: 0.2 });
+const floor = new THREE.Mesh(floorGeo, floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// Grid auxiliar
+const gridHelper = new THREE.GridHelper(500, 50, 0x212836, 0x131822);
+gridHelper.position.y = 0.1;
+scene.add(gridHelper);
+
+// Mapeamento de Cores por Linguagem
+const LANG_COLORS = {
+  "python": 0x3572A5,
+  "typescript": 0x3178c6,
+  "typescript-react": 0x3178c6,
+  "javascript": 0xf1e05a,
+  "javascript-react": 0xf1e05a,
+  "rust": 0xdea584,
+  "go": 0x00ADD8,
+  "cpp": 0xf34b7d,
+  "cpp-header": 0xf34b7d,
+  "c": 0x555555,
+  "unknown": 0x8b949e
+};
+
+const buildings = [];
+const buildingsGroup = new THREE.Group();
+scene.add(buildingsGroup);
+
+// Gerar prédios
+function buildCity(heightScale = 1.0, widthScale = 1.0) {
+  // Limpar antigos
+  while(buildingsGroup.children.length > 0){
+    buildingsGroup.remove(buildingsGroup.children[0]);
+  }
+  buildings.length = 0;
+  
+  const modules = window.RV_DATA.modules;
+  
+  // Organizar módulos em quadrantes/linhas por pasta para parecer uma cidade
+  const folders = [...new Set(modules.map(m => m.folder))];
+  const folderCols = Math.ceil(Math.sqrt(folders.length));
+  
+  // Organizar blocos
+  folders.forEach((folder, fIdx) => {
+    const folderModules = modules.filter(m => m.folder === folder);
+    const fx = (fIdx % folderCols) - (folderCols / 2);
+    const fz = Math.floor(fIdx / folderCols) - (folderCols / 2);
+    
+    // Ponto de início do quadrante
+    const qx = fx * 80;
+    const qz = fz * 80;
+    
+    const sideSize = Math.ceil(Math.sqrt(folderModules.length));
+    
+    folderModules.forEach((m, mIdx) => {
+      const bx = qx + (mIdx % sideSize) * 12 - (sideSize * 6);
+      const bz = qz + Math.floor(mIdx / sideSize) * 12 - (sideSize * 6);
+      
+      // Dimensões do prédio baseadas nas linhas e complexidade
+      const w = Math.max(3, Math.min(10, Math.sqrt(m.loc) * 0.4)) * widthScale;
+      const h = Math.max(4, Math.min(80, m.complexity * 1.5)) * heightScale;
+      const d = w;
+      
+      const geo = new THREE.BoxGeometry(w, h, d);
+      const color = LANG_COLORS[m.language] || LANG_COLORS["unknown"];
+      const mat = new THREE.MeshStandardMaterial({
+        color: color,
+        roughness: 0.3,
+        metalness: 0.1,
+        emissive: color,
+        emissiveIntensity: 0.05
+      });
+      
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set(bx, h / 2, bz);
+      mesh.castShadow = true;
+      mesh.receiveShadow = true;
+      mesh.userData = { module: m };
+      
+      buildingsGroup.add(mesh);
+      buildings.push(mesh);
+    });
+  });
+}
+
+// Inicializar cidade
+buildCity();
+
+// Animação/Render Loop
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+// Ajuste de tamanho
+window.addEventListener("resize", () => {
+  const w = container.clientWidth;
+  const h = container.clientHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Interatividade (Raycasting)
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+container.addEventListener("click", (e) => {
+  const rect = renderer.domElement.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObjects(buildingsGroup.children);
+  
+  if (intersects.length > 0) {
+    const clicked = intersects[0].object;
+    const m = clicked.userData.module;
+    
+    // Destacar
+    buildings.forEach(b => {
+      b.material.emissiveIntensity = 0.05;
+    });
+    clicked.material.emissiveIntensity = 0.4;
+    
+    // Preencher painel lateral
+    document.getElementById("details-empty").style.display = "none";
+    const content = document.getElementById("details-content");
+    content.style.display = "block";
+    document.getElementById("detail-name").textContent = m.name;
+    document.getElementById("detail-path").textContent = m.path;
+    document.getElementById("detail-loc").textContent = m.loc;
+    document.getElementById("detail-complexity").textContent = m.complexity;
+    document.getElementById("detail-lang").textContent = m.language;
+  }
+});
+
+// Controles na barra lateral
+document.getElementById("height-scale").addEventListener("input", (e) => {
+  const hs = parseFloat(e.target.value);
+  const ws = parseFloat(document.getElementById("width-scale").value);
+  buildCity(hs, ws);
+});
+
+document.getElementById("width-scale").addEventListener("input", (e) => {
+  const ws = parseFloat(e.target.value);
+  const hs = parseFloat(document.getElementById("height-scale").value);
+  buildCity(hs, ws);
+});
+</script>
+
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

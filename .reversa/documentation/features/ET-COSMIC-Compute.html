@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificação ET-COSMIC-Compute — ET-COSMIC-GitPay</title>
+  <meta name="reversa-category" content="diagram">
+  <meta name="reversa-producer-agent" content="reversa-docs-mapper">
+  <meta name="reversa-template" content="feature-ET-COSMIC-Compute">
+  <meta name="reversa-generated-at" content="2026-06-14T19:15:10-03:00">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilo centralizado -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Scripts básicos de dados e navegação -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/nav.js"></script>
+  
+  
+</head>
+<body data-page-id="feature-ET-COSMIC-Compute">
+  <main class="reversa-content">
+    
+    <div class="page-header">
+      <h1>Feature: <span>ET-COSMIC-Compute</span></h1>
+      <p>Especificação detalhada das regras de negócio, precondições, arquitetura técnica e componentes lógicos.</p>
+    </div>
+    
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-title">Requisitos Gerais &amp; Regras de Negócio</div>
+      <div class="spec-markdown">
+        <h1 class="feature-title">ET-COSMIC-Compute</h1>
+<br/>
+<p class="blockquote-content">Requisitos funcionais e de negócio do módulo de orquestração computacional distribuída.</p>
+<br/>
+<h2 class="section-title">Visão Geral</h2>
+<p>O módulo <strong>ET-COSMIC-Compute</strong> atua na orquestração de recursos computacionais distribuídos úteis e no agendamento de workloads de alta performance (na GPU e CPU locais ou terceirizados no sandbox VPS). Ele traduz o manual PMU para execução física de frames e interfaceia com o executor nativo em Rust (<code>void-runner</code>).</p>
+<br/>
+<h2 class="section-title">Responsabilidades</h2>
+<ul>
+<li>Coordenar o agendamento e execução física de frames do PMU (Physical Model Unit). 🟢</li>
+<li>Fornecer resolvedores baseados em WebGPU com stubs/fallbacks eficientes para CPU. 🟢</li>
+<li>Integrar a proteção e mitigação contra Model Collapse (MCM) alinhado aos limites do LSC. 🟢</li>
+<li>Acoplar o executor nativo multitarefa escrito em Rust (`void_runner`). 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Regras de Negócio</h2>
+<ul>
+<li><strong>Domínios de Frames</strong>: Todo frame físico necessita dividir a carga computacional em 4 domínios estruturais: `geom_relativity`, `quantum_void`, `algebra_paleo`, `lsc_mcm`. 🟢</li>
+<li><strong>Requisitos de Cores</strong>: Para executar um frame, o hardware local exige um mínimo de 4 cores lógicos de processamento. 🟢</li>
+<li><strong>Pipeline AMP</strong>: Toda computação deve validar se atende aos estágios exigidos pela pipeline (`HCF` ou `DPL`) antes de avançar. 🟢</li>
+</ul>
+<br/>
+<h2 class="section-title">Requisitos Funcionais</h2>
+<br/>
+<p>| ID | Requisito | Prioridade | Critério de Aceite |</p>
+<p>|----|-----------|-----------|-------------------|</p>
+<p>| RF-01 | Agendamento de frames PMU | Must | Repartir a computação do frame nos 4 domínios matemáticos estruturais. |</p>
+<p>| RF-02 | Verificação de cores lógicos | Must | Rejeitar processamento de frame caso o hardware possua menos que 4 cores. |</p>
+<p>| RF-03 | Respeito ao pipeline AMP | Must | Validar estágios através de assertivas rigorosas de status de transição. |</p>
+<br/>
+<h2 class="section-title">Requisitos Não Funcionais</h2>
+<br/>
+<p>| Tipo | Requisito inferido | Evidência no código | Confiança |</p>
+<p>|------|--------------------|---------------------|-----------|</p>
+<p>| Performance | Paralelismo de multithreading Rust | <code>void_runner/mapreduce.rs</code> | 🟢 |</p>
+<p>| Escalabilidade | Fatiamento de jobs em MapReduce | <code>void_runner/mapreduce.rs</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Critérios de Aceitação</h2>
+<br/>
+<div class="code-block"><pre><code class="language-gherkin">
+Dado que o hardware do usuário possui 8 cores lógicos
+
+Quando o agendador PMU inicia a execução de um frame
+
+Então o sistema valida as assertivas do pipeline AMP
+
+E distribui o processamento nos domínios geom_relativity, quantum_void, algebra_paleo e lsc_mcm
+
+E retorna o frame calculado com sucesso
+
+
+
+Dado que o hardware do usuário possui 2 cores lógicos
+
+Quando o agendador PMU tenta rodar um frame
+
+Então a execução é interrompida com erro de processadores insuficientes
+
+</code></pre></div>
+<br/>
+<h2 class="section-title">Prioridade (MoSCoW)</h2>
+<br/>
+<p>| Requisito | MoSCoW | Justificativa |</p>
+<p>|-----------|--------|---------------|</p>
+<p>| Agendador vHGPU PMU | Must | Motor de execução de workloads do ecossistema |</p>
+<p>| resolvedor geométrico GPU | Must | Prover performance na mineração baseada em física |</p>
+<p>| Executor Rust Void Runner | Should | Aceleração nativa em plataformas suportadas |</p>
+<br/>
+<h2 class="section-title">Rastreabilidade de Código</h2>
+<br/>
+<p>| Arquivo | Função / Classe | Cobertura |</p>
+<p>|---------|-----------------|-----------|</p>
+<p>| <code>ET-COSMIC/src/compute/pmuVhgpuScheduler.ts</code> | <code>pmuVhgpuScheduler</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/compute/geomWebgpuPass.ts</code> | <code>runGeomWebgpuPass</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/src/compute/lscMcmCoupled.ts</code> | <code>runBrunoTheoryFrame</code> | 🟢 |</p>
+<p>| <code>ET-COSMIC/void_runner/</code> | <code>wasm_worker</code>, <code>mapreduce</code>, <code>ghost_docker</code> | 🟢 |</p>
+      </div>
+    </div>
+    
+        <div class="card" style="margin-bottom: 30px;">
+          <div class="card-title">Design Técnico &amp; Arquitetura</div>
+          <div class="spec-markdown">
+            <h1 class="feature-title">ET-COSMIC-Compute, Design Técnico</h1>
+<br/>
+<p class="blockquote-content">Especificação de design técnico de orquestração computacional distribuída.</p>
+<br/>
+<h2 class="section-title">Interface</h2>
+<br/>
+<h3 class="subsection-title">Componentes de orquestração</h3>
+<br/>
+<p>| Símbolo | Assinatura | Retorno | Observação |</p>
+<p>|---------|-----------|---------|------------|</p>
+<p>| <code>pmuVhgpuScheduler</code> | <code>(frameData: Object)</code> | <code>Promise<Object></code> | Orquestra a fatiamento de workloads de frames nos domínios do PMU. 🟢 |</p>
+<p>| <code>runGeomWebgpuPass</code> | <code>(challenge: string)</code> | <code>Promise<Object></code> | Executa a prova PoH geométrica acelerada por GPU. 🟢 |</p>
+<br/>
+<h2 class="section-title">Fluxo Principal</h2>
+<p>1. O agendador inicializa inspecionando os recursos de hardware locais (<code>navigator.hardwareConcurrency</code> ou APIs equivalentes).</p>
+<p>2. Se compatível (cores >= 4), aceita o agendamento de frames.</p>
+<p>3. Para cada frame, divide o trabalho nos domínios:</p>
+<ul>
+<li>`geom_relativity`: Direciona para o resolvedor WebGPU `runGeomWebgpuPass()`.</li>
+<li>`quantum_void`: Avalia integridade de entropia local/remota.</li>
+<li>`algebra_paleo`: Executa colapso caótico imutável.</li>
+<li>`lsc_mcm`: Executa estabilização de colapso de modelo alinhada ao LSC.</li>
+</ul>
+<p>4. Caso o executor local em Rust esteja disponível e ativado, delega jobs científicos por chamadas de processos (subprocessos de <code>void_runner</code>).</p>
+<br/>
+<h2 class="section-title">Dependências</h2>
+<ul>
+<li>`void_runner`: executor nativo compilado em Rust.</li>
+<li>`lscGuard`: monitoramento e limitação ativa de hardware.</li>
+<li>WebGPU API: aceleração gráfica via GPU.</li>
+</ul>
+<br/>
+<h2 class="section-title">Decisões de Design Identificadas</h2>
+<br/>
+<p>| Decisão | Evidência no código | Confiança |</p>
+<p>|---------|---------------------|-----------|</p>
+<p>| Divisão rígida de frames em 4 domínios estruturais | <code>pmuVhgpuScheduler.ts</code> | 🟢 |</p>
+<p>| Requisito mínimo de 4 processadores lógicos | <code>pmuVhgpuScheduler.ts</code> | 🟢 |</p>
+<p>| Resolvedor com fallback gracioso em CPU spectral | <code>geomWebgpuPass.ts</code> | 🟢 |</p>
+<br/>
+<h2 class="section-title">Estado Interno</h2>
+<ul>
+<li>Mantém o estado da pipeline de execução e tarefas agendadas em andamento na vHGPU virtual.</li>
+</ul>
+          </div>
+        </div>
+        
+  </main>
+  
+  <footer class="reversa-footer">
+    <p>ET-COSMIC-GitPay — Analisado pelo framework Reversa. Seed sha256:c.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-14T18:18:00-03:00",
+  "projectName": "ET-COSMIC-GitPay",
+  "interview": {
+    "readerProfile": "novo_dev",
+    "depth": "full",
+    "visualStyle": "premium"
+  },
+  "seed": {
+    "hash": "sha256:c613d8ebcf700d95ed588b350fded6c64a7c18877f548a335a3e0de80be7e9fc",
+    "source": "project_name",
+    "explicitOverride": null
+  },
+  "knowledgeSources": {
+    "soul": false,
+    "chronicle": false,
+    "topology": true,
+    "sddSpecs": [
+      "ET-COSMIC-Compute",
+      "ET-COSMIC-Core",
+      "ET-COSMIC-Crypto",
+      "ET-COSMIC-Finance",
+      "ET-COSMIC-Mesh",
+      "ET-COSMIC-Server",
+      "GitPay"
+    ],
+    "sourceCode": true
+  },
+  "pagesPlanned": [
+    "index.html",
+    "arquitetura.html",
+    "modulos.html",
+    "topologia.html",
+    "metricas.html",
+    "features/ET-COSMIC-Compute.html",
+    "features/ET-COSMIC-Core.html",
+    "features/ET-COSMIC-Crypto.html",
+    "features/ET-COSMIC-Finance.html",
+    "features/ET-COSMIC-Mesh.html",
+    "features/ET-COSMIC-Server.html",
+    "features/GitPay.html"
+  ],
+  "pagesOmitted": [
+    {
+      "page": "timeline.html",
+      "reason": ".reversa/chronicle.md não encontrado"
+    },
+    {
+      "page": "glossario.html",
+      "reason": ".reversa/soul.md não encontrado"
+    },
+    {
+      "page": "deck.html",
+      "reason": ".reversa/soul.md não encontrado"
+    }
+  ]
+}
